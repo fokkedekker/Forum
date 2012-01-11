@@ -1,0 +1,97 @@
+div.Container
+{	
+	width: 600px;
+	height: auto;
+	min-height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	overflow:hidden;
+	font-family: "trebuchet ms", verdana;
+	border-radius: 12px;
+	box-shadow:3px 5px 10px #333;
+}
+
+div.Header
+{ 	
+	height: 100px;
+	background: #003366;
+	font-size: 30pt;
+	text-align: center;
+}
+
+div.Center
+{
+	background: #ffffff;
+	margin: 0 0 -120px 0;
+	height: 100%;
+	border-radius: 12px;
+}
+
+
+div.Title
+{
+	float: left;
+	width: 300px;
+}
+
+div.Topics
+{
+	float: left;
+	width: 100px;	
+}
+
+
+div.Replies
+{
+	float: left;
+	width: 100px;
+}
+
+div.LastPost
+{
+	float: left;
+	width: 100px;
+}
+
+div.Footer
+{
+	height:20px;
+	width:600px;
+	background:#cccc90;
+	text-align: center;
+	float:left;
+	border-radius: 12px;
+	
+}
+
+div.Post
+{
+	height: auto;
+	width: 580px;
+	margin: 10px;
+	border-style: solid;
+	border-radius:6px;
+	float:left;
+	margin-left: 10px;
+	
+}
+
+div.Button
+{
+	float:left;
+	width: 20px;
+	height:5px;
+	margin-left: 20px;
+}
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+	float:left;
+	padding: 10px;
+	background: #cccccc;	
+}
+
+
+
