@@ -1,7 +1,7 @@
 div.Container
 {	
 	width: 600px;
-	height: 100%;
+	height: auto;
 	min-height: 100%;
 	margin: 0 auto;
 	padding: 0;
@@ -23,7 +23,8 @@ div.Center
 {
 	background: #ffffff;
 	margin: 0 0 -120px 0;
-	height: 100%;
+	height: auto;
+	min-height:100%;
 	border-radius: 12px;
 }
 
@@ -53,15 +54,14 @@ div.LastPost
 	width: 100px;
 }
 
-div.Footer
+div.footer
 {
 	height:20px;
 	width:600px;
 	background:#cccc90;
 	text-align: center;
 	float:left;
-	border-radius: 12px;
-	
+	border-radius: 12px;	
 }
 
 div.Post
