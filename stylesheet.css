@@ -21,13 +21,11 @@ div.Header
 
 div.Center
 {
-	float: left;
 	background: #ffffff;
 	margin: 0 0 -120px 0;
 	height: 100%;
 	border-radius: 12px;
 }
-
 
 
 div.Title
@@ -55,11 +53,31 @@ div.LastPost
 	width: 100px;
 }
 
+
+
 div.Footer
 {
 	height:20px;
+	width:600px;
 	background:#cccc90;
 	text-align: center;
+	float:left;
+	border-radius: 12px;
+	
+	
+}
+
+div.Post
+{
+	height: auto;
+	width: 580px;
+	margin: 10px;
+	border-style: solid;
+	border-radius:6px;
+	float:left;
+	margin-left: 10px;
+	
+
 }
 
 html, body
