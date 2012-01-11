@@ -27,7 +27,6 @@ div.Center
 	border-radius: 12px;
 }
 
-
 div.Title
 {
 	float: left;
@@ -82,6 +81,13 @@ div.Button
 	width: 20px;
 	height:5px;
 	margin-left: 20px;
+}
+
+div.TopicLinks
+{
+	float:left;
+	text-align:right;
+	margin-left: 80px;
 }
 
 html, body
