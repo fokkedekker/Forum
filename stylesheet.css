@@ -1,7 +1,7 @@
 div.Container
 {	
 	width: 600px;
-	height: auto;
+	height: 100%;
 	min-height: 100%;
 	margin: 0 auto;
 	padding: 0;
@@ -63,7 +63,7 @@ div.Footer
 html, body
 {
 	height: 100%;
-	width: 100%
+	width: 100%;
 	float:left;
 	padding: 10px;
 	background: #cccccc;	
