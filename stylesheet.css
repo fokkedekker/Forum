@@ -1,7 +1,16 @@
 div.Container
 {	
+<<<<<<< HEAD
 	width:600px;
 	margin: 0 auto;
+=======
+	width: 600px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100%;
+	background: #ffffff;
+>>>>>>> beta
 	padding: 0;
 	overflow:hidden;
 	font-family: "trebuchet ms", verdana;
@@ -13,6 +22,7 @@ div.Header
 { 	
 	height: 100px;
 	background: #003366;
+	color: #CCCC99;
 	font-size: 30pt;
 	text-align: center;
 }
@@ -64,20 +74,33 @@ div.footer
 div.Post
 {
 	height: auto;
-	width: 580px;
+	width: 560px;
 	margin: 10px;
 	border-style: solid;
 	border-radius:6px;
+	border-color: #A9A9A9;
+	padding: 10px; 
 	float:left;
 	margin-left: 10px;
 	
 }
 
-div.Button
+Button
 {
+<<<<<<< HEAD
 	width: 20px;
 	height:5px;
+=======
+	float:right;
+	width: 70px;
+	height:20px;
+>>>>>>> beta
 	margin-left: 20px;
+}
+
+div.Reageer
+{
+	margin: 10px;
 }
 
 div.TopicLinks
@@ -91,6 +114,10 @@ html, body
 {
 	background: #cccccc;	
 }
+
+
+
+
 
 
 
