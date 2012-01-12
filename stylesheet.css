@@ -3,6 +3,7 @@ div.Container
 	width: 600px;
 	height: auto;
 	min-height: 100%;
+	background: #ffffff;
 	margin: 0 auto;
 	padding: 0;
 	overflow:hidden;
