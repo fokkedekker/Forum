@@ -2,9 +2,10 @@ div.Container
 {	
 	width: 600px;
 	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 	min-height: 100%;
 	background: #ffffff;
-	margin: 0 auto;
 	padding: 0;
 	overflow:hidden;
 	font-family: "trebuchet ms", verdana;
