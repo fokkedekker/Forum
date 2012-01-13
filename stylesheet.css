@@ -126,3 +126,12 @@ div.newtopic
 	text-align:right; 
 	margin-left: 15%;
 }
+
+div.personal
+{
+	float:left; 
+	margin-left:20%; 
+	margin-right:5px; 
+	text-align:right; 
+	font-weight:bold;
+}
