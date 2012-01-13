@@ -198,3 +198,24 @@ div.lastposts
 	margin-top:20px;
 }
 
+div.title
+{
+	float:left;
+	width: 370px;
+}
+div.topics
+{
+	float:left;
+	width: 60px;
+}
+
+div.replies
+{
+	float:left;
+	width: 60px;
+}
+div.lastpost
+{
+	float:left;
+	width: 70px;
+}
