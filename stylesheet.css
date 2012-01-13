@@ -74,13 +74,55 @@ div.footer
 	
 }
 
-
-<<<<<<< HEAD
-
-/*##########################################################################*/
-
-
-
-=======
 /*######################################################*/
->>>>>>> beta
+
+div.post
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:10px;
+}
+
+div.login
+{
+	text-align:right;
+	margin-right:200px;
+}
+
+div.currentpage
+{
+	border-style:solid;
+	float:left;
+	height:29px;
+	width:96px;
+	border-width:2px;
+	border-color: #003366;
+	background:#003366;
+	text-align:center;
+	padding-top:17px;
+	color:#cccc90;
+}
+
+div.register
+{
+	text-align:left;
+	margin-right:210px;
+	margin-left:0;
+}
+
+div.tekst
+{
+	float:left;
+}
+
+div.newtopic
+{
+	float:left; 
+	text-align:right; 
+	margin-left: 15%;
+}
