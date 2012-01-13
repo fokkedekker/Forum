@@ -65,3 +65,17 @@ div.footer
 
 
 /*######################################################*/
+
+
+
+div.post
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:10px;
+}
