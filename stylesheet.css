@@ -219,3 +219,15 @@ div.lastpost
 	float:left;
 	width: 70px;
 }
+
+div.faq
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:5px;
+}
