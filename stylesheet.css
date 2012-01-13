@@ -90,8 +90,8 @@ div.post
 
 div.login
 {
-	text-align:right;
-	margin-right:200px;
+	text-align:center;
+	margin: 0 auto 0 auto;
 }
 
 div.currentpage
