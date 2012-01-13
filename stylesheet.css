@@ -94,3 +94,17 @@ div.login
 {
 	margin: auto;
 }
+
+div.currentpage
+{
+	border-style:solid;
+	float:left;
+	height:29px;
+	width:96px;
+	border-width:2px;
+	border-color: #003366;
+	background:#003366;
+	text-align:center;
+	padding-top:17px;
+	color:#cccc90;
+}
