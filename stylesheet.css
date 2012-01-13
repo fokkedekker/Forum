@@ -92,7 +92,8 @@ div.post
 
 div.login
 {
-	margin: auto;
+	text-align:right;
+	margin-right:200px;
 }
 
 div.currentpage
@@ -107,4 +108,16 @@ div.currentpage
 	text-align:center;
 	padding-top:17px;
 	color:#cccc90;
+}
+
+div.register
+{
+	text-align:left;
+	margin-right:210px;
+	margin-left:0;
+}
+
+div.tekst
+{
+	float:left;
 }
