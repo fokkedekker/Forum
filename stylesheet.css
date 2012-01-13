@@ -37,6 +37,18 @@ div.menu
 	background:#cccc90;
 }
 
+div.menuknop
+{
+	border-style:solid;
+	float:left;
+	height:29px;
+	width:96px;
+	border-width:2px;
+	border-color: #003366;
+	text-align:center;
+	padding-top:17px;
+}
+
 div.center
 {
 	background:#ffffff;
@@ -66,8 +78,6 @@ div.footer
 
 /*######################################################*/
 
-
-
 div.post
 {
 	border-style:solid;
@@ -78,4 +88,9 @@ div.post
 	height:auto;
 	border-radius: 6px;
 	margin:10px;
+}
+
+div.login
+{
+	margin: auto;
 }
