@@ -334,6 +334,7 @@ div.menu2button
 	border-style:solid;
 	border-width:2px;
 	border-radius:6px;
+	border-color:#003366;
 	text-align:center;
 	width:170px;
 	height:10px;
@@ -342,6 +343,7 @@ div.menu2button
 	margin-top:20px;
 	margin-left:10px;
 	margin-right:10px;
+	
 }
 
 
