@@ -74,13 +74,238 @@ div.footer
 	
 }
 
-
-<<<<<<< HEAD
-
-/*##########################################################################*/
-
-
-
-=======
 /*######################################################*/
->>>>>>> beta
+
+div.post
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:5px;
+}
+
+div.login
+{
+	text-align:center;
+	margin: 0 auto 0 auto;
+}
+
+div.currentpage
+{
+	border-style:solid;
+	float:left;
+	height:29px;
+	width:96px;
+	border-width:2px;
+	border-color: #003366;
+	background:#003366;
+	text-align:center;
+	padding-top:17px;
+	color:#cccc90;
+}
+
+div.register
+{
+	text-align:left;
+	margin-right:210px;
+	margin-left:0;
+}
+
+div.tekst
+{
+	float:left;
+}
+
+div.newtopic
+{
+	float:left; 
+	text-align:right; 
+	margin-left: 15%;
+}
+
+div.picture
+{
+	float:left;
+}
+
+div.overmij
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:5px;
+	width:300px;	
+	height: 190px;
+	border-radius: 6px;
+	margin: 0 0 0 250px;
+	
+	
+}
+
+div.info
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:5px;
+	width:200px;	
+	height: 100px;
+	border-radius: 6px;
+	float:left;
+	margin-right:10px;
+	
+}
+
+div.startedtopics
+{
+	border-style:solid;
+	border-color:#003366;
+	width: 550px;
+	margin-top:20px;
+	border-radius:6px;
+	padding:5px;
+	border-width:2px;
+}
+
+div.forumstatus
+{
+	border-style:solid;
+	border-color:#003366;
+	padding:5px;
+	border-radius:6px;
+	border-width:2px;
+	width: 200px;
+	height:190px;
+	margin-top:130px;
+
+}
+
+div.lastposts
+{
+	
+	border-style:solid;
+	border-color:#003366;
+	padding:5px;
+	border-radius:6px;
+	border-width:2px;
+	width: 300px;
+	height:300px;
+	float: right;
+	margin-top:20px;
+}
+
+div.title
+{
+	float:left;
+	width: 370px;
+}
+div.topics
+{
+	float:left;
+	width: 60px;
+}
+
+div.replies
+{
+	float:left;
+	width: 60px;
+}
+div.lastpost
+{
+	float:left;
+	width: 70px;
+}
+
+div.faq
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:5px;
+}
+
+div.tabel
+{
+width: auto;
+
+}
+
+
+
+
+div.number
+{
+padding: 2px;
+width: 30px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-color: #003366;
+}
+
+div.status
+{
+padding: 2px;
+width: 75px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.id
+{
+padding: 2px;
+width: 65px;
+float:left;
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.name
+{
+width: 150px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.date
+{
+width: 85px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.actions
+{
+width: 115px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+
+
+
