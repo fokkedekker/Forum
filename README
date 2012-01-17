@@ -1,5 +1,0 @@
-1. Push eerst naar de 'beta' branch, als alles ok is dan mergen we die met de master.
-2. Gebruik de base.html om je paginas te maken, zet je content in de center div.
-3. Zet je style elementen in de stylesheet.css onder de #### streep, daarboven niks veranderen.
-
-DE OUDE SITE ZIT NU IN MASTER. IN BETA ZIT NU EEN EXPERIMENTELE VERSIE VAN DE SITE. 
