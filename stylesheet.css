@@ -43,7 +43,7 @@ div.menuknop
 	border-style:solid;
 	float:left;
 	height:31px;
-	width: 14.415%;
+	width: 16.05%;
 	border-width: 1%;
 	border-color: #003366;
 	text-align:center;
@@ -55,9 +55,9 @@ div.center
 	background:#ffffff;
 	height: auto;
 	min-height:100%;
-	width:560px;
+	width: 90%;
 	box-shadow:3px 5px 10px #333;
-	padding:20px;
+	padding:5%;
 }
 
 div.footer
@@ -310,9 +310,7 @@ border-color: #003366;
 div.slidemenu
 {
 	background:#cccc90;
-	height: auto;
-	min-height:80%;
-	margin-top:150px;
+	height: 100%;
 	width:192px;
 	float:left;
 	border-top-left-radius:12px;
