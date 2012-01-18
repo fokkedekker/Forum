@@ -71,7 +71,7 @@ div.footer
 	color:black;
 	margin-top:-10px;
 	box-shadow:3px 5px 10px #333;
-	
+
 }
 
 /*######################################################*/
@@ -142,8 +142,8 @@ div.overmij
 	height: 190px;
 	border-radius: 6px;
 	margin: 0 0 0 250px;
-	
-	
+
+
 }
 
 div.info
@@ -157,7 +157,7 @@ div.info
 	border-radius: 6px;
 	float:left;
 	margin-right:10px;
-	
+
 }
 
 div.startedtopics
@@ -186,7 +186,7 @@ div.forumstatus
 
 div.lastposts
 {
-	
+
 	border-style:solid;
 	border-color:#003366;
 	padding:5px;
@@ -317,7 +317,6 @@ div.slidemenu
 	border-top-left-radius:12px;
 	border-bottom-left-radius:12px;
 	padding:4px;
-	text-align:right;
 }
 
 div.bosscontainer
@@ -329,22 +328,27 @@ div.bosscontainer
 	font-family: "trebuchet ms", verdana;
 }
 
-div.menu2button
+div.forum
 {
-	border-style:solid;
-	border-width:2px;
-	border-radius:6px;
-	border-color:#003366;
-	text-align:center;
-	width:170px;
-	height:10px;
-	padding-top:10px;
-	padding-bottom:20px;
-	margin-top:20px;
-	margin-left:10px;
-	margin-right:10px;
-	
+	float:left;
 }
+
+div.categorie
+{
+	margin-left:10px;
+}
+
+div.thread
+{
+	margin-left:40px;
+}
+
+div.reactie
+{
+	margin-left:70px;
+}
+
+
 
 
 
