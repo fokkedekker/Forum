@@ -8,7 +8,8 @@ html, body
 
 div.container
 {
-	width:600px;
+	width: 60%;
+	min-width: 800px;
 	margin: 0 auto 0 auto;
 	height: 100%;
 	min-height: 100%;
@@ -41,12 +42,13 @@ div.menuknop
 {
 	border-style:solid;
 	float:left;
-	height:29px;
-	width:96px;
-	border-width:2px;
+	height:31px;
+	width: 15.915%;
+	min-width: 10px;
+	border-width: 1%;
 	border-color: #003366;
 	text-align:center;
-	padding-top:17px;
+	padding-top:14px;
 }
 
 div.center
@@ -54,9 +56,9 @@ div.center
 	background:#ffffff;
 	height: auto;
 	min-height:100%;
-	width:560px;
+	width: 90%;
 	box-shadow:3px 5px 10px #333;
-	padding:20px;
+	padding:5%;
 }
 
 div.footer
