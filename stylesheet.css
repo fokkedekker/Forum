@@ -1,9 +1,6 @@
 
 html, body
 {
-	background: white;
-	height:auto;
-	
 	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
 	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
 	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
@@ -18,16 +15,17 @@ html, body
 	color-stop(1, rgb(255,255,255)),
 	color-stop(0.5, rgb(207,207,207))
 );
+	min-height:100%;
 }
 
 
 div.container
 {
 	width: 60%;
-	min-width: 1000px;
+	min-width: 800px;
 	margin: 0 auto 0 auto;
-	height: 100%;
-	min-height: 100%;
+	height:auto;
+	min-height:100%;
 	background: #ffffff;
 	font-family: "trebuchet ms", verdana;
 	border-radius: 12px;	
@@ -50,7 +48,6 @@ div.menu
 	
 	margin-top:-10px;
 	height:46px;
-	box-shadow:3px 5px 10px #333;
 	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
 	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
 	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
@@ -64,7 +61,8 @@ div.menu
 	color-stop(0, rgb(255,255,255)),
 	color-stop(1, rgb(255,255,255)),
 	color-stop(0.5, rgb(207,207,207))
-);
+	);
+	
 }
 
 div.menuknop
@@ -90,7 +88,7 @@ div.menuknop
 	color-stop(0, rgb(255,255,255)),
 	color-stop(1, rgb(255,255,255)),
 	color-stop(0.5, rgb(207,207,207))
-);
+	);	
 }
 
 div.center
@@ -98,9 +96,13 @@ div.center
 	background:#ffffff;
 	height: auto;
 	min-height:100%;
-	width: 90%;
+	width:518px;
 	box-shadow:3px 5px 10px #333;
 	padding:5%;
+	border-style: solid;
+	border-color:#D3D3D3;
+	border-width: 0px 0px 0px 2px;
+	margin-left :200px;	
 }
 
 div.footer
@@ -352,21 +354,13 @@ border-color: #003366;
 
 div.slidemenu
 {
-	background:#cccc90;
-	height:auto;
+	height:100%;
 	width:192px;
 	float:left;
 	padding:2px;
 }
 
-div.bosscontainer
-{
-	width:1000px;
-	margin: 0 auto 0 auto;
-	height: 100%;
-	background: #cccccc;
-	font-family: "trebuchet ms", verdana;
-}
+
 
 div.forum
 {
