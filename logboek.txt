@@ -1,9 +1,0 @@
-Logboek
--------
-Week 1:
-Met HTML en CSS begonnen en globale opzet van site gemaakt
-Week 2:
-HTML en CSS afgemaakt en database ontwerp gemaakt.
-Database ingevoerd door Michiel met behulp van myPHPAdmin.
-Week 3:
-Ragequit
