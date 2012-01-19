@@ -1,8 +1,23 @@
 
 html, body
 {
-	background: #cccccc;	
-	height:100%;
+	background: white;
+	height:auto;
+	
+	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(1, rgb(255,255,255)),
+	color-stop(0.5, rgb(207,207,207))
+);
 }
 
 
@@ -21,21 +36,35 @@ div.container
 div.header
 {
 	height: 100px;
-	background: #003366;
-	color: #CCCC99;
+	color: black;
 	font-size: 30pt;
 	text-align: center;
 	border-radius: 12px;
 	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+);
 }
 
 div.menu
 {
-	background:black;
+	
 	margin-top:-10px;
-	height:50px;
+	height:46px;
 	box-shadow:3px 5px 10px #333;
-	background:#cccc90;
+	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(1, rgb(255,255,255)),
+	color-stop(0.5, rgb(207,207,207))
+);
 }
 
 div.menuknop
@@ -44,10 +73,24 @@ div.menuknop
 	float:left;
 	height:31px;
 	width: 16.05%;
-	border-width: 1%;
-	border-color: #003366;
+	border-width: 0px;
+	border-color:#D3D3D3;
 	text-align:center;
 	padding-top:14px;
+	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
+
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(1, rgb(255,255,255)),
+	color-stop(0.5, rgb(207,207,207))
+);
 }
 
 div.center
@@ -64,7 +107,7 @@ div.footer
 {
 	height:20px;
 	width:100%;
-	background:#cccc90;
+	background:#D3D3D3;
 	text-align: center;
 	float:left;
 	border-radius: 12px;
@@ -310,12 +353,10 @@ border-color: #003366;
 div.slidemenu
 {
 	background:#cccc90;
-	height: 100%;
+	height:auto;
 	width:192px;
 	float:left;
-	border-top-left-radius:12px;
-	border-bottom-left-radius:12px;
-	padding:4px;
+	padding:2px;
 }
 
 div.bosscontainer
@@ -346,7 +387,6 @@ div.reactie
 {
 	margin-left:70px;
 }
-
 
 
 
