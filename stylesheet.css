@@ -141,6 +141,7 @@ div.newtopic
 div.picture
 {
 	float:left;
+	margin-bottom:10px;
 }
 
 div.overmij
@@ -149,10 +150,11 @@ div.overmij
 	border-width:2px;
 	border-color: #003366;
 	padding:5px;
-	width:300px;	
+	width:57.5%;	
 	height: 190px;
 	border-radius: 6px;
-	margin: 0 0 0 250px;
+	margin: 0 0 10px 200px;
+
 
 
 }
@@ -163,11 +165,11 @@ div.info
 	border-width:2px;
 	border-color: #003366;
 	padding:5px;
-	width:200px;	
-	height: 100px;
+	width:34.5%;	
+	height: 140px;
 	border-radius: 6px;
-	float:left;
 	margin-right:10px;
+	margin-bottom:10px;
 
 }
 
@@ -175,7 +177,7 @@ div.startedtopics
 {
 	border-style:solid;
 	border-color:#003366;
-	width: 550px;
+	width: 97%;
 	margin-top:20px;
 	border-radius:6px;
 	padding:5px;
@@ -189,9 +191,13 @@ div.forumstatus
 	padding:5px;
 	border-radius:6px;
 	border-width:2px;
-	width: 200px;
+	width: 34.5%;
 	height:190px;
+<<<<<<< HEAD
+	
+=======
 	margin-top:130px;	
+>>>>>>> a9ff561e79bd4e6dcd2246eae00887e39da79499
 
 }
 
@@ -209,10 +215,11 @@ div.lastposts
 	padding:5px;
 	border-radius:6px;
 	border-width:2px;
-	width: 300px;
-	height:300px;
+	width: 57.5%;
+	height:353px;
 	float: right;
-	margin-top:20px;
+	margin-right:6px;
+	
 }
 
 div.title
@@ -251,8 +258,7 @@ div.faq
 
 div.tabel
 {
-width: auto;
-
+width: 500px;
 }
 
 
@@ -261,7 +267,7 @@ width: auto;
 div.number
 {
 padding: 2px;
-width: 30px;
+width: 5%;
 float:left; 
 border-style: solid;
 border-width: 2px;
@@ -271,7 +277,7 @@ border-color: #003366;
 div.status
 {
 padding: 2px;
-width: 75px;
+width: 14%;
 float:left; 
 border-style: solid;
 border-width: 2px;
@@ -282,7 +288,7 @@ border-color: #003366;
 div.id
 {
 padding: 2px;
-width: 65px;
+width: 12%;
 float:left;
 border-style: solid;
 border-width: 2px;
@@ -292,7 +298,7 @@ border-color: #003366;
 
 div.name
 {
-width: 150px;
+width: 22%;
 padding: 2px;
 float:left; 
 border-style: solid;
@@ -303,7 +309,7 @@ border-color: #003366;
 
 div.date
 {
-width: 85px;
+width: 17%;
 padding: 2px;
 float:left; 
 border-style: solid;
@@ -314,7 +320,7 @@ border-color: #003366;
 
 div.actions
 {
-width: 115px;
+width: 22%;
 padding: 2px;
 float:left; 
 border-style: solid;
