@@ -1,0 +1,362 @@
+
+html, body
+{
+	height: 100%;
+);
+
+}
+
+
+div.container
+{
+	width: 60%;
+	min-width: 800px;
+	margin: 0 auto 0 auto;
+	height: 100%;
+	min-height:100%;
+	background: #ffffff;
+	font-family: "trebuchet ms", verdana;
+	border-radius: 12px;	
+}
+
+div.header
+{
+	height: 100px;
+	color: black;
+	font-size: 30pt;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+);
+}
+
+div.menu
+{
+
+	margin-top:-10px;
+	height:46px;
+	background: #D3D3D3;
+	border-radius: 12px;
+	box-shadow:3px 5px 10px #333;
+
+}
+
+div.menuknop
+{
+	border-style:solid;
+	float:left;
+	height:31px;
+	width: 16.05%;
+	border-width: 0px;
+	border-color:#D3D3D3;
+	text-align:center;
+	padding-top:14px;
+}
+
+div.center
+{
+	background:#ffffff;
+	height: auto;
+	min-height:100%;
+	width:518px;
+	box-shadow:3px 5px 10px #333;
+	padding:5%;
+	border-style: solid;
+	border-color:#D3D3D3;
+	border-width: 0px 0px 0px 2px;
+	margin-left :200px;	
+	overflow:hidden;
+	
+}
+
+div.footer
+{
+	height:20px;
+	width:100%;
+	background:#D3D3D3;
+	text-align: center;
+	float:left;
+	border-radius: 12px;
+	font-size:12pt;
+	color:black;
+	margin-top:-10px;
+	box-shadow:3px 5px 10px #333;
+
+}
+
+/*######################################################*/
+
+div.post
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:5px;
+}
+
+div.login
+{
+	text-align:center;
+	margin: 0 auto 0 auto;
+}
+
+div.currentpage
+{
+	border-style:solid;
+	float:left;
+	height:29px;
+	width:96px;
+	border-width:2px;
+	border-color: #003366;
+	background:#003366;
+	text-align:center;
+	padding-top:17px;
+	color:#cccc90;
+}
+
+div.register
+{
+	text-align:left;
+	margin-right:210px;
+	margin-left:0;
+}
+
+div.tekst
+{
+	float:left;
+}
+
+div.newtopic
+{
+	float:left; 
+	text-align:right; 
+	margin-left: 15%;
+}
+
+div.picture
+{
+	float:left;
+}
+
+div.overmij
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:5px;
+	width:300px;	
+	height: 190px;
+	border-radius: 6px;
+	margin: 0 0 0 250px;
+
+
+}
+
+div.info
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:5px;
+	width:200px;	
+	height: 100px;
+	border-radius: 6px;
+	float:left;
+	margin-right:10px;
+
+}
+
+div.startedtopics
+{
+	border-style:solid;
+	border-color:#003366;
+	width: 550px;
+	margin-top:20px;
+	border-radius:6px;
+	padding:5px;
+	border-width:2px;
+}
+
+div.forumstatus
+{
+	border-style:solid;
+	border-color:#003366;
+	padding:5px;
+	border-radius:6px;
+	border-width:2px;
+	width: 200px;
+	height:190px;
+	margin-top:130px;	
+
+}
+
+div.over
+{
+	min-height:100%;
+	background: red;
+}
+
+div.lastposts
+{
+
+	border-style:solid;
+	border-color:#003366;
+	padding:5px;
+	border-radius:6px;
+	border-width:2px;
+	width: 300px;
+	height:300px;
+	float: right;
+	margin-top:20px;
+}
+
+div.title
+{
+	float:left;
+	width: 370px;
+}
+div.topics
+{
+	float:left;
+	width: 60px;
+}
+
+div.replies
+{
+	float:left;
+	width: 60px;
+}
+div.lastpost
+{
+	float:left;
+	width: 70px;
+}
+
+div.faq
+{
+	border-style:solid;
+	border-width:2px;
+	border-color: #003366;
+	padding:10px;
+	width:520px;
+	height:auto;
+	border-radius: 6px;
+	margin:5px;
+}
+
+div.tabel
+{
+width: auto;
+
+}
+
+
+
+
+div.number
+{
+padding: 2px;
+width: 30px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-color: #003366;
+}
+
+div.status
+{
+padding: 2px;
+width: 75px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.id
+{
+padding: 2px;
+width: 65px;
+float:left;
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.name
+{
+width: 150px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.date
+{
+width: 85px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.actions
+{
+width: 115px;
+padding: 2px;
+float:left; 
+border-style: solid;
+border-width: 2px;
+border-left:1px;
+border-color: #003366;
+}
+
+div.slidemenu
+{
+	height: 100%;
+	min-height:100%;
+	width:192px;
+	float:left;
+	padding:2px;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	box-shadow:3px 5px 10px #333;
+}
+
+
+
+div.forum
+{
+	float:left;
+}
+
+div.categorie
+{
+	margin-left:10px;
+}
+
+div.thread
+{
+	margin-left:40px;
+}
+
+div.reactie
+{
+	margin-left:70px;
+}
+
+
+
+
