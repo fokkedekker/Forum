@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -70,9 +70,35 @@
 			<div class="center">
 			
 			
-			hier mag je eigen input
-			<p style="height:1000px;">
+			<div class="login">
+						<?php
+						$dbhost = 'websec.science.uva.nl';
+$dbuser = 'webdb1236';
+$dbpass = 'wexet4eb';
+
+$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die                      ('Error connecting to mysql');
+
+$dbname = 'users';
+mysql_select_db($dbname);?>
+						Username: <input type="text" name="User name" />
+						<br />
+						Password: <input type="password" name="pwd" />
+						<br />
+						<input type="checkbox" name="remember" value="Password" /> Remember me
+						<button type="button">Submit</button>
+						<br />
+						<a href="registreerpagina">Registreer</a>
+				</div>
 			
+
+			<?php
+// an example of closedb.php
+// it does nothing but closing
+// a mysql database connection
+
+mysql_close($conn);
+?>
+
 			
 			</div>
 			
