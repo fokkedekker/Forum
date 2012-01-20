@@ -17,7 +17,7 @@ html, body
 	color-stop(1, rgb(255,255,255)),
 	color-stop(0.5, rgb(207,207,207))
 );
-	
+
 }
 
 
@@ -47,7 +47,7 @@ div.header
 
 div.menu
 {
-	
+
 	margin-top:-10px;
 	height:46px;
 	background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(255,255,255) 100%, rgb(207,207,207) 50%);
@@ -64,7 +64,7 @@ div.menu
 	color-stop(1, rgb(255,255,255)),
 	color-stop(0.5, rgb(207,207,207))
 	);
-	
+
 }
 
 div.menuknop
@@ -98,7 +98,6 @@ div.center
 	background:#ffffff;
 	height: auto;
 	min-height:100%;
-	
 	width:518px;
 	box-shadow:3px 5px 10px #333;
 	padding:5%;
@@ -106,7 +105,8 @@ div.center
 	border-color:#D3D3D3;
 	border-width: 0px 0px 0px 2px;
 	margin-left :200px;	
-	
+	overflow:hidden;
+
 }
 
 div.footer
@@ -392,7 +392,6 @@ div.reactie
 {
 	margin-left:70px;
 }
-
 
 
 
