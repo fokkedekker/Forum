@@ -76,10 +76,11 @@
 $dbuser = 'webdb1236';
 $dbpass = 'wexet4eb';
 
-$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die                      ('Error connecting to mysql');
+$dbhandle = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
 
-$dbname = 'users';
-mysql_select_db($dbname);?>
+$dbname = 'webdb1236';
+mysql_select_db($dbname);
+?>
 						Username: <input type="text" name="User name" />
 						<br />
 						Password: <input type="password" name="pwd" />
@@ -92,11 +93,7 @@ mysql_select_db($dbname);?>
 			
 
 			<?php
-// an example of closedb.php
-// it does nothing but closing
-// a mysql database connection
-
-mysql_close($conn);
+mysql_close($con);
 ?>
 
 			
