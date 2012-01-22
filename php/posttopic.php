@@ -67,7 +67,7 @@
 			</div>
 			
 			<div class="center">
-				Thank you for your submission, you have posted:
+				Thank you for your submission, your post is waiting for approval.
 				<br />
 				<hr />
 				<?php 
