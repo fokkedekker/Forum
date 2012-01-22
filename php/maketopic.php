@@ -67,30 +67,19 @@
 			</div>
 			
 			<div class="center">
-				<!-- De login moet nog even aangepast worden. -->
-				<?php
-					$dbhost = 'localhost';
-					$dbuser = 'root';
-					$dbpass = '';
-
-					$dbhandle = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-
-					$dbname = 'webdb1236';
-					mysql_select_db($dbname);
-					
-					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
-					
-					
-					while($row = mysql_fetch_array($result))
-					{
-						echo "<div class='faq'>";
-						echo "Question: ".$row['question'];
-						echo "<br /><hr />Awnser: ".$row['awnser'];
-						echo "</div>";
-					}
-					mysql_close($dbhandle)?>
 			
-				
+			
+			<div class="newtopic">
+				Topicname:<br \>
+				Message:<br \>
+				<form action="posttopic.php" method="POST">
+					<input type="submit" value="Submit"/>
+			</div>
+			<div>
+					<input type="text" size="40" maxlength="64" name="topicname" /><br />
+					<input type="text" size="40" maxlength="4096" style="height:200px;" name="content" />
+				</form>
+			</div>
 			</div>
 			
 

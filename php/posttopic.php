@@ -67,8 +67,11 @@
 			</div>
 			
 			<div class="center">
-				<!-- De login moet nog even aangepast worden. -->
-				<?php
+				Thank you for your submission, you have posted:
+				<br />
+				<hr />
+				<?php 
+					//TODO login aanpassen voor server, staat nu op local host.
 					$dbhost = 'localhost';
 					$dbuser = 'root';
 					$dbpass = '';
@@ -78,19 +81,33 @@
 					$dbname = 'webdb1236';
 					mysql_select_db($dbname);
 					
-					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
+					//Variabelen uit maketopic.php form.
+					$postTitle = $_POST["topicname"];
+					$postContent = $_POST["content"];
 					
+					// Pompt titel van post.
+					echo "<br />Title: ".$postTitle."<br />";
 					
-					while($row = mysql_fetch_array($result))
-					{
-						echo "<div class='faq'>";
-						echo "Question: ".$row['question'];
-						echo "<br /><hr />Awnser: ".$row['awnser'];
-						echo "</div>";
-					}
-					mysql_close($dbhandle)?>
-			
-				
+					// Berekent nieuwe post id op basis van max in tabel.
+					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
+					$row = mysql_fetch_array($getPost_id);
+					$newPost_id = $row['post_id'] + 1;
+					//Prompt postID.
+					echo "PostID: ".$newPost_id."<br />";
+					
+					//Prompt content
+					echo "<br />Content: ".$postContent."<br />";
+					
+					//TODO: catagorie_id ophalen en posten
+					//TODO: user_id ophalen en posten
+					//TODO: iets tegen sql injecties
+					
+					mysql_query("INSERT INTO `webdb1236`.`topics`
+					(posttitle, postcontent, post_id, catagorie_id, user_id, starttime)
+					VALUES ('$postTitle', '$postContent', '$newPost_id', '1', '1', CURRENT_TIMESTAMP)") or die (mysql_error());
+					
+					mysql_close($dbhandle);
+				?>			
 			</div>
 			
 
@@ -101,9 +118,4 @@
 		</div>
 
 	</body>
-
-
-
-
-
 </html>
