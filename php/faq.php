@@ -69,17 +69,9 @@
 			<div class="center">
 				<!-- De login moet nog even aangepast worden. -->
 				<?php
-					$dbhost = 'localhost';
-					$dbuser = 'root';
-					$dbpass = '';
-
-					$dbhandle = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-
-					$dbname = 'webdb1236';
-					mysql_select_db($dbname);
+					include 'dblogin.php';
 					
 					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
-					
 					
 					while($row = mysql_fetch_array($result))
 					{
