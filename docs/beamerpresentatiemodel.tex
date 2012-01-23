@@ -1,0 +1,142 @@
+
+\documentclass{beamer}
+% gebruik de optie [handouts] om elke frame maar 1 x te printen
+%\documentclass[handouts]{beamer}
+
+%% Theme specifiers
+\usetheme{Frankfurt}
+%probeer Warsaw, Frankfurt, Madrid, Pittsburg, Rochester, Amsterdam
+%% zie voor een overzicht
+%http://www.pletscher.org/writings/latex/beamerthemes.php
+
+%% Kleuren en fontsettings
+%\usecolortheme{seahorse}
+%\usecolortheme{rose}
+%\usefonttheme[onlylarge]{structuresmallcapsserif}
+%\usefonttheme[onlysmall]{structurebold}
+
+% deze regel maakt de "gecoverde" tekst lichtgrijs
+% anders wordt die tekst wit en onzichtbaar
+%(hoeft U niet te gebruiken)
+\beamertemplatetransparentcovered
+
+%% Times font (U mag ze ook allebij weglaten
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+\title{Patriciaat Tech Forum}
+\subtitle{snel en gemakkelijk}
+
+\author{Kees Halvemaan, Fokke Dekker, Michiel Mosmans, Hamid Chaman}
+\institute
+{
+Project webprogrammeren en databases \\
+ Faculteit der Natuurwetenschappen, Wiskunde en Informatica \\
+ Universiteit van Amsterdam\\
+%  \vspace{0.3cm}
+% \includegraphics[width=1cm]{uvalogo.png}
+}
+\date{\today}
+
+%% Title font specifiers
+%\setbeamerfont{title}{shape=\itshape,family=\rmfamily}
+%\setbeamercolor{title}{fg=red!80!black}
+%\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Voor zo'n korte minipresentatie, beter GEEN inhoudsopgave
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+%% Voor een korte miniprestentatie, graag deze vijf secties:
+% 1. Je artikel
+% 2. Onderzoeksvraag
+% 3. Aanpak (in Mathematica)
+% 4. Resultaten (uitkomsten in Mathematica)
+% 5. (Wiskundige) conclusies
+
+\section{compatibility}
+
+\begin{frame}
+\frametitle{Compatibility}
+Door dat onze website een zeer grote browsercompatibility heeft, kunnen we 90 procent van de op internet aangesloten wereld bevolking bereiken. \\ En natuurlijk ondersteuning voor onze persoonlijke voorkeur SEAMONKEY.
+
+
+\end{frame}
+
+ \section{Like}
+
+ \begin{frame}
+\frametitle{De like button}
+
+Doordat we besloten hebben gebruik te maken van de like button, zullen de meest relevante antwoorden altijd boven aanstaan wat de gebruiksvriendelijkheid verhoogd.
+
+\end{frame}
+
+\section{Admin}
+
+\begin{frame}
+\frametitle{admin}
+
+Door een gebuiksvriendelijke adminpanel is het beheer van de website in een paar minute per dag heel makkelijk bij te houden. 
+\end{frame}
+
+\section{Resultaten}
+
+\begin{frame}
+\frametitle{Personal}
+Een eigen persoonlijke pagina voor elke user, met een gemakkelijke interface om in een oogwenk te zien of er nog nieuwe reacties zijn. 
+\end{frame}
+
+
+
+\section{Conclusie}
+
+\begin{frame}
+\frametitle{Samenvattend}
+\begin{columns}
+\column{.5\textwidth}
+\begin{block}{makkelijk en snel}
+admin en personal panel \\ 
+\hbox{\strut} %CZ: nepregel ingevoegd om uit te lijnen, 
+%een strut is een onzichtbaar karakter van de groote van het huidige font
+\end{block}
+\column{.5\textwidth}
+\begin{block}{innovatief}
+De like button zorgt voor de meest relevante antwoorden 
+\end{block}
+\end{columns}
+\end{frame}
+
+\section{Goedkoop}
+
+\begin{frame}
+\frametitle{Goedkoop}
+Voor maar 99 euro per maand kan uw bedrijf ook een bruisend forum hebben. \\
+Volledig verzorgt en onderhouden door Patriciaat inc. 
+\end{frame}
+
+%% eind niet met "Vragen" (dat doet de voorzitter),
+%% maar met "Bedankt!" of iets dergelijks
+\begin{frame}
+\frametitle{}
+Bedankt voor uw aandacht!
+\end{frame}
+
+
+%% beter ook geen bibliografie in zo'n korte presentatie
+%\begin{thebibliography}{10}
+%\bibitem{onsartikel}[Goldbach, 1742]
+%Christian Goldbach.
+%\newblock A problem we should try to solve before the ISPN '43 deadline,
+%\newblock \emph{Letter to Leonhard Euler}, 1742.
+%\end{thebibliography}
+
+\end{document}
