@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -68,14 +67,21 @@
 			</div>
 			
 			<div class="center">
-			
+				<?php
+					include 'dblogin.php';
+					
+					//TODO iets doen zodat de juiste user wordt geselecteerd
+					$result = mysql_query("SELECT * FROM users") or die(mysql_error());  
+					
+					$row = mysql_fetch_array($result);
+				?>
 			
 			<div class="picture">
-					<img src="plus.jpg" alt="emperor" width="190" height="200"/>
+				<img src="plus.jpg" alt="emperor" width="200" height="200"/>
 				</div>
 				
 				<div class="overmij">
-					hier komt alles over de persoon te staan
+					<?php echo $row['personal info'];?>
 				</div>
 				
 					<div class="lastposts">
@@ -84,15 +90,36 @@
 				
 				
 				<div class="info">
-					consul henk 
+					<?php echo "Username: ".$row['username'];?>
 					<br />
-					man
+					<?php
+						echo "Sex:";
+						switch ($row['sex'])
+						{
+							case 0:
+								echo "Male";
+								break;
+							case 1:
+								echo "Female";
+								break;
+							case 2:
+								echo "Yes please";
+								break;
+						}
+					?>
 					<br />
-					geboren: 25-2-700
+					<?php 
+						echo "Name: ".$row['first name'];
+						echo " ".$row['last name'];
+					?>
 					<br />
-					email:		info@patriciaat.com
+					<?php 
+						echo "E-mail: ".$row['email'];
+					?>
 					<br />
-					favo browser: sea monkey
+					<?php 
+						echo "Favo browser: ".$row['favo browser'];
+					?>
 				</div>
 				
 			
@@ -134,7 +161,8 @@
 				</div>
 				
 			
-			
+					<?php mysql_close($dbhandle);
+				?>
 			</div>
 			
 

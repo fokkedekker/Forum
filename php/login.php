@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -67,40 +68,24 @@
 			</div>
 			
 			<div class="center">
-				Thank you for your submission, your post is waiting for approval.
-				<br />
-				<hr />
-				<?php 
-					include 'dblogin.php';
-					//TODO iets doen zodat als pagina geladen zonder de maketopic.php
-					//en dan hij dan niets in de db zet.
-					//Variabelen uit maketopic.php form.
-					$postTitle = $_POST["topicname"];
-					$postContent = $_POST["content"];
-					
-					// Pompt titel van post.
-					echo "<br />Title: ".$postTitle."<br />";
-					
-					// Berekent nieuwe post id op basis van max in tabel.
-					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
-					$row = mysql_fetch_array($getPost_id);
-					$newPost_id = $row['post_id'] + 1;
-					//Prompt postID.
-					echo "PostID: ".$newPost_id."<br />";
-					
-					//Prompt content
-					echo "<br />Content: ".$postContent."<br />";
-					
-					//TODO: catagorie_id ophalen en posten
-					//TODO: user_id ophalen en posten
-					//TODO: iets tegen sql injecties
-					
-					mysql_query("INSERT INTO `webdb1236`.`topics`
-					(posttitle, postcontent, post_id, catagorie_id, user_id, starttime)
-					VALUES ('$postTitle', '$postContent', '$newPost_id', '1', '1', CURRENT_TIMESTAMP)") or die (mysql_error());
-					
-					mysql_close($dbhandle);
-				?>			
+			
+			
+			<div class="login">
+					<form action="checklogin.php" method="POST">
+						Username: <input type="text" name="username" />
+						<br />
+						Password: <input type="password" name="password />
+						<br />
+						<input type="checkbox" name="remember" value="Password" /> Remember me
+						<button type="button">Submit</button>
+						<br />
+						<a href="registreerpagina">Registreer</a>
+					</form>
+				</div>
+			
+
+			
+			
 			</div>
 			
 
@@ -111,4 +96,9 @@
 		</div>
 
 	</body>
+
+
+
+
+
 </html>

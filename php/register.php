@@ -48,61 +48,47 @@
 			</div>
 
 			<div class="center">
-
-			<div class="tekst">
-			First name:
-			<br />
-			Last name:
-			<br />
-			<br />
-			<br />
-			Email:
-			<br />
-			Repeat email:
-			<br />
-			<br />
-			Password:
-			<br />
-			Repeat Password
-			<br />
-			<br />
-			Geboorte datum:
-			<br />
-			<br />
-			Geslacht:
-			<br />
-			<br />
-			<br />
-			Over jouw:
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			Favo browser:
-			</div>
+	
 
 				<div class="register">
 				
+				<form action="insert.php" method="post">
 				
-					<form >
-						<input type="text" name="firstname" />
-						<br />
-						<input type="text" name="lastname" />
-						<br />
-						<br />
-						<input type="text" name="email" />
-						<br />
-						<input type="text" name="repeatemail" />
-						<br />
-						<br />
-						<input type="password" name="pwd" />
-						<br />
-						<input type="password" name="repeatpwd" />
-						<br />
-						<br />
-						<select name="day">
+				<table border="0px">
+					
+					<tr>
+					<td> First name</td>
+					<td> <input type="text" name="firstname" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Last name</td>
+					<td> <input type="text" name="lastname" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Email </td>
+					<td> <input type="text" name="email" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Repeat Email </td>
+					<td> <input type="text" name="repeatemail" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Password </td>
+					<td> <input type="password" name="pwd" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Repeat Password </td>
+					<td> <input type="password" name="repeatpwd" /> </td>
+					</tr>
+					
+					<tr>
+					<td> Date of Birth</td>
+					<td> 						<select name="day">
   							<option>1</option>
   							<option>2</option>
   							<option>3</option>
@@ -135,7 +121,7 @@
   							<option>30</option>
   							<option>31</option>
 						</select>
-
+						
 						<select>
 							<option>Januari</option>
 							<option>Februari</option>
@@ -150,7 +136,8 @@
 							<option>November</option>
 							<option>December</option>
 						</select>
-
+						
+						
 						<select>
 							<option>1901</option>
 							<option>1902</option>
@@ -265,84 +252,25 @@
 							<option>2011</option>
 							<option>2012</option>
 						</select>
-						<br />
-						<br />
-
-						<select>
-  							<option>Male</option>
-							<option>Female</option>
-						</select>
-						<br />
-						<br />
-						<input type="text" size="30" maxlength="30" name="overjouw" style="height:100px;"/>
-						<br />
-						<br />
-						<input type="text" name="browser"/>
+						
+						</td>
+					</tr>
+					
+					<tr>
+					<td> About me</td>
+					<td> <input type="text" size="30" maxlength="30" name="overjouw" style="height:100px;"/> </td>
+					</tr>
+					
+					<tr>
+					<td> Favo Browser </td>
+					<td> <input type="text" name="browser"/> </td>
+					</tr>
+				
+					</table>
+					
 						<input type="submit" name="submit" />
-						
-						<?php
-							$con = mysql_connect("localhost","root","root");
-							if (!$con)
- 							 {
-  								die('Could not connect: ' . mysql_error());
- 							 }
-
-							mysql_select_db("webdb1236", $con);
-							
-									// Berekent nieuwe post id op basis van max in tabel.
-									$getPost_id = mysql_query("SELECT MAX(id) as id FROM users") or die (mysql_error());
-									$row = mysql_fetch_array($getPost_id);
-									$newPost_id = $row['id'] + 1;
-									//Prompt postID.
-									echo "PostID: ".$newPost_id."<br />";
-							
-							
-							$firstname = $_post[firstname];
-							$lastname = $_post[lastname];
-							$email = $_post[email];
-							$browser = $_post[browser];
-							$overjouw = $_post[overjouw];
-							
-							echo $firstname;
-							
-							?>
-							
-							
-							<?php
-							
-								
-							
-							
-							
-							
-							
-							
-							
-								if (isset($_REQUEST['submit']))
-								{
-								$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, id)
-									VALUES
-									('$firstname', '$lastname' ,'$email' ,'$browser' ,'$overjouw','$newPost_id')";
-
-									if (!mysql_query($sql,$con))
- 									 {
-  										die('Error: ' . mysql_error());
- 									 }
-									echo "1 record added";
-									echo '$_post[day]';
-								
-								}
-							?>
-							
-							
-							<?php
-							
-							mysql_close($con)
-							?>
-						
+		
 					</form>
-					
-					
 				</div>
 			</div>
 			<div class="footer">
@@ -352,9 +280,5 @@
 		</div>
 
 	</body>
-
-
-
-
 
 </html>
