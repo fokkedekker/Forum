@@ -363,5 +363,296 @@ div.reactie
 }
 
 
+div.first
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-bottom-width:1px;
+	border-color:black;
+	width:170.9px;
+	float:left;
+	border-right-width:0px;
+	padding:3px;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+
+
+}
+
+div.fourth
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:1px;
+	float: left;
+	border-left-width:0px;
+	border-right-width:0px;
+	padding:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+
+}
+
+div.fifth
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:1px;
+	
+	float: left;
+	border-left-width:0px;
+	border-right-width:0px;
+	padding:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+
+}
+
+div.sixth
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 150.7px;
+	border-bottom-width:1px;
+	float: left;
+	border-left-width:0px;
+	border-right-width:3px;
+	padding:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+
+}
+
+
+
+div.hunderd
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 170.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:3px;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+}
+
+div.seventh
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+}
+
+
+div.eight
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+
+}
+
+
+div.ninth
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 150.7px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	border-left-width:0px;
+	padding:3px;
+	border-right-width:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+	
+}
+
+
+
+
+div.dertig
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 170.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:3px;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+
+
+}
+
+
+div.tien
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+}
+
+
+div.elf
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+
+}
+
+
+div.twalf
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 150.7px;
+	border-bottom-width:2px;
+	border-top-width:0px;
+	float: left;
+	border-left-width:0px;
+	padding:3px;
+	border-right-width:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+	
+}
+
+
+
+div.fijftig
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 170.9px;
+	border-bottom-width:3px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:3px;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+}
+
+
+div.dertien
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:3px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+}
+
+
+div.viertien
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 82.9px;
+	border-bottom-width:3px;
+	border-top-width:0px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+
+}
+
+
+div.vijftien
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 150.7px;
+	border-bottom-width:3px;
+	border-top-width:0px;
+	float: left;
+	border-left-width:0px;
+	padding:3px;
+	border-right-width:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:240px;
+	
+}
 
 
