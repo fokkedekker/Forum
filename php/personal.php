@@ -68,10 +68,11 @@
 			
 			<div class="center">
 				<?php
+				$id = 24;
 					include 'dblogin.php';
 					
 					//TODO iets doen zodat de juiste user wordt geselecteerd
-					$result = mysql_query("SELECT * FROM users") or die(mysql_error());  
+					$result = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
 					
 					$row = mysql_fetch_array($result);
 				?>
@@ -81,36 +82,33 @@
 				</div>
 				
 				<div class="overmij">
-					<?php echo $row['personal info'];?>
+					<?php echo $row['personal_info'];?>
 				</div>
 				
 					<div class="lastposts">
-				Dit zijn de laatste posts van de user
+				<?php
+				$result2 = mysql_query("SELECT * FROM topics where user_id = $id limit 5") or die(mysql_error());  
+					
+					$row2 = mysql_fetch_array($result2);
+					
+					echo $row2['posttitle']; 
+					
+					
+				
+				?>
 				</div>
 				
 				
 				<div class="info">
-					<?php echo "Username: ".$row['username'];?>
+					<?php echo "Username: ".$row['user_name'];?>
 					<br />
 					<?php
-						echo "Sex:";
-						switch ($row['sex'])
-						{
-							case 0:
-								echo "Male";
-								break;
-							case 1:
-								echo "Female";
-								break;
-							case 2:
-								echo "Yes please";
-								break;
-						}
+						echo "Sex:".$row['sex'];
 					?>
 					<br />
 					<?php 
-						echo "Name: ".$row['first name'];
-						echo " ".$row['last name'];
+						echo "Name: ".$row['first_name'];
+						echo " ".$row['last_name'];
 					?>
 					<br />
 					<?php 
@@ -118,7 +116,7 @@
 					?>
 					<br />
 					<?php 
-						echo "Favo browser: ".$row['favo browser'];
+						echo "Favo browser: ".$row['favo_browser'];
 					?>
 				</div>
 				
@@ -130,34 +128,16 @@
 				
 				
 				<div class="startedtopics">
+				<?php
+				
+					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id ORDER BY starttime LIMIT 5") or die(mysql_error());  
 					
-					hier komen de gestarte topics van de persoon te staan deze lijst groeit 
-					automatisch mee naar mate het er meer worden
-					<br />
-					<br />
-					uisque viverra tempor est, id mollis risus blandit a. Morbi diam erat, dapibus
-					vitae vestibulum vitae, cursus sit amet lacus. Vestibulum ante ipsum primis in 
-					faucibus orci luctus et ultrices posuere cubilia Curae; Mauris lacinia ligula id 
-					<br />
-					<br />
-					uisque viverra tempor est, id mollis risus blandit a. Morbi diam erat, dapibus
-					vitae vestibulum vitae, cursus sit amet lacus. Vestibulum ante ipsum primis in 
-					faucibus orci luctus et ultrices posuere cubilia Curae; Mauris lacinia ligula id 
-					<br />
-					<br />
-					uisque viverra tempor est, id mollis risus blandit a. Morbi diam erat, dapibus
-					vitae vestibulum vitae, cursus sit amet lacus. Vestibulum ante ipsum primis in 
-					faucibus orci luctus et ultrices posuere cubilia Curae; Mauris lacinia ligula id 
-					<br />
-					<br />
-					uisque viverra tempor est, id mollis risus blandit a. Morbi diam erat, dapibus
-					vitae vestibulum vitae, cursus sit amet lacus. Vestibulum ante ipsum primis in 
-					faucibus orci luctus et ultrices posuere cubilia Curae; Mauris lacinia ligula id 
-					<br />
-					<br />
-					uisque viverra tempor est, id mollis risus blandit a. Morbi diam erat, dapibus
-					vitae vestibulum vitae, cursus sit amet lacus. Vestibulum ante ipsum primis in 
-					faucibus orci luctus et ultrices posuere cubilia Curae; Mauris lacinia ligula id 
+					$row3 = mysql_fetch_array($result3);
+					echo $row3['posttitle'];
+					
+					
+					?>
+					
 				</div>
 				
 			
