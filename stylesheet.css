@@ -2,8 +2,7 @@
 html, body
 {
 	height: 100%;
-);
-
+	background: url(gradient2.jpg);
 }
 
 
@@ -27,18 +26,16 @@ div.header
 	text-align: center;
 	border-radius: 12px;
 	box-shadow:3px 5px 10px #333;
-	background: #D3D3D3;
-);
+	background: #454545;
 }
 
 div.menu
 {
-
 	margin-top:-10px;
 	height:46px;
 	background: #D3D3D3;
+	border-radius: 12px;
 	box-shadow:3px 5px 10px #333;
-
 }
 
 div.menuknop
@@ -81,7 +78,6 @@ div.footer
 	color:black;
 	margin-top:-10px;
 	box-shadow:3px 5px 10px #333;
-
 }
 
 /*######################################################*/
@@ -153,9 +149,6 @@ div.overmij
 	height: 190px;
 	border-radius: 6px;
 	margin: 0 0 10px 200px;
-
-
-
 }
 
 div.info
@@ -169,7 +162,6 @@ div.info
 	border-radius: 6px;
 	margin-right:10px;
 	margin-bottom:10px;
-
 }
 
 div.startedtopics
@@ -208,7 +200,6 @@ div.over
 
 div.lastposts
 {
-
 	border-style:solid;
 	border-color:#003366;
 	padding:5px;
@@ -218,7 +209,6 @@ div.lastposts
 	height:353px;
 	float: right;
 	margin-right:6px;
-	
 }
 
 div.title
@@ -257,37 +247,25 @@ div.faq
 
 div.tabel
 {
-width: 500px;
+width: auto;
 }
 
-
-
-
-div.number
+div.topic_id
 {
 padding: 2px;
-width: 5%;
+width: 30px;
+height: 25px;
 float:left; 
 border-style: solid;
 border-width: 2px;
 border-color: #003366;
 }
 
-div.status
+div.topic_title
 {
 padding: 2px;
-width: 14%;
-float:left; 
-border-style: solid;
-border-width: 2px;
-border-left:1px;
-border-color: #003366;
-}
-
-div.id
-{
-padding: 2px;
-width: 12%;
+width: 225px;
+height: 25px;
 float:left;
 border-style: solid;
 border-width: 2px;
@@ -295,9 +273,22 @@ border-left:1px;
 border-color: #003366;
 }
 
-div.name
+div.topic_starttime
 {
-width: 22%;
+padding: 2px;
+width: 150px;
+height: 25px;
+float:left;
+border-style: solid;
+border-width: 2px;
+border-left: 1px;
+border-color: #003366;
+}
+
+div.topic_action
+{
+width: 80px;
+height: 25px;
 padding: 2px;
 float:left; 
 border-style: solid;
@@ -306,25 +297,12 @@ border-left:1px;
 border-color: #003366;
 }
 
-div.date
+div.catagorie_maker
 {
-width: 17%;
+width: 503px;
 padding: 2px;
-float:left; 
 border-style: solid;
 border-width: 2px;
-border-left:1px;
-border-color: #003366;
-}
-
-div.actions
-{
-width: 22%;
-padding: 2px;
-float:left; 
-border-style: solid;
-border-width: 2px;
-border-left:1px;
 border-color: #003366;
 }
 
@@ -362,297 +340,40 @@ div.reactie
 	margin-left:70px;
 }
 
-
-div.first
-{ 	
-	border-style:solid;
-	border-width:3px;
-	border-bottom-width:1px;
-	border-color:black;
-	width:170.9px;
+div.catPostTitle
+{
+	padding: 2px;
+	width: 250px;
+	height: 25px;
 	float:left;
-	border-right-width:0px;
-	padding:3px;
-	box-shadow:3px 5px 10px #333;
-	background: #D3D3D3;
-
-
+	border-style: solid;
+	border-width: 2px;
+	border-color: #003366;
 }
-
-div.fourth
+div.catPostTime
 {
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:1px;
-	float: left;
-	border-left-width:0px;
-	border-right-width:0px;
-	padding:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #333;
-	background: #D3D3D3;
-
+	padding: 2px;
+	width: 150px;
+	height: 25px;
+	float:left;
+	border-style: solid;
+	border-width: 2px;
+	border-left: 1px;
+	border-color: #003366;
 }
-
-div.fifth
+div.catPostUser
 {
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:1px;
-	
-	float: left;
-	border-left-width:0px;
-	border-right-width:0px;
-	padding:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #333;
-	background: #D3D3D3;
-
+	padding: 2px;
+	width: 96px;
+	height: 25px;
+	float:left; 
+	border-style: solid;
+	border-width: 2px;
+	border-color: #003366;
 }
 
-div.sixth
+div.catPostOver
 {
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 150.7px;
-	border-bottom-width:1px;
+	width: 100%;
 	float: left;
-	border-left-width:0px;
-	border-right-width:3px;
-	padding:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #333;
-	background: #D3D3D3;
-
 }
-
-
-
-div.hunderd
-{ 	
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 170.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:3px;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-}
-
-div.seventh
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-}
-
-
-div.eight
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-
-}
-
-
-div.ninth
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 150.7px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	border-left-width:0px;
-	padding:3px;
-	border-right-width:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-	
-}
-
-
-
-
-div.dertig
-{ 	
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 170.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:3px;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-
-
-}
-
-
-div.tien
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-}
-
-
-div.elf
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-
-}
-
-
-div.twalf
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 150.7px;
-	border-bottom-width:2px;
-	border-top-width:0px;
-	float: left;
-	border-left-width:0px;
-	padding:3px;
-	border-right-width:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-	
-}
-
-
-
-div.fijftig
-{ 	
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 170.9px;
-	border-bottom-width:3px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:3px;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-}
-
-
-div.dertien
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:3px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-}
-
-
-div.viertien
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 82.9px;
-	border-bottom-width:3px;
-	border-top-width:0px;
-	float: left;
-	padding:3px;
-	border-right-width:0px;
-	border-left-width:0px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-
-}
-
-
-div.vijftien
-{
-	border-style:solid;
-	border-width:3px;
-	border-color:black;
-	width: 150.7px;
-	border-bottom-width:3px;
-	border-top-width:0px;
-	float: left;
-	border-left-width:0px;
-	padding:3px;
-	border-right-width:3px;
-	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
-	height:240px;
-	
-}
-
-

@@ -13,39 +13,13 @@
 
 	<body>
 		<div class="container">
-
-
-
-
 			<div class="header">
 			<A HREF="home.html">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">
 
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
+					<?php include 'menu.php' ?>
 
 			</div>
 			
@@ -77,16 +51,27 @@
 					$GETusername = strip_tags($_POST["name"]);
 					$GETpassword = strip_tags($_POST["pass"]);
 					
-					//Kijken of de combinatie van username en password in de database te vinden is
-					$login = mysql_query("SELECT username FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
+					// Kijken of de combinatie van username en password in de database te vinden is
+					$login = mysql_query("SELECT username, id FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
 					$login = mysql_fetch_array($login);
 					
+					// TODO iets doen als login mislukt
+					
+					// Start sessie.
+					session_start();
+					
+					// Geef waarde aan variabele 'username' is sessie.
+					$_SESSION['username'] = $GETusername;
+					// Geef waarde aan variabele 'userID' is sessie.
+					$_SESSION['userID'] = $login['id'];
+					
 					//Prompt gebruiker met login bericht.
-					echo "Thank you ".$login['username']." for logging in!";
+					echo "Thank you ".$_SESSION['username']." for logging in!";
 					
 					// Database connectie afsluiten.
 					mysql_close($dbhandle);
 				?>
+			</div>
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
@@ -94,9 +79,5 @@
 		</div>
 
 	</body>
-
-
-
-
 
 </html>
