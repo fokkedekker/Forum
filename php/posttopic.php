@@ -90,7 +90,7 @@
 					//TODO: catagorie_id ophalen
 					//$catagory = $_SESSION['category'];
 					// Verkrijgt catagorie_id.
-					$catagory = 1;
+					$catagory = 2;
 					
 					// Laadt catagorie approval.
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
@@ -105,16 +105,18 @@
 					else
 						echo "Your post has been approved.<br />";
 					
+					// Berekent nieuwe post id op basis van max in tabel.
+					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
+					$row = mysql_fetch_array($getPost_id);
+					$newPost_id = $row['post_id'] + 1;
+					
+					echo "Click <a href= draadje.php?topicid=".$newPost_id."> here </a> to visit your thread.";
+					
 					// Prompt gebruiker.
 					echo "<hr />";
 					
 					// Pompt titel van post.
 					echo "<br />Title: ".$postTitle."<br />";
-					
-					// Berekent nieuwe post id op basis van max in tabel.
-					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
-					$row = mysql_fetch_array($getPost_id);
-					$newPost_id = $row['post_id'] + 1;
 					
 					//Prompt catagorie naam.
 					$catagoryName = mysql_query("SELECT name FROM catagories WHERE id = '$catagory'") or die (mysql_error());

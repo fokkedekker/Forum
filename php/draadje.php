@@ -71,9 +71,9 @@
 					include 'dblogin.php';
 					
 					//TODO juiste draad weergeven
-					//$getPostID = $_GET['postid'];
-					//$result = mysql_query("SELECT * FROM topics where approved = '1' and post_id = '$getPostID' ") or die(mysql_error()); 
-					$result = mysql_query("SELECT * FROM topics where approved = '1'") or die(mysql_error());  
+					$getPostID = $_GET['topicid'];
+					
+					$result = mysql_query("SELECT * FROM topics WHERE approved = '0' and post_id = '$getPostID'") or die(mysql_error());  
 					
 					while($row = mysql_fetch_array($result))
 					{
@@ -83,8 +83,7 @@
 						echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						echo "<div class=button>
-							  <button type='button'>Reageer</button>
-							  <button type='button'>Report</button>
+							  <button type='button'>Reply</button>
 							  </div>";
 						echo "<br /><hr />".$row['postcontent'];
 						echo "</div>";
