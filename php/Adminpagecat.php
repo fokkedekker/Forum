@@ -64,42 +64,17 @@
 
 			<div class="center">
 
-<?php
-	include 'dblogin.php';
-
-	$result = mysql_query("SELECT * FROM topics") or die (mysql_error());
-		
-	while($row = mysql_fetch_array($result))
-	{
-	echo "<div class='topic_id'>";
-	echo $row['id'];
-	echo "</div>";
-	echo "<div class='topic_title'>";
-	echo $row['posttitle'];
-	echo "</div>";
-	echo "<div class='topic_starttime'>";
-	echo $row['starttime'];
-	echo "</div>";
-	
-	echo "<div class='topic_action'>";
-	//if ($row['approved'] ==0)
-		//echo "pending";
-	echo "<select name='status' method='post'>
-	<option>pending</option>
-	<option>approve</option>
-	<option>delete</option>
-	</select>";
-	echo "</div>";
-	}
-	
-	//$catagorie_name = strip_tags($_POST['name']);
-	//$catagorie_approval = strip_tags($_POST['approval']);
-	
-	//$result2 = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$approval')") or die (mysql_error());
-mysql_close($dbhandle)?>
+<div class="catagorie_maker">
+<form action="xxxxxx.php" method="POST">
+Catagorie: <input type="text" name="name"/>
+<br />
+Approval: <input type="text" name="approval"/>
+<br />
+<input type="submit" value="Submit"/>
 
 
 
+</div>
 
 
 		</div>
