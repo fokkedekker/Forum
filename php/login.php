@@ -72,12 +72,11 @@
 			
 			<div class="login">
 					<form action="checklogin.php" method="POST">
-						Username: <input type="text" name="username" />
+						Username: <input type="text" name="name" />
 						<br />
-						Password: <input type="password" name="password />
+						Password: <input type="password" name="pass" />
 						<br />
-						<input type="checkbox" name="remember" value="Password" /> Remember me
-						<button type="button">Submit</button>
+						<input type="submit" value="Submit"/>
 						<br />
 						<a href="registreerpagina">Registreer</a>
 					</form>

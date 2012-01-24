@@ -69,10 +69,22 @@
 			
 			<div class="center">
 				<?php 
+					// Connectie maken met database, geladen vanuit dblogin.php.
 					include 'dblogin.php';
 					
-					$row = mysql_fetch_array($result);
+					// Variabelen uit login.php form verkrijgen.
+					// Stript van tags met behulp van strip_tags();
+					$GETusername = strip_tags($_POST["name"]);
+					$GETpassword = strip_tags($_POST["pass"]);
 					
+					//Kijken of de combinatie van username en password in de database te vinden is
+					$login = mysql_query("SELECT username FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
+					$login = mysql_fetch_array($login);
+					
+					//Prompt gebruiker met login bericht.
+					echo "Thank you ".$login['username']." for logging in!";
+					
+					// Database connectie afsluiten.
 					mysql_close($dbhandle);
 				?>
 			<div class="footer">
