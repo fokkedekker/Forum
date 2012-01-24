@@ -9,38 +9,42 @@ mysql_select_db("webdb1236", $con);
 
 
 
-$str1 ='$_POST[email]';
-$str2 = $_post[repeatemail];
+$str1 =strip_tags($_POST["email"]);
+$str2 =strip_tags($_POST["repeatemail"]);
+$day =strip_tags($_POST["day"]);
+$month =strip_tags($_POST["month"]);
+$year =strip_tags($_POST["year"]);
+$date =($day.$month.$year); 
+$username = strip_tags($_POST["username"]);
+$firstname = strip_tags($_POST["firstname"]);
+$lastname = strip_tags($_POST["lastname"]);
+$browser = strip_tags($_POST["browser"]);
+$personal = strip_tags($_POST["overjouw"]);
 
-$stringcompare = strcmp ($str1 ,$str2 );
-
-echo $stringcompare;
-echo $str1;
-echo $str2;
-echo $_post["email"];
 
 
 
-
-if($stringcompare == 9)
+if($str1 == $str2 && $str3 == $str4)
 {
 
-$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth)
+
+$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, user_name)
 VALUES
-('$_POST[firstname]', '$_POST[lastname]' ,'$_POST[email]' ,'$_POST[browser]' ,'$_POST[overjouw]','$_post[day]')";
+('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username')";
 
 if (!mysql_query($sql,$con))
   {
   die('Error: ' . mysql_error());
   }
 echo "1 record added";
-echo '$_post[day]';
+
 }
 
 
-else if($stringcompare != 0)
+else if($str1 != $str2)
 {
 	echo "emails zijn niet gelijk";
+	
 }
 
 

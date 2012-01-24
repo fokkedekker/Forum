@@ -57,6 +57,11 @@
 				<table border="0px">
 					
 					<tr>
+					<td> Username</td>
+					<td> <input type="text" name="username" /> </td>
+					</tr>
+					
+					<tr>
 					<td> First name</td>
 					<td> <input type="text" name="firstname" /> </td>
 					</tr>
@@ -77,27 +82,18 @@
 					</tr>
 					
 					<tr>
-					<td> Password </td>
-					<td> <input type="password" name="pwd" /> </td>
-					</tr>
-					
-					<tr>
-					<td> Repeat Password </td>
-					<td> <input type="password" name="repeatpwd" /> </td>
-					</tr>
-					
-					<tr>
 					<td> Date of Birth</td>
-					<td> 						<select name="day">
-  							<option>1</option>
-  							<option>2</option>
-  							<option>3</option>
-  							<option>4</option>
-  							<option>5</option>
-  							<option>6</option>
-  							<option>7</option>
-  							<option>8</option>
-  							<option>9</option>
+					<td> 	
+					<select name="day" method="post">
+  							<option>01</option>
+  							<option>02</option>
+  							<option>03</option>
+  							<option>04</option>
+  							<option>05</option>
+  							<option>06</option>
+  							<option>07</option>
+  							<option>08</option>
+  							<option>09</option>
   							<option>10</option>
   							<option>11</option>
   							<option>12</option>
@@ -121,24 +117,24 @@
   							<option>30</option>
   							<option>31</option>
 						</select>
-						
-						<select>
-							<option>Januari</option>
-							<option>Februari</option>
-							<option>Maart</option>
-							<option>April</option>
-							<option>Mei</option>
-							<option>Juni</option>
-							<option>Juli</option>
-							<option>Augustus</option>
-							<option>September</option>
-							<option>Oktober</option>
-							<option>November</option>
-							<option>December</option>
+						 
+						<select name="month" method="post">
+							<option>01</option>
+							<option>02</option>
+							<option>03</option>
+							<option>04</option>
+							<option>05</option>
+							<option>06</option>
+							<option>07</option>
+							<option>08</option>
+							<option>09</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
 						</select>
 						
 						
-						<select>
+						<select name="year" method="post">
 							<option>1901</option>
 							<option>1902</option>
 							<option>1903</option>
