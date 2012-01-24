@@ -67,16 +67,37 @@
 			</div>
 			
 			<div class="center">
-				Thank you for your submission, your post is waiting for approval.
+				Thank you for your submission.
 				<br />
 				<hr />
 				<?php 
+					//Laadt database login.
 					include 'dblogin.php';
 					//TODO iets doen zodat als pagina geladen zonder de maketopic.php
 					//en dan hij dan niets in de db zet.
+					
 					//Variabelen uit maketopic.php form.
-					$postTitle = $_POST["topicname"];
-					$postContent = $_POST["content"];
+					//Stript van tags met behulp van strip_tags();
+					$postTitle = strip_tags($_POST["topicname"]);
+					$postContent = strip_tags($_POST["content"]);
+					
+					//TODO: catagorie_id ophalen
+					//Verkrijgt catagorie_id.
+					$catagory = 1;
+					
+					//Laadt catagorie approval.
+					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
+					$approval = mysql_fetch_array($approval);
+					
+					//Prompt approval.
+					if ($approval['approval'] == 0)
+						echo "Your post is pending approval.<br />";
+					else
+						echo "Your post has been approved.<br />";
+					
+					//TODO $userID ophalen
+					//$userID = iets met sessions
+					$userID = 1;
 					
 					// Pompt titel van post.
 					echo "<br />Title: ".$postTitle."<br />";
@@ -85,20 +106,25 @@
 					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
 					$row = mysql_fetch_array($getPost_id);
 					$newPost_id = $row['post_id'] + 1;
+					
+					//Prompt catagorie naam.
+					$catagoryName = mysql_query("SELECT name FROM catagories where id = '$catagory'") or die (mysql_error());
+					$catagoryName = mysql_fetch_array($catagoryName);
+					$catagoryName = $catagoryName['name'];
+					echo "Catagory: ".$catagoryName."<br />";
+					
 					//Prompt postID.
 					echo "PostID: ".$newPost_id."<br />";
 					
 					//Prompt content
 					echo "<br />Content: ".$postContent."<br />";
 					
-					//TODO: catagorie_id ophalen en posten
-					//TODO: user_id ophalen en posten
-					//TODO: iets tegen sql injecties
-					
+					//Mysql query.
 					mysql_query("INSERT INTO `webdb1236`.`topics`
-					(posttitle, postcontent, post_id, catagorie_id, user_id, starttime)
-					VALUES ('$postTitle', '$postContent', '$newPost_id', '1', '1', CURRENT_TIMESTAMP)") or die (mysql_error());
+					(approved, posttitle, postcontent, post_id, catagorie_id, user_id, starttime)
+					VALUES ('$approval', '$postTitle', '$postContent', '$newPost_id', '$category', '$userID', CURRENT_TIMESTAMP)") or die (mysql_error());
 					
+					//Connectie met databse afsluiten.
 					mysql_close($dbhandle);
 				?>			
 			</div>
