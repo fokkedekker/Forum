@@ -67,9 +67,6 @@
 			</div>
 			
 			<div class="center">
-				Thank you for your submission.
-				<br />
-				<hr />
 				<?php 
 					// Laadt database login.
 					include 'dblogin.php';
@@ -89,12 +86,18 @@
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
 					$approval = mysql_fetch_array($approval);
 					
+					//Prompt gebruiker.
+					echo "Thank you for your submission. <br />";
+					
 					// Prompt approval.
 					if ($approval['approval'] == 0)
 						echo "Your post is pending approval.<br />";
 					else
 						echo "Your post has been approved.<br />";
-						
+					
+					// Prompt gebruiker.
+					echo "<hr />";
+					
 					// Pompt titel van post.
 					echo "<br />Title: ".$postTitle."<br />";
 					
