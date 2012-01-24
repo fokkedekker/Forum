@@ -19,29 +19,7 @@
 
 			<div class="menu">
 			
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
+				<?php include 'menu.php' ?>
 
 			</div>
 			
@@ -83,7 +61,7 @@
 					// Print de tabel met gegevens.
 					echo "<div class='catPostOver'>";
 					echo "<hr />";
-					echo "<h1 align = 'center'>".$row['name']."</h1>";
+					echo "<h1 align = 'center'><a href='category.php?cat=".$row['id']."'>".$row['name']."</h1>";
 					echo "<hr />";
 					while ($posts = mysql_fetch_array($GETposts))
 					{
@@ -95,7 +73,7 @@
 							$dots = "...";
 							
 						// Prompt post titel.
-						echo "<div class='catPostTitle'>".substr($posts['posttitle'], 0, 31).$dots."</div>";
+						echo "<div class='catPostTitle'><a href='draadje.php?topicid=".$posts['post_id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
 						
 						// Vekrijg naam van poster post.
 						$userPoster = $posts['user_id'];
