@@ -13,10 +13,6 @@
 
 	<body>
 		<div class="container">
-
-
-
-
 			<div class="header">
 			<A HREF="home.html">Het Patriciaat Forum</A>
 			</div>
