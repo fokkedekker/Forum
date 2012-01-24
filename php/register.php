@@ -253,6 +253,16 @@
 					</tr>
 					
 					<tr>
+					<td> Sex</td>
+					<td> <select name="sex" method="post">
+							<option>Male</option>
+							<option>Female</option>
+							<option>Yes Please</option>
+						</select> </td>
+					</tr>
+					
+					
+					<tr>
 					<td> About me</td>
 					<td> <input type="text" size="30" maxlength="30" name="overjouw" style="height:100px;"/> </td>
 					</tr>
