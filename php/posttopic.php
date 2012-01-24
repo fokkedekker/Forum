@@ -71,34 +71,30 @@
 				<br />
 				<hr />
 				<?php 
-					//Laadt database login.
+					// Laadt database login.
 					include 'dblogin.php';
-					//TODO iets doen zodat als pagina geladen zonder de maketopic.php
-					//en dan hij dan niets in de db zet.
+					// TODO iets doen zodat als pagina geladen zonder de maketopic.php
+					// en dan hij dan niets in de db zet.
 					
-					//Variabelen uit maketopic.php form.
-					//Stript van tags met behulp van strip_tags();
+					// Variabelen uit maketopic.php form.
+					// Stript van tags met behulp van strip_tags();
 					$postTitle = strip_tags($_POST["topicname"]);
 					$postContent = strip_tags($_POST["content"]);
 					
 					//TODO: catagorie_id ophalen
-					//Verkrijgt catagorie_id.
+					// Verkrijgt catagorie_id.
 					$catagory = 1;
 					
-					//Laadt catagorie approval.
+					// Laadt catagorie approval.
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
 					$approval = mysql_fetch_array($approval);
 					
-					//Prompt approval.
+					// Prompt approval.
 					if ($approval['approval'] == 0)
 						echo "Your post is pending approval.<br />";
 					else
 						echo "Your post has been approved.<br />";
-					
-					//TODO $userID ophalen
-					//$userID = iets met sessions
-					$userID = 1;
-					
+						
 					// Pompt titel van post.
 					echo "<br />Title: ".$postTitle."<br />";
 					
@@ -108,23 +104,50 @@
 					$newPost_id = $row['post_id'] + 1;
 					
 					//Prompt catagorie naam.
-					$catagoryName = mysql_query("SELECT name FROM catagories where id = '$catagory'") or die (mysql_error());
+					$catagoryName = mysql_query("SELECT name FROM catagories WHERE id = '$catagory'") or die (mysql_error());
 					$catagoryName = mysql_fetch_array($catagoryName);
 					$catagoryName = $catagoryName['name'];
 					echo "Catagory: ".$catagoryName."<br />";
 					
-					//Prompt postID.
+					// Start sessie.
+					session_start();
+					
+					// Haal gebruikersnaam uit sessie.
+					$username = $_SESSION['username'];
+					
+					// Haal user ID uit sessie.
+					$userID = $_SESSION['userID'];
+					
+					// Prompt userid.
+					echo "UserID: ".$userID."<br />";
+					
+					// Prompt username.
+					echo "Username: ".$username."<br />";
+					
+					// Prompt postID.
 					echo "PostID: ".$newPost_id."<br />";
 					
-					//Prompt content
+					// Prompt content
 					echo "<br />Content: ".$postContent."<br />";
 					
-					//Mysql query.
+					// Mysql query.
 					mysql_query("INSERT INTO `webdb1236`.`topics`
-					(approved, posttitle, postcontent, post_id, catagorie_id, user_id, starttime)
-					VALUES ('$approval', '$postTitle', '$postContent', '$newPost_id', '$category', '$userID', CURRENT_TIMESTAMP)") or die (mysql_error());
+					(approved, 
+					posttitle, 
+					postcontent, 
+					post_id, 
+					catagorie_id, 
+					user_id, 
+					starttime)
+					VALUES ('$approval', 
+					'$postTitle', 
+					'$postContent', 
+					'$newPost_id', 
+					'$catagory', 
+					'$userID', 
+					CURRENT_TIMESTAMP)") or die (mysql_error());
 					
-					//Connectie met databse afsluiten.
+					// Connectie met databse afsluiten.
 					mysql_close($dbhandle);
 				?>			
 			</div>
