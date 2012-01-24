@@ -78,7 +78,17 @@
 					$postTitle = strip_tags($_POST["topicname"]);
 					$postContent = strip_tags($_POST["content"]);
 					
+					// Start sessie.
+					session_start();
+					
+					// Haal gebruikersnaam uit sessie.
+					$username = $_SESSION['username'];
+					
+					// Haal user ID uit sessie.
+					$userID = $_SESSION['userID'];
+					
 					//TODO: catagorie_id ophalen
+					//$catagory = $_SESSION['category'];
 					// Verkrijgt catagorie_id.
 					$catagory = 1;
 					
@@ -86,7 +96,7 @@
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
 					$approval = mysql_fetch_array($approval);
 					
-					//Prompt gebruiker.
+					// Prompt gebruiker.
 					echo "Thank you for your submission. <br />";
 					
 					// Prompt approval.
@@ -111,15 +121,6 @@
 					$catagoryName = mysql_fetch_array($catagoryName);
 					$catagoryName = $catagoryName['name'];
 					echo "Catagory: ".$catagoryName."<br />";
-					
-					// Start sessie.
-					session_start();
-					
-					// Haal gebruikersnaam uit sessie.
-					$username = $_SESSION['username'];
-					
-					// Haal user ID uit sessie.
-					$userID = $_SESSION['userID'];
 					
 					// Prompt userid.
 					echo "UserID: ".$userID."<br />";
