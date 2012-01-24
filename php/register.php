@@ -19,7 +19,29 @@
 
 			<div class="menu">
 
-				<?php include 'menu.php' ?>
+				<div class="menuknop">
+				Home
+				</div>
+
+				<div class="menuknop">
+				Login
+				</div>
+
+				<div class="currentpage">
+				Register
+				</div>
+
+				<div class="menuknop">
+				Personal
+				</div>
+
+				<div class="menuknop">
+				Admin
+				</div>
+
+				<div class="menuknop">
+				FAQ
+				</div>
 
 
 
