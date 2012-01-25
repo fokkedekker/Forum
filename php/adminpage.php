@@ -86,7 +86,7 @@
 	echo "</div>";
 	
 	echo "<div class='topic_action'>";
-	echo "<form action='approve.php?id=".$row['id']."'>";
+	echo "<form action='approve.php?id=".$row['id']."' method='POST'>";
 	echo "<input type='submit' value='Y'/>";
 	echo "</form>";
 	echo "<form action='delete.php?id=".$row['id']."'>";
