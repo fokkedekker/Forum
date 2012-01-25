@@ -67,7 +67,7 @@
 				$counter = 1;
 				$counter2 = 0;
 				
-				
+				// een while counter die het script 10 keer uitvoert hierdoor worden de laatste 10 posts van de user weer gegeven
 				while($counter != 10)
 				{
 				
@@ -144,7 +144,7 @@
 				
 				$counter3 =1;
 				$counter4 = 0;
-				
+				// een while met counters om het script 10 keer te laten uitvoeren waardoor de laatste 10 gestarte topics te zien zijn.
 				while($counter3 != 10)
 				{					
 					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
