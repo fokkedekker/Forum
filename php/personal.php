@@ -68,7 +68,7 @@
 			
 			<div class="center">
 				<?php
-				$id = 1;
+				$id = 24;
 					include 'dblogin.php';
 					
 					//TODO iets doen zodat de juiste user wordt geselecteerd
@@ -91,15 +91,19 @@
 				$counter = 1;
 				$counter2 = 0;
 				
-				while($counter != 5)
+				
+				while($counter != 10)
 				{
 				
-				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = $id LIMIT '$counter2' OFFSET 1") or die(mysql_error());  
+				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = $id LIMIT $counter OFFSET $counter2 ") or die(mysql_error());  
 					
 					$row2 = mysql_fetch_array($result2);
 					
 					echo $row2['posttitle']; 
 					$counter = $counter + 1;
+					$counter2 = $counter2 +1;
+					
+					echo "<br />";
 					
 					
 				}
@@ -141,12 +145,20 @@
 				<div class="startedtopics">
 				<?php
 				
-					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id ORDER BY starttime LIMIT 5") or die(mysql_error());  
+				$counter3 =1;
+				$counter4 = 0;
+				
+				while($counter3 != 10)
+				{					
+					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
 					
 					$row3 = mysql_fetch_array($result3);
 					echo $row3['posttitle'];
+					$counter3 = $counter3 + 1;
+					$counter4 = $counter4 + 1;
+					echo "<br />";
 					
-					
+				}
 					?>
 					
 				</div>
