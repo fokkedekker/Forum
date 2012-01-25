@@ -51,7 +51,7 @@
 				Topicname:<br \>
 				Message:<br \>
 				<?php 
-				
+					//TODO redirect als niet ingelogd
 					$topic = strip_tags($_GET["topic"]);
 					
 					if ($topic === 'f')

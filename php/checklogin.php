@@ -64,6 +64,8 @@
 					$_SESSION['username'] = $GETusername;
 					// Geef waarde aan variabele 'userID' is sessie.
 					$_SESSION['userID'] = $login['id'];
+					// Geef waarde aan variabele 'loggedIn' in sessie.
+					$_SESSION['loggedIn'] = 1;
 					
 					//Prompt gebruiker met login bericht.
 					echo "Thank you ".$_SESSION['username']." for logging in!";
