@@ -50,8 +50,8 @@
 					
 					//TODO juiste draad weergeven
 					$getPostID = $_GET['topicid'];
-					
-					$result = mysql_query("SELECT * FROM topics WHERE approved = '0' and post_id = '$getPostID'") or die(mysql_error());  
+					$getCat = $_GET['cat'];
+					$result = mysql_query("SELECT * FROM topics WHERE approved = '0' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
 					
 					while($row = mysql_fetch_array($result))
 					{
@@ -61,7 +61,9 @@
 						echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						echo "<div class=button>
-							  <button type='button'>Reply</button>
+							  <form action='maketopic.php?id=".$getPostID."&topic=f&cat=".$getCat."' method='POST'>
+							  <input type='submit' value='reply'/>
+							  </form>
 							  </div>";
 						echo "<br /><hr />".$row['postcontent'];
 						echo "</div>";

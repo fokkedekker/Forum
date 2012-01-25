@@ -73,7 +73,7 @@
 							$dots = "...";
 							
 						// Prompt post titel.
-						echo "<div class='catPostTitle'><a href='draadje.php?topicid=".$posts['post_id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
+						echo "<div class='catPostTitle'><a href='draadje.php?topicid=".$posts['post_id']."&cat=".$row['id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
 						
 						// Vekrijg naam van poster post.
 						$userPoster = $posts['user_id'];

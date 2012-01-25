@@ -69,6 +69,9 @@
 				
 				// Print de tabel met gegevens.
 				echo "<div class='catPostOver'>";
+				echo "<form action='maketopic.php?cat=".$categorie."&topic=y' method='POST'>";
+				echo "<input type='submit' value='Make topic'/>";
+				echo "</form>";
 				echo "<hr />";
 				echo "<h1 align = 'center'>".$row['name']."</h1>";
 				echo "<hr />";
@@ -81,8 +84,8 @@
 					if (strlen($posts['posttitle']) > 33)
 						$dots = "...";
 						
-					// Prompt post titel.
-					echo "<div class='catPostTitle'> <a href='draadje.php?topicid=".$posts['post_id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
+					// Prompt post titel met link naar draad.
+					echo "<div class='catPostTitle'> <a href='draadje.php?topicid=".$posts['post_id']."&cat=".$categorie."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
 					
 					// Vekrijg naam van poster post.
 					$userPoster = $posts['user_id'];

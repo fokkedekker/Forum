@@ -65,10 +65,8 @@
 					// Haal user ID uit sessie.
 					$userID = $_SESSION['userID'];
 					
-					//TODO: catagorie_id ophalen
-					//$catagory = $_SESSION['category'];
 					// Verkrijgt catagorie_id.
-					$catagory = 2;
+					$catagory = $_GET['cat'];
 					
 					// Laadt catagorie approval.
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
@@ -83,12 +81,22 @@
 					else
 						echo "Your post has been approved.<br />";
 					
-					// Berekent nieuwe post id op basis van max in tabel.
-					$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
-					$row = mysql_fetch_array($getPost_id);
-					$newPost_id = $row['post_id'] + 1;
+					// Checkt of er een nieuw draad aangemaakt wordt of het een reply is.
+					$checkThread = strip_tags($_GET["topic"]);
 					
-					echo "Click <a href= draadje.php?topicid=".$newPost_id."> here </a> to visit your thread.";
+					if ($checkThread === "y")
+					{
+						// Berekent nieuwe post id op basis van max in tabel.
+						$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
+						$row = mysql_fetch_array($getPost_id);
+						$newPost_id = $row['post_id'] + 1;
+					} 
+					else
+					{
+						// Set post_id naar die van uit de GET van de url.
+						$newPost_id = strip_tags($_GET["id"]);
+					}
+					echo "Click <a href= draadje.php?topicid=".$newPost_id."&cat=".$catagory."> here </a> to visit your submission.";
 					
 					// Prompt gebruiker.
 					echo "<hr />";

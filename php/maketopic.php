@@ -50,7 +50,20 @@
 			<div class="newtopic">
 				Topicname:<br \>
 				Message:<br \>
-				<form action="posttopic.php" method="POST">
+				<?php 
+				
+					$topic = strip_tags($_GET["topic"]);
+					
+					if ($topic === 'f')
+						$id = strip_tags($_GET["id"]);
+					else
+						$id = 0;
+						
+					$cat = strip_tags($_GET["cat"]);
+					
+					$url = "posttopic.php?id=".$id."&topic=".$topic."&cat=".$cat;
+				?>
+				<form action=<?php echo $url; ?> method="POST">
 					<input type="submit" value="Submit"/>
 			</div>
 			<div>
