@@ -75,7 +75,14 @@
 					
 					$row2 = mysql_fetch_array($result2);
 					
-					echo $row2['posttitle']; 
+					$lastpost = $row2['posttitle'];
+					$lastpostcut = str_split($lastpost, 37);
+					echo $lastpostcut[0];
+					// als de string langer is dan 37 dan past hij niet in het hokje dus ... om aan te geven dat het niet de volledige titel is
+					if (strlen($lastpostcut[0]) == 37)
+					{
+						echo "...";
+					}
 					$counter = $counter + 1;
 					$counter2 = $counter2 +1;
 					
@@ -113,7 +120,21 @@
 				
 			
 				<div class="forumstatus">
-				hier komt de forum status te staan
+				<?php
+				$forumstatus = $row['admin'];
+				
+				if($forumstatus == 0)
+				{
+					echo " Forum status: User";
+				}
+				else if($forumstatus == 1)
+				{
+					echo "Forum status: Admin";
+				}
+				
+				echo  mysql_query("SELECT user_id, COUNT(*) FROM topics WHERE user_id=$id"); 
+			
+				?>
 				</div>
 				
 				
