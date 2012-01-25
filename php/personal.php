@@ -68,7 +68,7 @@
 			
 			<div class="center">
 				<?php
-				$id = 24;
+				$id = 1;
 					include 'dblogin.php';
 					
 					//TODO iets doen zodat de juiste user wordt geselecteerd
@@ -87,11 +87,22 @@
 				
 					<div class="lastposts">
 				<?php
-				$result2 = mysql_query("SELECT * FROM topics where user_id = $id limit 5") or die(mysql_error());  
+				
+				$counter = 1;
+				$counter2 = 0;
+				
+				while($counter != 5)
+				{
+				
+				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = $id LIMIT '$counter2' OFFSET 1") or die(mysql_error());  
 					
 					$row2 = mysql_fetch_array($result2);
 					
 					echo $row2['posttitle']; 
+					$counter = $counter + 1;
+					
+					
+				}
 					
 					
 				
@@ -100,7 +111,7 @@
 				
 				
 				<div class="info">
-					<?php echo "Username: ".$row['user_name'];?>
+					<?php echo "Username: ".$row['username'];?>
 					<br />
 					<?php
 						echo "Sex:".$row['sex'];
