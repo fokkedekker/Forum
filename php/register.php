@@ -19,32 +19,7 @@
 
 			<div class="menu">
 
-				<div class="menuknop">
-				Home
-				</div>
-
-				<div class="menuknop">
-				Login
-				</div>
-
-				<div class="currentpage">
-				Register
-				</div>
-
-				<div class="menuknop">
-				Personal
-				</div>
-
-				<div class="menuknop">
-				Admin
-				</div>
-
-				<div class="menuknop">
-				FAQ
-				</div>
-
-
-
+				<?php include 'menu.php';?>
 			</div>
 
 			<div class="center">

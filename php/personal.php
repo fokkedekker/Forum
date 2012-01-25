@@ -21,31 +21,7 @@
 			</div>
 
 			<div class="menu">
-
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
-
+				<?php include 'menu.php';?>
 			</div>
 			
 			
