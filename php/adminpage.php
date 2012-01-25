@@ -63,6 +63,8 @@
 			</div>
 
 			<div class="center">
+			
+			
 
 <?php
 	include 'dblogin.php';
@@ -74,33 +76,29 @@
 	echo "<div class='topic_id'>";
 	echo $row['id'];
 	echo "</div>";
+	
 	echo "<div class='topic_title'>";
 	echo $row['posttitle'];
 	echo "</div>";
+	
 	echo "<div class='topic_starttime'>";
 	echo $row['starttime'];
 	echo "</div>";
 	
 	echo "<div class='topic_action'>";
-	//if ($row['approved'] ==0)
-		//echo "pending";
-	echo "<select name='status' method='post'>
-	<option>pending</option>
-	<option>approve</option>
-	<option>delete</option>
-	</select>";
+	echo "<form action='approve.php?id=".$row['id']."'>";
+	echo "<input type='submit' value='Y'/>";
+	echo "</form>";
+	echo "<form action='delete.php?id=".$row['id']."'>";
+	echo "<input type='submit' value='X'/>";
+	echo "</form>";
+
 	echo "</div>";
 	}
 	
-	//$catagorie_name = strip_tags($_POST['name']);
-	//$catagorie_approval = strip_tags($_POST['approval']);
 	
-	//$result2 = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$approval')") or die (mysql_error());
 mysql_close($dbhandle)?>
-
-
-
-
+	
 
 		</div>
 
