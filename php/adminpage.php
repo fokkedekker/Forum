@@ -18,29 +18,7 @@
 
 			<div class="menu">
 
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
+			<?php include 'menu.php' ?>
 
 			</div>
 
@@ -86,7 +64,7 @@
 	echo "</div>";
 	
 	echo "<div class='topic_action'>";
-	echo "<form action='approve.php?id=".$row['id']."' method='POST'>";
+	echo "<form action='approve.php?id=".$row['id']."'>";
 	echo "<input type='submit' value='Y'/>";
 	echo "</form>";
 	echo "<form action='delete.php?id=".$row['id']."'>";

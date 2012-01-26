@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="menuknop">
-	<A HREF="admin.php">Admin</A>
+	<A HREF="adminpage.php">Admin</A>
 	</div>
 
 	<div class="menuknop">
