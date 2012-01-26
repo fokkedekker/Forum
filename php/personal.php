@@ -67,8 +67,29 @@
 				$counter = 1;
 				$counter2 = 0;
 				
+				
+				$result6 = mysql_query("SELECT * FROM topics WHERE user_id = '$id' LIMIT 10");
+				
+				
+				while($row6 = mysql_fetch_array($result6))
+				{
+				
+				$lastpost =  $row6['posttitle'];
+				
+				$lastpostcut = str_split($lastpost, 37);
+					echo $lastpostcut[0];
+					// als de string langer is dan 37 dan past hij niet in het hokje dus ... om aan te geven dat het niet de volledige titel is
+					if (strlen($lastpostcut[0]) == 37)
+					{
+						echo "...";
+					}
+					
+					echo "<br />";
+				
+				}
+				
 				// een while counter die het script 10 keer uitvoert hierdoor worden de laatste 10 posts van de user weer gegeven
-				while($counter != 10)
+				/*while($counter != 10)
 				{
 				
 				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = $id LIMIT $counter OFFSET $counter2 ") or die(mysql_error());  
@@ -90,6 +111,7 @@
 					
 					
 				}
+				*/
 					
 					
 				
@@ -156,6 +178,7 @@
 					echo "<br />";
 					
 				}
+				
 					?>
 					
 				</div>
