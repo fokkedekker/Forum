@@ -21,6 +21,7 @@ $lastname = strip_tags($_POST["lastname"]);
 $browser = strip_tags($_POST["browser"]);
 $personal = strip_tags($_POST["overjouw"]);
 $sex = strip_tags($_POST["sex"]);
+$password = md5(strip_tags($_POST["password"]));
 
 
 
@@ -29,9 +30,9 @@ if($str1 == $str2 && $str3 == $str4)
 {
 
 
-$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, user_name, sex)
+$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, user_name, sex, password)
 VALUES
-('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username','$sex')";
+('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username','$sex','$password')";
 
 if (!mysql_query($sql,$con))
   {
