@@ -21,7 +21,9 @@
 
 				<?php include 'menu.php';?>
 			</div>
-
+			<div class="slidemenu">
+				<?php include 'slidemenu.php'?>
+			</div>
 			<div class="center">
 	
 

@@ -1,4 +1,3 @@
-<?php session_start(test); ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -25,22 +24,8 @@
 				<?php include 'menu.php';?>
 			</div>
 			
-			
 			<div class="slidemenu">
-
-				 <div class="forum">
-				 	Forum
-				 </div>
-				 <div class="categorie">
-				 	<br />
-				 	 &#8627; Categorie
-				 </div>
-				 <div class="thread">
-				 	 &#8627; Thread
-				 </div>
-				 <div class="reactie">
-				 	 &#8627; Reactie
-				 </div>
+				<?php include 'slidemenu.php'?>
 			</div>
 			
 			<div class="center">
@@ -64,8 +49,6 @@
 				
 					<div class="lastposts">
 				<?php
-				
-				print_r($_SESSION);
 				
 				$counter = 1;
 				$counter2 = 0;
