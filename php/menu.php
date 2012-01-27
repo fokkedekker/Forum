@@ -1,5 +1,5 @@
 	<div class="menuknop">
-	<A HREF="../">Home</A>
+	<A HREF="index.php">Home</A>
 	</div>
 
 	<div class="menuknop">
