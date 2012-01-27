@@ -49,16 +49,17 @@
 					// Variabelen uit login.php form verkrijgen.
 					// Stript van tags met behulp van strip_tags();
 					$GETusername = strip_tags($_POST["name"]);
-					$GETpassword = strip_tags($_POST["pass"]);
+					$GETpassword = md5(strip_tags($_POST["pass"]));
 					
 					// Kijken of de combinatie van username en password in de database te vinden is
 					$login = mysql_query("SELECT username, id FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
-					$login = mysql_fetch_array($login);
-					
-					// TODO iets doen als login mislukt
+				if(	$login = mysql_fetch_array($login))
+				{
 					
 					// Start sessie.
-					session_start();
+					session_start(test);
+					
+					
 					
 					// Geef waarde aan variabele 'username' is sessie.
 					$_SESSION['username'] = $GETusername;
@@ -72,6 +73,14 @@
 					
 					// Database connectie afsluiten.
 					mysql_close($dbhandle);
+					print_r($_SESSION);
+					
+					}
+					
+					else
+					{
+					echo "fout u bent niet ingelogd";
+					}
 				?>
 			</div>
 			<div class="footer">
