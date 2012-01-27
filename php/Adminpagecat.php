@@ -1,6 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
+<?php
+//if(isset($_session['username'] == Admin)
+//{
+//echo "hij is gelijk";
+//}
+
+
+
+
+?>	
+	
+	
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -17,30 +29,8 @@
 			</div>
 
 			<div class="menu">
-
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
+			
+			<?php include 'menu.php' ?>
 
 			</div>
 
@@ -65,14 +55,15 @@
 			<div class="center">
 
 <div class="catagorie_maker">
-<form action="xxxxxx.php" method="POST">
+<form action="addcat.php" method="POST">
 Catagorie: <input type="text" name="name"/>
 <br />
-Approval: <input type="text" name="approval"/>
-<br />
-<input type="submit" value="Submit"/>
-
-
+Approval:
+<select name="approval" method="POST">
+	<option value="1">approve</option>
+	<option value="0">control</option>
+</select>
+</form>
 
 </div>
 
