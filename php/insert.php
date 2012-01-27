@@ -1,5 +1,5 @@
 <?php
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("localhost","root","root");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
@@ -21,7 +21,28 @@ $lastname = strip_tags($_POST["lastname"]);
 $browser = strip_tags($_POST["browser"]);
 $personal = strip_tags($_POST["overjouw"]);
 $sex = strip_tags($_POST["sex"]);
-$password = md5(strip_tags($_POST["password"]));
+
+
+
+
+
+$random = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',10)),10,10);
+echo $random;
+
+
+
+
+$to = "$str1";
+$subject = "Your password";
+$message = "This is your password $random";
+$from = "fokke.dekker@me.com";
+$headers = "From:" . $from;
+mail($to,$subject,$message,$headers);
+echo "Mail Sent.";
+
+$userpass = md5($random);
+
+echo $userpass;
 
 
 
@@ -29,10 +50,9 @@ $password = md5(strip_tags($_POST["password"]));
 if($str1 == $str2 && $str3 == $str4)
 {
 
-
-$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, user_name, sex, password)
+$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, username, sex, password)
 VALUES
-('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username','$sex','$password')";
+('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username','$sex','$userpass')";
 
 if (!mysql_query($sql,$con))
   {
