@@ -1,4 +1,4 @@
-
+<?php session_start(test); ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -56,8 +56,6 @@
 				if(	$login = mysql_fetch_array($login))
 				{
 					
-					// Start sessie.
-					session_start(test);
 					
 					
 					

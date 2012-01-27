@@ -1,3 +1,4 @@
+<?php session_start(test); ?>
 	<div class="menuknop">
 	<A HREF="index.php">Home</A>
 	</div>

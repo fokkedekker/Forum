@@ -1,3 +1,4 @@
+<?php session_start(test); ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -30,7 +31,7 @@
 			
 			<div class="center">
 				<?php
-				$id = 24;
+				$id = $_SESSION['userID'];
 					include 'dblogin.php';
 					
 					//TODO iets doen zodat de juiste user wordt geselecteerd

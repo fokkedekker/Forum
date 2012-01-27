@@ -1,3 +1,4 @@
+<?php session_start(test); ?>
 <div class="forum">
 	<a href="..">Forum</a>
 </div>
