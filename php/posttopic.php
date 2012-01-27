@@ -29,19 +29,7 @@
 			
 			<div class="slidemenu">
 
-				 <div class="forum">
-				 	Forum
-				 </div>
-				 <div class="categorie">
-				 	<br />
-				 	 &#8627; Categorie
-				 </div>
-				 <div class="thread">
-				 	 &#8627; Thread
-				 </div>
-				 <div class="reactie">
-				 	 &#8627; Reactie
-				 </div>
+				<?php include 'slidemenu.php' ?>
 			</div>
 			
 			<div class="center">
