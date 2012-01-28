@@ -13,12 +13,8 @@
 
 	<body>
 		<div class="container">
-
-
-
-
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<a href="index.php">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">
@@ -27,18 +23,19 @@
 
 			</div>
 			
-			
 			<div class="slidemenu">
 				<?php include 'slidemenu.php'?>
 			</div>
 			
 			<div class="center">
-				<!-- De login moet nog even aangepast worden. -->
 				<?php
+					// Database connectie aanmaken.
 					include 'dblogin.php';
 					
+					// Alle FAQ dingen uit de faq tabel halen.
 					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
 					
+					// Resultaat weergeven.
 					while($row = mysql_fetch_array($result))
 					{
 						echo "<div class='faq'>";
@@ -46,22 +43,25 @@
 						echo "<br /><hr />Awnser: ".$row['awnser'];
 						echo "</div>";
 					}
-					mysql_close($dbhandle)?>
-			
-				
+					print_r($_SESSION);
+					// Als er een admin is ingelogd, submit formulier laten zien.
+					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					{
+						echo "<div class='faq'>";
+						echo "<h1> New FAQ </h1>";
+						echo "Question: ";
+						echo "<br /><hr />Awnser: ";
+						echo "</div>";
+					}
+					
+					// Database connectie afsluiten.
+					mysql_close($dbhandle);
+				?>
 			</div>
 			
-
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
-
-
-
-
-
 </html>
