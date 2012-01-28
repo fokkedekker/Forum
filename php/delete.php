@@ -1,4 +1,4 @@
-<?php session_start(test); ?>
+<?php session_start('test'); ?>
 <?php
 include 'dblogin.php';
 

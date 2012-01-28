@@ -1,4 +1,4 @@
-<?php session_start(test); ?>
+<?php session_start('test'); ?>
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
@@ -20,51 +20,14 @@
 			</div>
 
 			<div class="menu">
-			
-			
-			
-				<div class="menuknop">
-				<A HREF="home.html">Home</A>
-				</div>
 
-				<div class="menuknop">
-				<A HREF="login.html">Login</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="register.html">Register</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="personal.html">Personal</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="admin.html">Admin</A>
-				</div>
-
-				<div class="menuknop">
-				<A HREF="faq.html">FAQ</A>
-				</div>
+				<?php include 'menu.php' ?>
 
 			</div>
 			
 			
 			<div class="slidemenu">
-
-				 <div class="forum">
-				 	Forum
-				 </div>
-				 <div class="categorie">
-				 	<br />
-				 	 &#8627; Categorie
-				 </div>
-				 <div class="thread">
-				 	 &#8627; Thread
-				 </div>
-				 <div class="reactie">
-				 	 &#8627; Reactie
-				 </div>
+				<?php include 'slidemenu.php'?>
 			</div>
 			
 			<div class="center">
