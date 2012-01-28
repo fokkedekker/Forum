@@ -3,7 +3,12 @@
 </div>
 
 <div class="menuknop">
-<A HREF="login.php">Login</A>
+	<?php
+		if (empty($_SESSION['loggedIn']))
+			echo "<a href='login.php'>Login</a>";
+		else if ($_SESSION['loggedIn'] == 1)
+			echo "<a href='logout.php'>Logout</a>";
+	?>
 </div>
 
 <div class="menuknop">
