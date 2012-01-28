@@ -40,18 +40,24 @@
 					{
 						echo "<div class='faq'>";
 						echo "Question: ".$row['question'];
-						echo "<br /><hr />Awnser: ".$row['awnser'];
+						echo "<br /><hr />Anwser: ".$row['awnser'];
 						echo "</div>";
 					}
-					print_r($_SESSION);
+					
+					echo "<br />";
+					
 					// Als er een admin is ingelogd, submit formulier laten zien.
 					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
 					{
 						echo "<div class='faq'>";
 						echo "<h1> New FAQ </h1>";
-						echo "Question: ";
-						echo "<br /><hr />Awnser: ";
-						echo "</div>";
+						echo "Question: <br />";
+						echo "<form action='addfaq.php' method='POST'>";
+						echo "<input type='text' size='40' name='question'/>";
+						echo "<hr />Anwser: <br />";
+						echo "<input type='text' size='40' name='anwser' />";
+						echo "<br /> <input type='submit' value='Submit'/>";
+						echo "</form></div>";
 					}
 					
 					// Database connectie afsluiten.
