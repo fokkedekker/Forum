@@ -13,29 +13,20 @@
 
 	<body>
 		<div class="container">
-
-
-
-
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<A HREF="index.php">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">
-
 				<?php include 'menu.php' ?>
-
 			</div>
-			
 			
 			<div class="slidemenu">
 				<?php include 'slidemenu.php'?>
 			</div>
 			
 			<div class="center">
-			
-			
-			<div class="login">
+				<div class="login">
 					<form action="checklogin.php" method="POST">
 						Username: <input type="text" name="name" />
 						<br />
@@ -43,26 +34,14 @@
 						<br />
 						<input type="submit" value="Submit"/>
 						<br />
-						<a href="registreerpagina">Registreer</a>
+						<a href="register.php">Registreer</a>
 					</form>
 				</div>
-			
-
-			
-			
 			</div>
 			
-
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
-
-
-
-
-
 </html>
