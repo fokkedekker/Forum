@@ -27,15 +27,21 @@
 			
 			<div class="center">
 				<div class="login">
-					<form action="checklogin.php" method="POST">
-						Username: <input type="text" name="name" />
-						<br />
-						Password: <input type="password" name="pass" />
-						<br />
-						<input type="submit" value="Submit"/>
-						<br />
-						<a href="register.php">Registreer</a>
-					</form>
+					<?php
+						if (empty($_SESSION['admin']))
+							echo "
+							<form action='checklogin.php' method='POST'>
+								Username: <input type='text' name='name' />
+								<br />
+								Password: <input type='password' name='pass' />
+								<br />
+								<input type='submit' value='Submit'/>
+								<br />
+								<a href='register.php'>Registreer</a>
+							</form>";
+						else
+							echo "You are already logged in.";
+					?>
 				</div>
 			</div>
 			
