@@ -14,7 +14,7 @@
 		<div class="container">
 
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<A HREF="index.php">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">

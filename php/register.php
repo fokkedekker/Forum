@@ -15,7 +15,7 @@
 		<div class="container">
 
 			<div class="header">
-			Het Patriciaat Forum
+				<a href='index.php'>Het Patriciaat Forum</a>
 			</div>
 
 			<div class="menu">
