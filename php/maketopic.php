@@ -26,7 +26,7 @@
 					if (!empty($_SESSION['admin']))
 					{
 						echo "<div class='newtopic'>
-							Topicname:<br \>
+							Title:<br \>
 							Message:<br \>";
 						
 						$topic = strip_tags($_GET["topic"]);
