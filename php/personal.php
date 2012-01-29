@@ -31,6 +31,8 @@
 					include 'dblogin.php';
 					
 					//TODO check uitvoeren dat de user wel bestaat.
+					if (!empty($_GET['id']))
+					{
 					$id = $_GET['id'];
 					
 					$result = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
@@ -169,7 +171,12 @@
 				</div>
 				
 			
-					<?php mysql_close($dbhandle);
+					<?php }
+					else
+					{
+						echo "No user specified.";
+					}
+					mysql_close($dbhandle);
 				?>
 			</div>
 			
