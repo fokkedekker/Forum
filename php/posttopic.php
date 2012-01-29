@@ -13,23 +13,15 @@
 
 	<body>
 		<div class="container">
-
-
-
-
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<a href="index.php">Het Patriciaat Forum</a>
 			</div>
 
 			<div class="menu">
-
 				<?php include 'menu.php' ?>
-
 			</div>
 			
-			
 			<div class="slidemenu">
-
 				<?php include 'slidemenu.php' ?>
 			</div>
 			
@@ -63,16 +55,7 @@
 					
 					// Prompt gebruiker.
 					echo "Thank you for your submission. <br />";
-					
-					// Prompt approval.
-					if ($approval['approval'] == 0)
-						echo "Your post is pending approval.<br />";
-					else
-					{
-						echo "Your post has been approved.<br />";
-						echo "Click <a href= draadje.php?topicid=".$newPost_id."&cat=".$catagory."> here </a> to visit your submission.";
-					}
-					
+										
 					// Checkt of er een nieuw draad aangemaakt wordt of het een reply is.
 					$checkThread = strip_tags($_GET["topic"]);
 					
@@ -89,6 +72,15 @@
 						$newPost_id = strip_tags($_GET["id"]);
 					}
 					
+					// Prompt approval.
+					if ($approval['approval'] == 0)
+						echo "Your post is pending approval.<br />";
+					else
+					{
+						echo "Your post has been approved.<br />";
+						echo "Click <a href= draadje.php?topicid=".$newPost_id."&cat=".$catagory."> here </a> to visit your submission.";
+					}
+					$approval = $approval['approval'];
 					// Prompt gebruiker.
 					echo "<hr />";
 					
