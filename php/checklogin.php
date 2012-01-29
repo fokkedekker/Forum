@@ -34,7 +34,7 @@
 					// Stript van tags met behulp van strip_tags();
 					$GETusername = strip_tags($_POST["name"]);
 					//$GETpassword = md5(strip_tags($_POST["pass"]));
-					$GETpassword = strip_tags($_POST["pass"]);
+					$GETpassword = md5(strip_tags($_POST["pass"]));
 					
 					// Kijken of de combinatie van username en password in de database te vinden is
 					$login = mysql_query("SELECT username, id, admin FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
