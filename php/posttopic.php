@@ -46,7 +46,7 @@
 					$postContent = strip_tags($_POST["content"]);
 					
 					// Start sessie.
-					session_start();
+					//session_start();
 					
 					// Haal gebruikersnaam uit sessie.
 					$username = $_SESSION['username'];
