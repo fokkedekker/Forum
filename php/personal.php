@@ -35,9 +35,9 @@
 					{
 					$id = $_GET['id'];
 					
-					$result = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
+					$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
 					
-					$row = mysql_fetch_array($result);
+					$row = mysql_fetch_array($result1);
 				?>
 			
 			<div class="picture">
@@ -45,23 +45,36 @@
 				</div>
 				
 				<div class="overmij">
+				
+				<div class="personaltitle">
+					Over 
+					<?php echo $row['username'];
+					
+						
+					?> 
+					</div>
+				
 					<?php echo $row['personal_info'];?>
 				</div>
 				
 					<div class="lastposts">
+					
+					<div class="personaltitle">
+					Last Posts.
+					</div>
 				<?php
 				
 				$counter = 1;
 				$counter2 = 0;
 				
 				
-				$result6 = mysql_query("SELECT * FROM topics WHERE user_id = '$id' LIMIT 10");
+				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = '$id' LIMIT 10");
 				
 				
-				while($row6 = mysql_fetch_array($result6))
+				while($row2 = mysql_fetch_array($result2))
 				{
 				
-				$lastpost =  $row6['posttitle'];
+				$lastpost =  $row2['posttitle'];
 				
 				$lastpostcut = str_split($lastpost, 37);
 					echo $lastpostcut[0];
@@ -73,40 +86,17 @@
 					
 					echo "<br />";
 				
-				}
-				
-				// een while counter die het script 10 keer uitvoert hierdoor worden de laatste 10 posts van de user weer gegeven
-				/*while($counter != 10)
-				{
-				
-				$result2 = mysql_query("SELECT * FROM topics WHERE user_id = $id LIMIT $counter OFFSET $counter2 ") or die(mysql_error());  
-					
-					$row2 = mysql_fetch_array($result2);
-					
-					$lastpost = $row2['posttitle'];
-					$lastpostcut = str_split($lastpost, 37);
-					echo $lastpostcut[0];
-					// als de string langer is dan 37 dan past hij niet in het hokje dus ... om aan te geven dat het niet de volledige titel is
-					if (strlen($lastpostcut[0]) == 37)
-					{
-						echo "...";
-					}
-					$counter = $counter + 1;
-					$counter2 = $counter2 +1;
-					
-					echo "<br />";
-					
-					
-				}
-				*/
-					
-					
-				
+				}	
 				?>
 				</div>
 				
 				
 				<div class="info">
+				
+				<div class="personaltitle">
+					Info.
+					</div>
+					
 					<?php echo "Username: ".$row['username'];?>
 					<br />
 					<?php
@@ -129,6 +119,10 @@
 				
 			
 				<div class="forumstatus">
+				
+				<div class="personaltitle">
+					Forum Status
+					</div>
 				<?php
 				$forumstatus = $row['admin'];
 				
@@ -149,6 +143,10 @@
 				
 				
 				<div class="startedtopics">
+				
+				<div class="personaltitle">
+					Started Topics.
+					</div>
 				<?php
 				
 				$counter3 =1;

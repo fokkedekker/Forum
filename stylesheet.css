@@ -377,3 +377,10 @@ div.catPostOver
 	width: 100%;
 	float: left;
 }
+
+div.personaltitle
+{
+	text-decoration: underline;
+	color:#003366;
+	text-decoration-color
+}
