@@ -16,7 +16,10 @@
 </div>
 
 <div class="menuknop">
-<A HREF="personal.php">Personal</A>
+	<A HREF="<?php echo "personal.php?id=";
+		if (!empty($_SESSION['userID'])) 
+			echo $_SESSION['userID'];
+	?>">Personal</A>
 </div>
 
 <div class="menuknop">

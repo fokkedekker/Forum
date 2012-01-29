@@ -14,7 +14,7 @@
 		<div class="container">
 
 			<div class="header">
-				<A HREF="index.php">Het Patriciaat Forum</A>
+				<a href="index.php">Het Patriciaat Forum</a>
 			</div>
 
 			<div class="menu">
@@ -27,59 +27,60 @@
 			
 			<div class="center">
 				<?php 
-				// Database connectie en login.
-				include 'dblogin.php';
-				
-				// Selectie van categorien.
-				$cats = mysql_query("SELECT name, id FROM catagories");
-				
-				// Lus om catagorie en de eerste 5 posts erin weer te geven.
-				while($row = mysql_fetch_array($cats))
-				{
-					// Verkrijg id.
-					$id = $row['id'];
+					// Database connectie en login.
+					include 'dblogin.php';
 					
-					// Verkrijg de 5 laatst geposte berichten uit de catagorie.
-					$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$id' and approved = '1' ORDER BY starttime DESC LIMIT 5");
+					// Selectie van categorien.
+					$cats = mysql_query("SELECT name, id FROM catagories");
 					
-					// Print de tabel met gegevens.
-					echo "<div class='catPostOver'>";
-					echo "<hr />";
-					echo "<h1 align = 'center'><a href='category.php?cat=".$row['id']."'>".$row['name']."</h1>";
-					echo "<hr />";
-					while ($posts = mysql_fetch_array($GETposts))
+					// Lus om catagorie en de eerste 5 posts erin weer te geven.
+					while($row = mysql_fetch_array($cats))
 					{
-						// Initialiseer variabele dots.
-						$dots = "";
+						// Verkrijg id.
+						$id = $row['id'];
 						
-						// Als titel groter is dan 33 chars, dan '...' toevoegen.
-						if (strlen($posts['posttitle']) > 33)
-							$dots = "...";
+						// Verkrijg de 5 laatst geposte berichten uit de catagorie.
+						$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$id' and approved = '1' ORDER BY starttime DESC LIMIT 5");
+						
+						// Print de tabel met gegevens.
+						echo "<div class='catPostOver'>";
+						echo "<hr />";
+						echo "<h1 align = 'center'><a href='category.php?cat=".$row['id']."'>".$row['name']."</h1>";
+						echo "<hr />";
+						while ($posts = mysql_fetch_array($GETposts))
+						{
+							// Initialiseer variabele dots.
+							$dots = "";
 							
-						// Prompt post titel.
-						echo "<div class='catPostTitle'><a href='draadje.php?topicid=".$posts['post_id']."&cat=".$row['id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
-						
-						// Vekrijg naam van poster post.
-						$userPoster = $posts['user_id'];
-						$user = mysql_query("SELECT username FROM users where id = '$userPoster'");
-						$user = mysql_fetch_array($user);
-						
-						// Prompt naam van poster post.
-						echo "<div class='catPostUser'>".$user['username']."</div>";
-						
-						// Prompt tijd dat de post gepost is.
-						echo "<div class='catPostTime'>".$posts['starttime']."</div>";
-						echo "<br />";
-					}
-					echo "</div>";
-				}// Einde lus.
-				
-				// Database connectie afsluiten.
-				mysql_close($dbhandle);
-			?>
-		</div>
-		<div class="footer">
-			&#169; 2012 Patriciaat 
+							// Als titel groter is dan 33 chars, dan '...' toevoegen.
+							if (strlen($posts['posttitle']) > 33)
+								$dots = "...";
+								
+							// Prompt post titel.
+							echo "<div class='catPostTitle'><a href='draadje.php?topicid=".$posts['post_id']."&cat=".$row['id']."'>".substr($posts['posttitle'], 0, 31).$dots."</a></div>";
+							
+							// Vekrijg naam van poster post.
+							$userPoster = $posts['user_id'];
+							$user = mysql_query("SELECT username FROM users where id = '$userPoster'");
+							$user = mysql_fetch_array($user);
+							
+							// Prompt naam van poster post.
+							echo "<div class='catPostUser'>".$user['username']."</div>";
+							
+							// Prompt tijd dat de post gepost is.
+							echo "<div class='catPostTime'>".$posts['starttime']."</div>";
+							echo "<br />";
+						}
+						echo "</div>";
+					}// Einde lus.
+					
+					// Database connectie afsluiten.
+					mysql_close($dbhandle);
+				?>
+			</div>
+			<div class="footer">
+				&#169; 2012 Patriciaat 
+			</div>
 		</div>
 	</body>
 </html>

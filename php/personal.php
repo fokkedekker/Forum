@@ -27,10 +27,12 @@
 			
 			<div class="center">
 				<?php
-				$id = $_SESSION['userID'];
+					
 					include 'dblogin.php';
 					
-					//TODO iets doen zodat de juiste user wordt geselecteerd
+					//TODO check uitvoeren dat de user wel bestaat.
+					$id = $_GET['id'];
+					
 					$result = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
 					
 					$row = mysql_fetch_array($result);
