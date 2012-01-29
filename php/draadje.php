@@ -30,9 +30,12 @@
 					
 					while($row = mysql_fetch_array($result))
 					{
+						$postUser = $row['user_id'];
+						$name = mysql_query("SELECT username FROM users WHERE id = '$postUser'") or die(mysql_error());
+						$name = mysql_fetch_array($name);
 						echo "<div class='post'>";
 						echo "Title: ".$row['posttitle'];
-						echo "<br />UserID: ".$row['user_id'];
+						echo "<br />Username: <a href='personal.php?id=".$row['user_id']."'>".$name['username']."</a>";
 						echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						echo "<div class=button>

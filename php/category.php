@@ -81,7 +81,7 @@
 					$user = mysql_fetch_array($user);
 					
 					// Prompt naam van poster post.
-					echo "<div class='catPostUser'>".$user['username']."</div>";
+					echo "<div class='catPostUser'><a href=personal.php?id=".$userPoster.">".$user['username']."</a></div>";
 					
 					// Prompt tijd dat de post gepost is.
 					echo "<div class='catPostTime'>".$posts['starttime']."</div>";
