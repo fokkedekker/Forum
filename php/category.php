@@ -15,7 +15,7 @@
 		<div class="container">
 
 			<div class="header">
-				<A HREF="home.html">Het Patriciaat Forum</A>
+				<a href="index.php">Het Patriciaat Forum</a>
 			</div>
 
 			<div class="menu">
@@ -49,7 +49,7 @@
 				//echo $categorie;
 				
 				// Verkrijg de laatst geposte berichten uit de catagorie.
-				$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$categorie' ORDER BY starttime DESC");
+				$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$categorie' and approved = '1' ORDER BY starttime DESC");
 				
 				// Verkrijg catagorie naam.
 				$cats = mysql_query("SELECT name FROM catagories where id = '$categorie'");

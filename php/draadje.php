@@ -26,7 +26,7 @@
 					
 					$getPostID = $_GET['topicid'];
 					$getCat = $_GET['cat'];
-					$result = mysql_query("SELECT * FROM topics WHERE approved = '0' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
+					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
 					
 					while($row = mysql_fetch_array($result))
 					{

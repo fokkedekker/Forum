@@ -68,7 +68,10 @@
 					if ($approval['approval'] == 0)
 						echo "Your post is pending approval.<br />";
 					else
+					{
 						echo "Your post has been approved.<br />";
+						echo "Click <a href= draadje.php?topicid=".$newPost_id."&cat=".$catagory."> here </a> to visit your submission.";
+					}
 					
 					// Checkt of er een nieuw draad aangemaakt wordt of het een reply is.
 					$checkThread = strip_tags($_GET["topic"]);
@@ -85,7 +88,6 @@
 						// Set post_id naar die van uit de GET van de url.
 						$newPost_id = strip_tags($_GET["id"]);
 					}
-					echo "Click <a href= draadje.php?topicid=".$newPost_id."&cat=".$catagory."> here </a> to visit your submission.";
 					
 					// Prompt gebruiker.
 					echo "<hr />";

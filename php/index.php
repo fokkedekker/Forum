@@ -40,7 +40,7 @@
 					$id = $row['id'];
 					
 					// Verkrijg de 5 laatst geposte berichten uit de catagorie.
-					$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$id' ORDER BY starttime DESC LIMIT 5");
+					$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$id' and approved = '1' ORDER BY starttime DESC LIMIT 5");
 					
 					// Print de tabel met gegevens.
 					echo "<div class='catPostOver'>";
