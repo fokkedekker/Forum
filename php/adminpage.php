@@ -12,73 +12,58 @@
 
 	<body>
 		<div class="container">
-
 			<div class="header">
-				<A HREF="index.php">Het Patriciaat Forum</A>
+				<a href="index.php">Het Patriciaat Forum</a>
 			</div>
 
 			<div class="menu">
-
-			<?php include 'menu.php' ?>
-
+				<?php include 'menu.php'; ?>
 			</div>
 
-
 			<div class="slidemenu">
-				<?php include 'slidemenu.php'?>
+				<?php include 'slidemenu.php'; ?>
 			</div>
 
 			<div class="center">
-			
-			
+				<?php
+					include 'dblogin.php';
 
-<?php
-	include 'dblogin.php';
+					$result = mysql_query("SELECT * FROM topics") or die (mysql_error());
+						
+					while($row = mysql_fetch_array($result))
+					{
+						echo "<div class='topic_id'>";
+						echo $row['id'];
+						echo "</div>";
+						
+						echo "<div class='topic_title'>";
+						echo "<a href='draadje.php?topicid=".$row['post_id']."&cat=".$row['catagorie_id']."'>".$row['posttitle']."</a>";
+						echo "</div>";
+						
+						echo "<div class='topic_starttime'>";
+						echo $row['starttime'];
+						echo "</div>";
+						
+						echo "<div class='topic_action'>";
+						
+						echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
+						echo "<input type='submit' value='Y'/>";
+						echo "</form>";
+						
+						echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
+						echo "<input type='submit' value='X'/>";
+						echo "</form>";
 
-	$result = mysql_query("SELECT * FROM topics") or die (mysql_error());
-		
-	while($row = mysql_fetch_array($result))
-	{
-	echo "<div class='topic_id'>";
-	echo $row['id'];
-	echo "</div>";
-	
-	echo "<div class='topic_title'>";
-	echo $row['posttitle'];
-	echo "</div>";
-	
-	echo "<div class='topic_starttime'>";
-	echo $row['starttime'];
-	echo "</div>";
-	
-	echo "<div class='topic_action'>";
-	echo "<form action='approve.php?id=".$row['id']."' method='POST'>";
-	echo "<input type='submit' value='Y'/>";
-	echo "</form>";
-	echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
-	echo "<input type='submit' value='X'/>";
-	echo "</form>";
-
-	echo "</div>";
-	}
-	
-	
-mysql_close($dbhandle)?>
-	
-
-		</div>
-
+						echo "</div>";
+					}
+					
+					mysql_close($dbhandle);
+				?>
+			</div>
 
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
-
-
-
-
-
 </html>
