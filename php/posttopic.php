@@ -93,11 +93,8 @@
 					$catagoryName = $catagoryName['name'];
 					echo "Catagory: ".$catagoryName."<br />";
 					
-					// Prompt userid.
-					echo "UserID: ".$userID."<br />";
-					
 					// Prompt username.
-					echo "Username: ".$username."<br />";
+					echo "Username: <a href=personal.php?id=".$userID.">".$username."</a><br />";
 					
 					// Prompt postID.
 					echo "PostID: ".$newPost_id."<br />";
