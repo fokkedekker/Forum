@@ -33,7 +33,11 @@
 
 
 			<div class="slidemenu">
+<<<<<<< HEAD
 				<?php include 'adminslide.php' ?>
+=======
+				<a href="adminpage.php">Control Topics</a>
+>>>>>>> a192600... sidemenu adminpagecat nu mt link naar topic dinges
 			</div>
 
 			<div class="center">
