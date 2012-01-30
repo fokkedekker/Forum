@@ -1,5 +1,4 @@
 <?php session_start('test'); ?>
-<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -49,7 +48,7 @@
 				//echo $categorie;
 				
 				// Verkrijg de laatst geposte berichten uit de catagorie.
-				$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$categorie' and approved = '1' ORDER BY starttime DESC");
+				$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$categorie' and approved = '1' AND start = '1' ORDER BY starttime DESC");
 				
 				// Verkrijg catagorie naam.
 				$cats = mysql_query("SELECT name FROM catagories where id = '$categorie'");

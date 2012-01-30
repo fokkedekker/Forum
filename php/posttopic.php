@@ -65,11 +65,13 @@
 						$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
 						$row = mysql_fetch_array($getPost_id);
 						$newPost_id = $row['post_id'] + 1;
+						$start = 1;
 					} 
 					else
 					{
 						// Set post_id naar die van uit de GET van de url.
 						$newPost_id = strip_tags($_GET["id"]);
+						$start = 0;
 					}
 					
 					// Prompt approval.
@@ -110,14 +112,16 @@
 					post_id, 
 					catagorie_id, 
 					user_id, 
-					starttime)
+					starttime,
+					start)
 					VALUES ('$approval', 
 					'$postTitle', 
 					'$postContent', 
 					'$newPost_id', 
 					'$catagory', 
 					'$userID', 
-					CURRENT_TIMESTAMP)") or die (mysql_error());
+					CURRENT_TIMESTAMP,
+					'$start')") or die (mysql_error());
 					
 					// Connectie met databse afsluiten.
 					mysql_close($dbhandle);
