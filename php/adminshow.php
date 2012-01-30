@@ -75,12 +75,12 @@
 			
 			if ($q != 1)
 			{
-				echo "<form style='float: left;' onchange='approve(".$row['id'].")'>";
+				echo "<form style='float: left;' onclick='approve(".$row['id'].")'>";
 				echo "<input type='submit' value='Y'/>";
 				echo "</form>";
 			}
 
-			echo "<form onchange='delete(".$row['id'].")'>";
+			echo "<form onclick='delete(".$row['id'].")'>";
 			echo "<input type='submit' value='X'/>";
 			echo "</form>";
 			
