@@ -340,40 +340,129 @@ div.reactie
 	margin-left:70px;
 }
 
-div.catPostTitle
-{
-	padding: 2px;
-	width: 250px;
-	height: 25px;
-	float:left;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #003366;
-}
-div.catPostTime
-{
-	padding: 2px;
-	width: 150px;
-	height: 25px;
-	float:left;
-	border-style: solid;
-	border-width: 2px;
-	border-left: 1px;
-	border-color: #003366;
-}
-div.catPostUser
-{
-	padding: 2px;
-	width: 96px;
-	height: 25px;
-	float:left; 
-	border-style: solid;
-	border-width: 2px;
-	border-color: #003366;
-}
+
 
 div.catPostOver
 {
 	width: 100%;
 	float: left;
 }
+
+div.first
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-bottom-width:3px;
+	border-color:black;
+	width: 250px;
+	float:left;
+	border-right-width:0px;
+	padding:3px;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+	height:45px;
+	text-align: center;
+
+
+}
+
+div.fourth
+
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 95px;
+	border-bottom-width: 3px;
+	float: left;
+	border-left-width:0px;
+	border-right-width:0px;
+	padding:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+	height:45px;
+}
+
+
+
+div.sixth
+
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 147px;
+	border-bottom-width:3px;
+	float: left;
+	border-left-width:0px;
+	border-right-width:3px;
+	padding:3px;
+	text-align: center;
+	box-shadow:3px 5px 10px #333;
+	background: #D3D3D3;
+	height:45px;
+
+}
+
+
+
+
+
+div.catPostTitle
+{ 	
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 250px;
+	border-bottom-width:1px;
+	border-top-width:1px;
+	float: left;
+	padding:3px;
+	border-right-width:0px;
+	border-left-width:3px;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:35px
+	
+}
+
+div.catPostUser
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 95px;
+	border-bottom-width:1px;
+	border-top-width:1px;
+	float: left;
+	border-left-width:0px;
+	padding:3px;
+	border-right-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:35px
+	
+	
+}
+
+
+div.catPostTime
+{
+	border-style:solid;
+	border-width:3px;
+	border-color:black;
+	width: 145px;
+	border-bottom-width:1px;
+	border-top-width:1px;
+	float: left;
+	padding:3px;
+	border-right-width:3px;
+	border-left-width:0px;
+	text-align: center;
+	box-shadow:3px 5px 10px #a7a7a7;
+	height:35px
+
+}
+
+
+
