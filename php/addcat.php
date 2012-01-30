@@ -23,7 +23,9 @@
 
 
 			<div class="slidemenu">
-				<?php include 'slidemenu.php' ?>
+			<a href="adminpagecat.php">Add Catagory</a>
+			<br />
+			<a href="adminpage.php">Control Topics</a>
 			</div>
 
 			<div class="center">

@@ -1,10 +1,39 @@
-<?php session_start('test'); ?>
+
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script type="text/javascript">
+function showTopic(str)
+{
+if (str=="")
+  {
+  document.getElementById("topicTabel").innerHTML="";
+  return;
+  } 
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("topicTabel").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","adminphp.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+
+		
 		<title>
 			Patriciaat Forum
 		</title>
@@ -12,58 +41,44 @@
 
 	<body>
 		<div class="container">
+
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</a>
+			<A HREF="index.php">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">
-				<?php include 'menu.php'; ?>
+			<?php include 'menu.php' ?>
 			</div>
-
+			
 			<div class="slidemenu">
-				<?php include 'slidemenu.php'; ?>
+			<a href="adminpagecat.php">Add Catagory</a>
 			</div>
 
 			<div class="center">
-				<?php
-					include 'dblogin.php';
+			
+			<form>
+			<select name="users" onchange="showTopic(this.value)">
+			<option value="">Select Topic Type:</option>
+			<option value="0">Pending Topics</option>
+			<option value="1">Approved Topics</option>
+			</select>
+			</form>
+			<br />
+			<div id="topicTabel">Select topics will be displayed here</div>
 
-					$result = mysql_query("SELECT * FROM topics") or die (mysql_error());
-						
-					while($row = mysql_fetch_array($result))
-					{
-						echo "<div class='topic_id'>";
-						echo $row['id'];
-						echo "</div>";
-						
-						echo "<div class='topic_title'>";
-						echo "<a href='draadje.php?topicid=".$row['post_id']."&cat=".$row['catagorie_id']."'>".$row['posttitle']."</a>";
-						echo "</div>";
-						
-						echo "<div class='topic_starttime'>";
-						echo $row['starttime'];
-						echo "</div>";
-						
-						echo "<div class='topic_action'>";
-						
-						echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
-						echo "<input type='submit' value='Y'/>";
-						echo "</form>";
-						
-						echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
-						echo "<input type='submit' value='X'/>";
-						echo "</form>";
-
-						echo "</div>";
-					}
-					
-					mysql_close($dbhandle);
-				?>
 			</div>
+
 
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
+
 		</div>
+
 	</body>
+
+
+
+
+
 </html>
