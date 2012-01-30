@@ -22,7 +22,7 @@
 		<div class="container">
 
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+			<A HREF="index.php">Het Patriciaat Forum</A>
 			</div>
 
 			<div class="menu">
@@ -33,7 +33,7 @@
 
 
 			<div class="slidemenu">
-				<?php include 'slidemenu.php' ?>
+				<a href="adminpage.php">Control Topics</a>
 			</div>
 
 			<div class="center">
