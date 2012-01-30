@@ -33,7 +33,7 @@
 
 
 			<div class="slidemenu">
-				<a href="adminpage.php">Control Topics</a>
+				<?php include 'adminslide.php' ?>
 			</div>
 
 			<div class="center">
