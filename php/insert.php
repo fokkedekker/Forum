@@ -51,8 +51,9 @@ $sex = strip_tags($_POST["sex"]);
 
 $random = substr(str_shuffle(str_repeat('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',10)),10,10);
 
+$userpass = md5($random);
 
-if($str1 == $str2 && $str3 == $str4)
+if($str1 == $str2)
 {
 
 $sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, username, sex, password)
