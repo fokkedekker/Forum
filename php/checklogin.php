@@ -57,8 +57,7 @@
 						// Database connectie afsluiten.
 						mysql_close($dbhandle);
 						
-						// Voor debug.
-						print_r($_SESSION);
+					
 					}
 					else
 					{
