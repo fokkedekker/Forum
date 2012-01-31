@@ -155,7 +155,7 @@
 				// een while met counters om het script 10 keer te laten uitvoeren waardoor de laatste 10 gestarte topics te zien zijn.
 				while($counter3 != 10)
 				{					
-					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
+					$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
 					
 					$row3 = mysql_fetch_array($result3);
 					echo $row3['posttitle'];
