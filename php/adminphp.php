@@ -26,11 +26,11 @@ while($row = mysql_fetch_array($result))
 		if ($q != '1')
 		{
 		echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
-		echo "<input type='submit' value='Y'/>";
+		echo "<input type='image' src='public.png' value='Y'/>";
 		echo "</form>";
 		}
 		echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
-		echo "<input type='submit' value='X'/>";
+		echo "<input type='image' src='nee.png' value='X'/>";
 		echo "</form>";
 		
 
