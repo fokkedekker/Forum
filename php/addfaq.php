@@ -3,7 +3,6 @@
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
@@ -13,42 +12,39 @@
 
 	<body>
 		<div class="container">
+
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</A>
+				<a href="index.php">Gitmasters</A>
 			</div>
 
 			<div class="menu">
-
 				<?php include 'menu.php' ?>
+			</div>
 
-			</div>
-			
 			<div class="slidemenu">
-				<?php include 'slidemenu.php'?>
+				<?php include'adminslide.php'; ?>
 			</div>
-			
+
 			<div class="center">
 				<?php
-					// Database connectie aanmaken.
 					include 'dblogin.php';
+						
+					$question = strip_tags($_POST['question']);
+					$anwser = strip_tags($_POST['anwser']);
+						
+					$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die (mysql_error());
 					
-					// Alle FAQ dingen uit de faq tabel halen.
-					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
-					
-					// Resultaat weergeven.
-					while($row = mysql_fetch_array($result))
-					{
-						echo "<div class='faq'>";
-						echo "Question: ".$row['question'];
-						echo "<br /><hr />Anwser: ".$row['awnser'];
-						echo "</div>";
-					}
-					
-					// Database connectie afsluiten.
+					echo "<h1>New FAQ succesfully added.</h1><br />";
+					echo "Click <a href='adminfaq.php'>here</a> to return.";
+					echo "<div class='faq'>";
+					echo "Question: ".$question;
+					echo "<br /><hr />Anwser: ".$anwser;
+					echo "</div>";
+
 					mysql_close($dbhandle);
 				?>
 			</div>
-			
+
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>

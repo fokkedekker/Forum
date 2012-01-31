@@ -95,7 +95,7 @@ div.post
 }
 
 div.login
-{
+{	
 	text-align:center;
 	margin: 0 auto 0 auto;
 }
@@ -239,7 +239,7 @@ div.faq
 	border-width:2px;
 	border-color: #003366;
 	padding:10px;
-	width:520px;
+	width:480px;
 	height:auto;
 	border-radius: 6px;
 	margin:5px;
