@@ -32,10 +32,18 @@
 			{
 				echo "
 				<form action='changepw.php' method='POST'>
-				Old password: <input type= 'password' name='oldpassword'><p>
-				New password: <input type='password' name='newpassword'><br>
-				Repeat new password: <input type='password' name='reapeatnewpassword'><p>
+				<table border ='0'>
+				<tr>
+				<td>Old password: </td> <td> <input type= 'password' name='oldpassword'> </td>
+				</tr>
+				<tr>
+				<td>New password: </td> <td> <input type='password' name='newpassword'> </td>
+				</tr>
+				<tr>
+				<td> Repeat new password: </td> <td> <input type='password' name='repeatnewpw'> </td>
+				</tr>
 				<input type='submit' name='submit' value='change password'>
+				</table>
 				</form>";
 				
 			}
