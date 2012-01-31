@@ -27,21 +27,24 @@
 
 			<div class="center">
 				<?php
-					include 'dblogin.php';
+					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					{
+						include 'dblogin.php';
+							
+						$question = strip_tags($_POST['question']);
+						$anwser = strip_tags($_POST['anwser']);
+							
+						$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die (mysql_error());
 						
-					$question = strip_tags($_POST['question']);
-					$anwser = strip_tags($_POST['anwser']);
-						
-					$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die (mysql_error());
-					
-					echo "<h1>New FAQ succesfully added.</h1><br />";
-					echo "Click <a href='adminfaq.php'>here</a> to return.";
-					echo "<div class='faq'>";
-					echo "Question: ".$question;
-					echo "<br /><hr />Anwser: ".$anwser;
-					echo "</div>";
+						echo "<h1>New FAQ succesfully added.</h1><br />";
+						echo "Click <a href='adminfaq.php'>here</a> to return.";
+						echo "<div class='faq'>";
+						echo "Question: ".$question;
+						echo "<br /><hr />Anwser: ".$anwser;
+						echo "</div>";
 
-					mysql_close($dbhandle);
+						mysql_close($dbhandle);
+					}
 				?>
 			</div>
 

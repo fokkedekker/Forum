@@ -27,8 +27,8 @@
 
 			<div class="center">
 				<?php
-					//if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
-					//{
+					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					{
 						// Databaseconnectie.
 						include 'dblogin.php';
 						
@@ -59,7 +59,7 @@
 						
 						// Database connectie afsluiten.
 						mysql_close($dbhandle);
-					//}
+					}
 				?>
 			</div>
 

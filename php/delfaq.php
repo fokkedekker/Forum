@@ -27,13 +27,16 @@
 
 			<div class="center">
 				<?php
-					// Database login.
-					include 'dblogin.php';
-					
-					$delete_topic = strip_tags($_GET['id']);
-					mysql_query("DELETE FROM faq WHERE id ='$delete_topic'") or die (mysql_error());
+					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					{
+						// Database login.
+						include 'dblogin.php';
+						
+						$delete_topic = strip_tags($_GET['id']);
+						mysql_query("DELETE FROM faq WHERE id ='$delete_topic'") or die (mysql_error());
 
-					echo "FAQ succesfully deleted, press <a href='adminfaq.php'>here</a> to return.";
+						echo "FAQ succesfully deleted, press <a href='adminfaq.php'>here</a> to return.";
+					}
 				?>
 			</div>
 			<div class="footer">
