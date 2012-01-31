@@ -128,14 +128,15 @@
 				
 				if($forumstatus == 0)
 				{
-					echo " Forum status: User";
+					echo " Forum status: User <br />";
 				}
 				else if($forumstatus == 1)
 				{
-					echo "Forum status: Admin";
+					echo "Forum status: Admin <br />";
 				}
 				
-				echo  mysql_query("SELECT user_id, COUNT(*) FROM topics WHERE user_id=$id"); 
+				
+				echo "<a href='changing.php'>change password</a>";
 			
 				?>
 				</div>
