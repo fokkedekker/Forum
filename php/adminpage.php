@@ -56,19 +56,19 @@ xmlhttp.send();
 
 			<div class="center">
 			<?php 
-			if (!empty($_SESSION['admin']) && ($_SESSION['admin']) != "1")
-				echo "<form>
-				<select name='users' onchange='showTopic(this.value)'>
-				<option value=''>Select Topic Type:</option>
-				<option value='0'>Pending Topics</option>
-				<option value='1'>Approved Topics</option>
-				</select>
-				</form>
-				<br />
-				<div id='topicTabel'> Select topics will be displayed here</div>";
-			else
-				echo "You are not an admin.";
-			?>
+				if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
+					echo "<form>
+					<select name='users' onchange='showTopic(this.value)'>
+					<option value=''>Select Topic Type:</option>
+					<option value='0'>Pending Topics</option>
+					<option value='1'>Approved Topics</option>
+					</select>
+					</form>
+					<br />
+					<div id='topicTabel'> Select topics will be displayed here</div>";
+				else
+					echo "You are not an admin.";
+				?>
 			</div>
 
 

@@ -26,21 +26,21 @@
 
 			<div class="center">
 				<?php
-				if (!empty($_SESSION['admin']) && ($_SESSION['admin']) != "1")
-					echo "
-					<div class='catagorie_maker'>
-					<form action='addcat.php' method='POST'>
-					Catagorie: <input type='text' name='name'/>
-					<br />
-					Approval:
-					<select name='approval' method='POST'>
-						<option value='1'>approve</option>
-						<option value='0'>control</option>
-					</select>
-					</form>
-					</div>";
-				else
-					echo "Your not an admin, please login.";
+					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
+						echo "
+						<div class='catagorie_maker'>
+						<form action='addcat.php' method='POST'>
+						Catagorie: <input type='text' name='name'/>
+						<br />
+						Approval:
+						<select name='approval' method='POST'>
+							<option value='1'>approve</option>
+							<option value='0'>control</option>
+						</select>
+						</form>
+						</div>";
+					else
+						echo "Your not an admin, please login.";
 				?>
 			</div>
 			<div class="footer">

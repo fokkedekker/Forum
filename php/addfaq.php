@@ -27,7 +27,7 @@
 
 			<div class="center">
 				<?php
-					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
 					{
 						include 'dblogin.php';
 							

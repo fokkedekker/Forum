@@ -31,12 +31,13 @@
 			<div class="center">
 <?php
 include 'dblogin.php';
-
+if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
+{
 $approve_topic = strip_tags($_GET['id']);
 mysql_query("UPDATE topics SET approved='1' WHERE id='$approve_topic'") or die (mysql_error());
 
 echo "Topic approved";
-
+}
 ?>			
 		</div>
 
