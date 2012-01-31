@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
@@ -31,18 +29,12 @@
 			</div>
 
 			<div class="center">
->>>>>>> 9cc4fb1... adminpage met ajax
 <?php
-	include 'dblogin.php';
+include 'dblogin.php';
 
-	$approve_topic = strip_tags($_GET['id']);
-	mysql_query("UPDATE topics SET approved='1' WHERE id='$approve_topic'") or die (mysql_error());
+$approve_topic = strip_tags($_GET['id']);
+mysql_query("UPDATE topics SET approved='1' WHERE id='$approve_topic'") or die (mysql_error());
 
-<<<<<<< HEAD
-	echo "Topic approved";
-
-?>			
-=======
 echo "Topic approved";
 
 ?>			
@@ -62,4 +54,3 @@ echo "Topic approved";
 
 
 </html>
->>>>>>> 9cc4fb1... adminpage met ajax

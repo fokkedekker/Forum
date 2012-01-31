@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
@@ -33,17 +31,12 @@
 			<div class="center">
 			
 
->>>>>>> 9cc4fb1... adminpage met ajax
 <?php
-	include 'dblogin.php';
+include 'dblogin.php';
 
-	$delete_topic = strip_tags($_GET['id']);
-	mysql_query("DELETE FROM topics WHERE id ='$delete_topic'") or die (mysql_error());
+$delete_topic = strip_tags($_GET['id']);
+mysql_query("DELETE FROM topics WHERE id ='$delete_topic'") or die (mysql_error());
 
-<<<<<<< HEAD
-	echo "Topic Deleted";
-?>
-=======
 echo "Topic Deleted";
 
 ?>
@@ -66,4 +59,3 @@ echo "Topic Deleted";
 
 
 </html>
->>>>>>> 9cc4fb1... adminpage met ajax

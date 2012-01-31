@@ -3,7 +3,7 @@ $q=$_GET["q"];
 
 include"dblogin.php";
 
-$sql="SELECT * FROM topics where id = '".$q."'";
+$sql="SELECT * FROM topics where approved = '".$q."'";
 
 $result = mysql_query($sql);
 
@@ -21,14 +21,18 @@ while($row = mysql_fetch_array($result))
 		echo "<div class='topic_starttime'>";
 		echo $row['starttime'];
 		echo "</div>";
-
+		
 		echo "<div class='topic_action'>";
+		if ($q != '1')
+		{
 		echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
 		echo "<input type='submit' value='Y'/>";
 		echo "</form>";
+		}
 		echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
 		echo "<input type='submit' value='X'/>";
 		echo "</form>";
+		
 
 		echo "</div>";
   }

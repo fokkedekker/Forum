@@ -6,7 +6,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Gitmasters
+			Patriciaat Forum
 		</title>
 	</head>
 
