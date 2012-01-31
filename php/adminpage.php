@@ -56,7 +56,7 @@ xmlhttp.send();
 
 			<div class="center">
 			<?php 
-				if (array_key_exists('admin',$_SESSION) && !empty($_SESSION['admin']) && $_SESSION['admin'] == '1')
+				if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
 					echo "<form>
 					<select name='users' onchange='showTopic(this.value)'>
 					<option value=''>Select Topic Type:</option>
