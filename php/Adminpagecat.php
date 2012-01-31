@@ -1,15 +1,6 @@
 <?php session_start('test'); ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
-
-<?php
-//if(isset($_session['username'] == Admin)
-//{
-//echo "hij is gelijk";
-//}
-?>	
-	
-	
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -22,53 +13,33 @@
 		<div class="container">
 
 			<div class="header">
-			<A HREF="index.php">Het Patriciaat Forum</A>
+				<A HREF="index.php">Gitmasters</A>
 			</div>
 
 			<div class="menu">
-			
-			<?php include 'menu.php' ?>
-
+				<?php include 'menu.php' ?>
 			</div>
 
-
 			<div class="slidemenu">
-<<<<<<< HEAD
 				<?php include 'adminslide.php' ?>
-=======
-				<a href="adminpage.php">Control Topics</a>
->>>>>>> a192600... sidemenu adminpagecat nu mt link naar topic dinges
 			</div>
 
 			<div class="center">
-
-<div class="catagorie_maker">
-<form action="addcat.php" method="POST">
-Catagorie: <input type="text" name="name"/>
-<br />
-Approval:
-<select name="approval" method="POST">
-	<option value="1">approve</option>
-	<option value="0">control</option>
-</select>
-</form>
-
-</div>
-
-
-		</div>
-
-
+				<div class="catagorie_maker">
+				<form action="addcat.php" method="POST">
+				Catagorie: <input type="text" name="name"/>
+				<br />
+				Approval:
+				<select name="approval" method="POST">
+					<option value="1">approve</option>
+					<option value="0">control</option>
+				</select>
+				</form>
+				</div>
+			</div>
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
-
-
-
-
-
 </html>

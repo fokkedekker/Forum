@@ -1,4 +1,4 @@
-
+<?php session_start('start') ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
@@ -47,25 +47,28 @@ xmlhttp.send();
 			</div>
 
 			<div class="menu">
-			<?php include 'menu.php' ?>
+				<?php include 'menu.php' ?>
 			</div>
 			
 			<div class="slidemenu">
-			<a href="adminpagecat.php">Add Catagory</a>
+				<?php include'adminslide.php'; ?>
 			</div>
 
 			<div class="center">
-			
-			<form>
-			<select name="users" onchange="showTopic(this.value)">
-			<option value="">Select Topic Type:</option>
-			<option value="0">Pending Topics</option>
-			<option value="1">Approved Topics</option>
-			</select>
-			</form>
-			<br />
-			<div id="topicTabel">Select topics will be displayed here</div>
-
+			<?php 
+			if (!empty($_SESSION['admin']) && ($_SESSION['admin']) != "1")
+				echo "<form>
+				<select name='users' onchange='showTopic(this.value)'>
+				<option value=''>Select Topic Type:</option>
+				<option value='0'>Pending Topics</option>
+				<option value='1'>Approved Topics</option>
+				</select>
+				</form>
+				<br />
+				<div id='topicTabel'> Select topics will be displayed here</div>";
+			else
+				echo "You are not an admin.";
+			?>
 			</div>
 
 

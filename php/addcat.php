@@ -21,11 +21,8 @@
 				<?php include 'menu.php' ?>
 			</div>
 
-
 			<div class="slidemenu">
-			<a href="adminpagecat.php">Add Catagory</a>
-			<br />
-			<a href="adminpage.php">Control Topics</a>
+				<?php include'adminslide.php'; ?>
 			</div>
 
 			<div class="center">
