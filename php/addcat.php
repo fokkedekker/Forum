@@ -14,7 +14,7 @@
 		<div class="container">
 
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<a href="index.php">Gitmasters</A>
 			</div>
 
 			<div class="menu">
@@ -27,22 +27,25 @@
 
 			<div class="center">
 				<?php
-					include 'dblogin.php';
-						
-					$catagorie_name = strip_tags($_POST['name']);
-					$catagorie_approval = strip_tags($_POST['approval']);
+					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
+					{
+						include 'dblogin.php';
+							
+						$catagorie_name = strip_tags($_POST['name']);
+						$catagorie_approval = strip_tags($_POST['approval']);
 
-					if($catagorie_approval == "approved")
-						$catagorie_approval = 1;
-					else
-						$catagorie_approval = 0;
-						
-					$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die (mysql_error());
+						if($catagorie_approval == "approved")
+							$catagorie_approval = 1;
+						else
+							$catagorie_approval = 0;
+							
+						$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die (mysql_error());
 
-					echo "Catagory added: ".$catagorie_name."<br />";
-					echo "Approved: ".$catagorie_approval; 
+						echo "Catagory added: ".$catagorie_name."<br />";
+						echo "Approved: ".$catagorie_approval; 
 
-					mysql_close($dbhandle);
+						mysql_close($dbhandle);
+					}
 				?>
 			</div>
 

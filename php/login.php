@@ -28,7 +28,7 @@
 			<div class="center">
 				<div class="login">
 					<?php
-						if (empty($_SESSION['admin']))
+						if (!array_key_exists('admin',$_SESSION))
 							echo "
 							<form action='checklogin.php' method='POST'>
 								<table border = 0>

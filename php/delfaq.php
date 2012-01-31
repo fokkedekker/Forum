@@ -27,7 +27,7 @@
 
 			<div class="center">
 				<?php
-					if (!empty($_SESSION['admin']) && $_SESSION['admin'] == 1)
+					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
 					{
 						// Database login.
 						include 'dblogin.php';

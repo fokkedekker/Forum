@@ -15,3 +15,24 @@ Week 2:
 HTML en CSS afgemaakt en database ontwerp gemaakt.
 Database ingevoerd door Michiel met behulp van myPHPAdmin.
 Week 3:
+
+/------------------
+Maketopic.php
+-Ingelogd check fixen.
+
+Slidemenu.php
+-.php weg uit woorden.
+
+Index.php
+-Slidemenu.php includen.
+
+Login.php
+-Array echo weg.
+-Invul vakjes in midden zetten.
+
+Admin
+-User admin check.
+
+Overal
+-Comments
+-Code conventies
