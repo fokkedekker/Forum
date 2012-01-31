@@ -31,13 +31,32 @@
 						if (empty($_SESSION['admin']))
 							echo "
 							<form action='checklogin.php' method='POST'>
-								Username: <input type='text' name='name' />
-								<br />
-								Password: <input type='password' name='pass' />
-								<br />
-								<input type='submit' value='Submit'/>
-								<br />
-								<a href='register.php'>Registreer</a>
+								<table border = 0>
+									<tr>
+										<td>
+											Username: 
+										</td>
+										<td>
+											<input type='text' name='name' />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Password:
+										</td>
+										<td>
+											<input type='password' name='pass' />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href='register.php'>Registreer</a>
+										</td>
+										<td>
+											<input type='submit' value='Submit'/>
+										</td>
+									</tr>
+								</table>
 							</form>";
 						else
 							echo "You are already logged in.";
