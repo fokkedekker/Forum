@@ -23,7 +23,9 @@
 			</div>
 			<div class="center">
 				<?php 
-					if (!empty($_SESSION['admin']))
+				
+				echo $_SESSION['userID'];
+					if (($_SESSION['admin']) != "")
 					{
 						echo "<div class='newtopic'>
 							Title:<br \>
@@ -51,8 +53,10 @@
 					}
 					else
 					{
+						
 						echo "You need to be logged in in order to post.<br />";
 						echo "Click <a href='login.php'>here</a> to login.";
+						
 					}
 				?>
 			</div>
