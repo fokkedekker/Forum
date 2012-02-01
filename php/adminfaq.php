@@ -60,6 +60,10 @@
 						// Database connectie afsluiten.
 						mysql_close($dbhandle);
 					}
+					else
+					{
+						echo "You are not an admin, please login.";
+					}
 				?>
 			</div>
 

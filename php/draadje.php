@@ -36,7 +36,7 @@
 						echo "<div class='post'>";
 						echo "Title: ".$row['posttitle'];
 						echo "<br />Username: <a href='personal.php?id=".$row['user_id']."'>".$name['username']."</a>";
-						echo "<br />PostID: ".$row['post_id'];
+						//echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						echo "<div class=button>
 							  <form action='maketopic.php?id=".$getPostID."&topic=f&cat=".$getCat."' method='POST'>

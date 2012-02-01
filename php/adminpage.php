@@ -67,7 +67,7 @@ xmlhttp.send();
 					<br />
 					<div id='topicTabel'> Select topics will be displayed here</div>";
 				else
-					echo "You are not an admin.";
+					echo "You are not an admin, please login.";
 				?>
 			</div>
 
