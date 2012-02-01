@@ -1,8 +1,6 @@
 <?php session_start('test'); ?>
-
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
-
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -16,14 +14,13 @@
 				<?php include 'header.php'; ?>
 			</div>
 			<div class="menu">
-				<?php include 'menu.php' ?>
+				<?php include 'menu.php'; ?>
 			</div>
 			<div class="slidemenu">
-				<?php include 'slidemenu.php' ?>
+				<?php include 'slidemenu.php'; ?>
 			</div>
 			<div class="center">
 				<?php 
-				
 					if (array_key_exists('admin',$_SESSION) && !empty($_SESSION['blah']))
 					{
 						echo "<div class='newtopic'>
@@ -52,10 +49,8 @@
 					}
 					else
 					{
-						
 						echo "You need to be logged in in order to post.<br />";
 						echo "Click <a href='login.php'>here</a> to login.";
-						
 					}
 				?>
 			</div>

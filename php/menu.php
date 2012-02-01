@@ -1,7 +1,6 @@
 <div class="menuknop">
-<A HREF="index.php">Home</A>
+	<a href="index.php">Home</A>
 </div>
-
 <div class="menuknop">
 	<?php
 		if (empty($_SESSION['loggedIn']))
@@ -10,22 +9,18 @@
 			echo "<a href='logout.php'>Logout</a>";
 	?>
 </div>
-
 <div class="menuknop">
-<A HREF="register.php">Register</A>
+	<a href="register.php">Register</a>
 </div>
-
 <div class="menuknop">
-	<A HREF="<?php echo "personal.php?id=";
+	<a href="<?php echo "personal.php?id=";
 		if (!empty($_SESSION['userID'])) 
 			echo $_SESSION['userID'];
 	?>">Personal</A>
 </div>
-
 <div class="menuknop">
-<A HREF="adminpage.php">Admin</A>
+	<a href="adminpage.php">Admin</a>
 </div>
-
 <div class="menuknop">
-<A HREF="faq.php">FAQ</A>
+	<a href="faq.php">FAQ</a>
 </div>

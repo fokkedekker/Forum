@@ -5,7 +5,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Gitmasters
+			<?php include 'forumname.php'; ?>
 		</title>
 	</head>
 	<body>
@@ -41,14 +41,14 @@
 					}
 					else
 					{
-						echo "Please set a title for the categorie";
+						echo "Please set a title for the category.";
 					}
 					// Sluit database connectie.
 					mysql_close($dbhandle);
 				?>
 			</div>
 			<div class="footer">
-				&#169; 2012 Patriciaat 
+				&#169; 2012 <?php include 'forumname.php'; ?> 
 			</div>
 		</div>
 	</body>
