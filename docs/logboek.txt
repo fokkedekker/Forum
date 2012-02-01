@@ -36,6 +36,9 @@ Admin
 Catagorie add
 -Geen leeg veld
 
+Personal
+- Hoogtes vakjes gelijk zetten aan inhoud.
+
 Overal
 -Comments
 -Code conventies
