@@ -39,7 +39,7 @@
 
 									$userpass = md5($random);
 
-									if($str1 == $str2)
+									if($str1 == $str2 && strlen($username) !> 12)
 									{
 										$sql="INSERT INTO users (first_name, last_name, email, favo_browser, personal_info, date_of_birth, username, sex, password)
 										VALUES
@@ -72,6 +72,12 @@
 										echo "emails zijn niet gelijk";
 									}
 									// Database connectie afsluiten.
+									
+				
+									
+														
+									
+									
 									mysql_close($dbhandle);
                                 ?>
                         </div>
