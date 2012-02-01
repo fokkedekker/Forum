@@ -7,9 +7,9 @@
 		// Functie neemt naam van het bestand minus extensie.
 		function curPageName() 
 		{
-			 return substr($_SERVER["SCRIPT_NAME"],
-			 strrpos($_SERVER["SCRIPT_NAME"],"/")+1,
-			 strrpos($_SERVER["SCRIPT_NAME"],".") -1 );
+			 $dottedName = substr($_SERVER["SCRIPT_NAME"],
+			 strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+			 return preg_replace('/\.[^.]*$/', '', $dottedName); 
 		}
 		
 		// Functie pakt bestandsnaam van huidige pagina.
