@@ -7,13 +7,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Patriciaat Forum
+			Gitmasters
 		</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="header">
-			<A HREF="home.html">Het Patriciaat Forum</A>
+				<?php include 'header.php'; ?>
 			</div>
 			<div class="menu">
 				<?php include 'menu.php' ?>

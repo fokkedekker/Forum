@@ -14,7 +14,7 @@
 	<body>
 		<div class="container">
 			<div class="header">
-				<A HREF="index.php">Het Patriciaat Forum</A>
+				<?php include 'header.php'; ?>
 			</div>
 
 			<div class="menu">

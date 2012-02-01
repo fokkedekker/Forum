@@ -3,28 +3,23 @@
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Patriciaat Forum
+			Gitmasters
 		</title>
 	</head>
-
 	<body>
 		<div class="container">
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</a>
+				<?php include 'header.php'; ?>
 			</div>
-
 			<div class="menu">
 				<?php include 'menu.php' ?>
 			</div>
-			
 			<div class="slidemenu">
 				<?php include 'slidemenu.php' ?>
 			</div>
-			
 			<div class="center">
 				<?php 
 					// Laadt database login.
@@ -127,13 +122,9 @@
 					mysql_close($dbhandle);
 				?>			
 			</div>
-			
-
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
 </html>

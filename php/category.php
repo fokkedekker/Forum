@@ -3,31 +3,23 @@
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Patriciaat Forum
+			Gitmasters
 		</title>
 	</head>
 	<body>
 		<div class="container">
-
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</a>
+				<?php include 'header.php'; ?>
 			</div>
-
 			<div class="menu">
-			
 				<?php include 'menu.php' ?>
-
 			</div>
-			
-			
 			<div class="slidemenu">
 				<?php include 'slidemenu.php' ?>
 			</div>
-			
 			<div class="center">
 				<?php 
 				// Database connectie en login.
@@ -36,16 +28,8 @@
 				// Categorie ophalen.
 				$categorie = strip_tags($_GET["cat"]);
 				
-				// Pagina ophalen.
-				//$page = strip_tags($_GET["page"]);
-				
 				//TODO dit fixen vvvvvvv
 				// Als categorie niet goed gespecificeert is (e.g. moet een getal zijn unsigned), dan 1 laten zien.
-				
-				//$categorie = mysql_query("SELECT id FROM catagories LIMIT 1");
-			//	$categorie = mysql_fetch_array($categorie);
-				//$categorie = $categorie['id'];
-				//echo $categorie;
 				
 				// Verkrijg de laatst geposte berichten uit de catagorie.
 				$GETposts = mysql_query("SELECT * FROM topics WHERE catagorie_id = '$categorie' and approved = '1' AND start = '1' ORDER BY starttime DESC");

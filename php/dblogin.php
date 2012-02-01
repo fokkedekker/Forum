@@ -1,7 +1,7 @@
 <?php 
 	$dbhost = 'localhost';
 	$dbuser = 'root';
-	$dbpass = 'root';
+	$dbpass = '';
 
 	$dbhandle = mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());  
 

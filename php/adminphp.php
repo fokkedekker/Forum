@@ -1,14 +1,14 @@
 <?php
-$q=$_GET["q"];
+	$q=$_GET["q"];
 
-include"dblogin.php";
+	include"dblogin.php";
 
-$sql="SELECT * FROM topics where approved = '".$q."'";
+	$sql="SELECT * FROM topics where approved = '".$q."'";
 
-$result = mysql_query($sql);
+	$result = mysql_query($sql);
 
-while($row = mysql_fetch_array($result))
-  {
+	while($row = mysql_fetch_array($result))
+	{
 		echo "<div class='topic_id'>";
 		
 		echo $row['id'];
@@ -35,7 +35,6 @@ while($row = mysql_fetch_array($result))
 		
 
 		echo "</div>";
-  }
-
+	}
 ?>
 

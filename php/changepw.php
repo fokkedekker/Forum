@@ -3,7 +3,6 @@
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 
 <html>
-
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
@@ -14,13 +13,11 @@
 	<body>
 		<div class="container">
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</A>
+				<?php include 'header.php'; ?>
 			</div>
 
 			<div class="menu">
-
 				<?php include 'menu.php' ?>
-
 			</div>
 			
 			<div class="slidemenu">
@@ -29,46 +26,46 @@
 			
 			<div class="center">
 				<?php
+					// Database connectie.
+					include 'dblogin.php';
 					
-include 'dblogin.php';
+					// Variabelen verkrijgen.
+					$oldpw = $_POST['oldpassword'];
+					$newpw = $_POST['newpassword'];
+					$repeatnewpw = $_POST['repeatnewpw'];
+					
+					// Md5 encriptie.
+					$md5pwnew = md5($newpw);
+					$md5oldpw = md5($oldpw);
 
-$oldpw = $_POST['oldpassword'];
-$newpw = $_POST['newpassword'];
-$repeatnewpw = $_POST['repeatnewpw'];
-$md5pwnew = md5($newpw);
-$md5oldpw = md5($oldpw);
+					$id = $_SESSION['userID'];
 
-$id = $_SESSION['userID'];
+					$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die(mysql_error());
+					$row = mysql_fetch_array($result);
 
-$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die(mysql_error());
-$row = mysql_fetch_array($result);
-
-$password = $row['password'];
-
-
-if($md5oldpw == $password && $newpw == $repeatnewpw)
-{
-	mysql_query("UPDATE users SET password = '$md5pwnew' WHERE id ='$id'");
-	echo "password is changed";
-}
-
-else if('$newpw' != '$repeatnewpw')
-{
-	echo " Password are not the same";
-}
-
-else if('$oldpw' != '$password')
-{
-	echo "Old password is not correct";
-}
+					$password = $row['password'];
 
 
-// Database connectie afsluiten.
+					if($md5oldpw == $password && $newpw == $repeatnewpw)
+					{
+						mysql_query("UPDATE users SET password = '$md5pwnew' WHERE id ='$id'");
+						echo "password is changed";
+					}
+
+					else if('$newpw' != '$repeatnewpw')
+					{
+						echo " Password are not the same";
+					}
+
+					else if('$oldpw' != '$password')
+					{
+						echo "Old password is not correct";
+					}
+
+					// Database connectie afsluiten.
 					mysql_close($dbhandle);
-
 				?>
 			</div>
-			
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>

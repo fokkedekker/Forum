@@ -5,7 +5,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Patriciaat Forum
+			Gitmasters
 		</title>
 	</head>
 
@@ -13,7 +13,7 @@
 		<div class="container">
 
 			<div class="header">
-				<A HREF="index.php">Gitmasters</A>
+				<?php include 'header.php'; ?>
 			</div>
 
 			<div class="menu">

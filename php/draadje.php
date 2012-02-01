@@ -6,13 +6,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Patriciaat Forum
+			Gitmasters
 		</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="header">
-				<a href="index.php">Het Patriciaat Forum</a>
+				<?php include 'header.php'; ?>
 			</div>
 			<div class="menu">
 				<?php include 'menu.php' ?>
