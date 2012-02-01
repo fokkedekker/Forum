@@ -53,7 +53,7 @@
 
 										best regards,
 
-										The gitmasters team.";
+										The Gitmasters team.";
 										$from = "noreply@gitmasters.com";
 										$headers = "From:" . $from;
 										mail($to,$subject,$message,$headers);
@@ -64,7 +64,7 @@
 										  die('Error: ' . mysql_error());
 										}
 										echo "Thank you for registering for gitmasters.com. <br/>
-										A message containing your log in credentials have been send to your E-mail <br/>";
+										A message containing your login credentials have been send to ".$to." <br/>";
 									}
 
 									else if($str1 != $str2)
