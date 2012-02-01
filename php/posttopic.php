@@ -31,17 +31,14 @@
 					$postTitle = mysql_real_escape_string(strip_tags($_POST["topicname"]));
 					$postContent = mysql_real_escape_string(strip_tags($_POST["content"]));
 					
-					// Start sessie.
-					//session_start();
-					
 					// Haal gebruikersnaam uit sessie.
-					$username = $_SESSION['username'];
+					$username = mysql_real_escape_string($_SESSION['username']);
 					
 					// Haal user ID uit sessie.
-					$userID = $_SESSION['userID'];
+					$userID = mysql_real_escape_string($_SESSION['userID']);
 					
 					// Verkrijgt catagorie_id.
-					$catagory = $_GET['cat'];
+					$catagory = mysql_real_escape_string($_GET['cat']);
 					
 					// Laadt catagorie approval.
 					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
@@ -51,7 +48,7 @@
 					echo "Thank you for your submission. <br />";
 										
 					// Checkt of er een nieuw draad aangemaakt wordt of het een reply is.
-					$checkThread = strip_tags($_GET["topic"]);
+					$checkThread = mysql_real_escape_string(strip_tags($_GET["topic"]));
 					
 					if ($checkThread === "y")
 					{
@@ -117,7 +114,7 @@
 					CURRENT_TIMESTAMP,
 					'$start')") or die (mysql_error());
 					
-					// Connectie met databse afsluiten.
+					// Connectie met database afsluiten.
 					mysql_close($dbhandle);
 				?>			
 			</div>
