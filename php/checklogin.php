@@ -45,7 +45,8 @@
 						$_SESSION['admin'] = $login['admin'];
 						
 						//Prompt gebruiker met login bericht.
-						echo "Thank you ".$_SESSION['username']." for logging in!";
+						echo "Thank you ".$_SESSION['username']." for logging in, you will now be redirected!";
+						header("refresh: 1; index.php");
 					}
 					else
 					{
