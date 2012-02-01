@@ -28,9 +28,9 @@
 					// en dan hij dan niets in de db zet.
 					
 					// Variabelen uit maketopic.php form.
-					// Stript van tags met behulp van strip_tags();
-					$postTitle = strip_tags($_POST["topicname"]);
-					$postContent = strip_tags($_POST["content"]);
+					// Stript van tags met behulp van strip_tags() en mysql_real_escape_string().
+					$postTitle = mysql_real_escape_string(strip_tags($_POST["topicname"]));
+					$postContent = mysql_real_escape_string(strip_tags($_POST["content"]));
 					
 					// Start sessie.
 					//session_start();

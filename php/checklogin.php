@@ -31,10 +31,9 @@
 					include 'dblogin.php';
 					
 					// Variabelen uit login.php form verkrijgen.
-					// Stript van tags met behulp van strip_tags();
-					$GETusername = strip_tags($_POST["name"]);
-					//$GETpassword = md5(strip_tags($_POST["pass"]));
-					$GETpassword = md5(strip_tags($_POST["pass"]));
+					// Stript van tags met behulp van strip_tags() en mysql_real_escape_string
+					$GETusername = mysql_real_escape_string(strip_tags($_POST["name"]));
+					$GETpassword = md5(mysql_real_escape_string(strip_tags($_POST["pass"])));
 					
 					// Kijken of de combinatie van username en password in de database te vinden is
 					$login = mysql_query("SELECT username, id, admin FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());

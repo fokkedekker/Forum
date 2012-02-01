@@ -32,8 +32,8 @@
 				<?php
 					include 'dblogin.php';
 						
-					$catagorie_name = strip_tags($_POST['name']);
-					$catagorie_approval = strip_tags($_POST['approval']);
+					$catagorie_name = mysql_real_escape_string(strip_tags($_POST['name']));
+					$catagorie_approval = mysql_real_escape_string(strip_tags($_POST['approval']));
 
 					if($catagorie_approval == "approved")
 						$catagorie_approval = 1;

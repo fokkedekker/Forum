@@ -35,8 +35,8 @@
 					$repeatnewpw = $_POST['repeatnewpw'];
 					
 					// Md5 encriptie.
-					$md5pwnew = md5($newpw);
-					$md5oldpw = md5($oldpw);
+					$md5pwnew = md5(mysql_real_escape_string($newpw));
+					$md5oldpw = md5(mysql_real_escape_string($oldpw));
 
 					$id = $_SESSION['userID'];
 

@@ -31,8 +31,8 @@
 					{
 						include 'dblogin.php';
 							
-						$question = strip_tags($_POST['question']);
-						$anwser = strip_tags($_POST['anwser']);
+						$question = mysql_real_escape_string(strip_tags($_POST['question']));
+						$anwser = mysql_real_escape_string(strip_tags($_POST['anwser']));
 							
 						$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die (mysql_error());
 						
