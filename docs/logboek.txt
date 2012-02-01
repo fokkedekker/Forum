@@ -18,27 +18,33 @@ Week 3:
 
 /------------------
 Email
-/Link naar login pagine
--\r gebruikt voor linebreaks
+/Link naar login pagine < Fokke
+-\r gebruikt voor linebreaks < Fokke
 
 posttopic.php
-- chekcen voor posts
+- chekcen voor posts id bestaat < Kees
+-checken lege velden < Fokke
 
-Regiser
-- Checken of niet leeg vakjes
+Register
+- Checken of niet leeg vakjes < Fokke
 
 maketopic
-- geen lege berichten posten
+- geen lege berichten posten < Fokke
 
 changepw
--random.
+- niet zomaar aanroepen, posts afvangen < Fokke
 
 personal
--change pw link weghalen als je niet bij jezelf kijkt
-- string afvangen in get
+-change pw link weghalen als je niet bij jezelf kijkt < Kees
+- string afvangen in get < Kees
 
-Like
+Like < Fokke
 - Niet zelfde dingen liken
 - niet liken als niet ingelogd
+
+posttopic.php
+-Gets checken of bestaande id < Michiel
+
 Overal
--Auto redirect naar https ipv http
+-Auto redirect naar https ipv http < Kees
+-lege velden chekcen < Fokke
