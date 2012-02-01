@@ -26,8 +26,13 @@
 					{
 						// Vernietig sessie test.
 						if (session_destroy());
+						{
 							// Prompt gebruiker.
-							echo "Sucessfully logged out!";
+							echo "Sucessfully logged out, you will now be redirected!";
+							
+							// Redirect.
+							header("refresh: 1; index.php");
+						}
 					}
 				?>
 			</div>
