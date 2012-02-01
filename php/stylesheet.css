@@ -443,13 +443,12 @@ div.catPostTitle
 div.catPostUser
 {
 	border-style:solid;
-	border-width:3px;
+	border-width:2px;
 	border-color:black;
 	width: 95px;
 	border-bottom-width:1px;
 	border-top-width:1px;
 	float: left;
-	border-left-width:0px;
 	padding:3px;
 	border-right-width:1px;
 	text-align: center;
