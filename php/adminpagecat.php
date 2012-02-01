@@ -8,22 +8,17 @@
 			Gitmasters
 		</title>
 	</head>
-
 	<body>
 		<div class="container">
-
 			<div class="header">
 				<?php include 'header.php'; ?>
 			</div>
-
 			<div class="menu">
-				<?php include 'menu.php' ?>
+				<?php include 'menu.php'; ?>
 			</div>
-
 			<div class="slidemenu">
-				<?php include 'adminslide.php' ?>
+				<?php include 'adminslide.php'; ?>
 			</div>
-
 			<div class="center">
 				<?php
 					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)

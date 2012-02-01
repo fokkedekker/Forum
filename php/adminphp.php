@@ -1,7 +1,7 @@
 <?php
 	$q=$_GET["q"];
 
-	include"dblogin.php";
+	include "dblogin.php";
 
 	$sql="SELECT * FROM topics where approved = '".$q."'";
 
@@ -25,15 +25,14 @@
 		echo "<div class='topic_action'>";
 		if ($q != '1')
 		{
-		echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
-		echo "<input type='image' src='public.png' value='Y'/>";
-		echo "</form>";
+			echo "<form style='float: left;' action='approve.php?id=".$row['id']."' method='POST'>";
+			echo "<input type='image' src='public.png' value='Y'/>";
+			echo "</form>";
 		}
 		echo "<form action='delete.php?id=".$row['id']."' method='POST'>";
 		echo "<input type='image' src='nee.png' value='X'/>";
 		echo "</form>";
 		
-
 		echo "</div>";
 	}
 ?>

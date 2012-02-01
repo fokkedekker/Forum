@@ -1,59 +1,51 @@
 <?php session_start('test'); ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
-
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-<script type="text/javascript">
-function showTopic(str)
-{
-if (str=="")
-  {
-  document.getElementById("topicTabel").innerHTML="";
-  return;
-  } 
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("topicTabel").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","adminphp.php?q="+str,true);
-xmlhttp.send();
-}
-</script>
-
-		
-		<title>
-			Patriciaat Forum
-		</title>
+			<script type="text/javascript">
+				function showTopic(str)
+				{
+				if (str=="")
+				  {
+				  document.getElementById("topicTabel").innerHTML="";
+				  return;
+				  } 
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+					document.getElementById("topicTabel").innerHTML=xmlhttp.responseText;
+					}
+				  }
+				xmlhttp.open("GET","adminphp.php?q="+str,true);
+				xmlhttp.send();
+				}
+			</script>
+			<title>
+				Gitmasters
+			</title>
 	</head>
-
 	<body>
 		<div class="container">
-
 			<div class="header">
-			<A HREF="index.php">Het Patriciaat Forum</A>
+				<?php include 'header.php'; ?>
 			</div>
-
 			<div class="menu">
-				<?php include 'menu.php' ?>
+				<?php include 'menu.php'; ?>
 			</div>
-			
 			<div class="slidemenu">
-				<?php include'adminslide.php'; ?>
+				<?php include 'adminslide.php'; ?>
 			</div>
-
 			<div class="center">
 			<?php 
 				if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
@@ -70,18 +62,9 @@ xmlhttp.send();
 					echo "You are not an admin, please login.";
 				?>
 			</div>
-
-
 			<div class="footer">
 				&#169; 2012 Patriciaat 
 			</div>
-
 		</div>
-
 	</body>
-
-
-
-
-
 </html>
