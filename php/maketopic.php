@@ -21,7 +21,7 @@
 			</div>
 			<div class="center">
 				<?php 
-					if (array_key_exists('admin',$_SESSION) && !empty($_SESSION['blah']))
+					if (array_key_exists('admin',$_SESSION) && !empty($_SESSION['admin']))
 					{
 						echo "<div class='newtopic'>
 							Title:<br \>
