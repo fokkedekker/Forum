@@ -17,6 +17,9 @@ Database ingevoerd door Michiel met behulp van myPHPAdmin.
 Week 3:
 
 /------------------
+Header
+logo.png checks
+
 Email
 /Link naar login pagine < Fokke
 -\r gebruikt voor linebreaks < Fokke
