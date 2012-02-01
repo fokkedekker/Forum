@@ -46,8 +46,8 @@
 										('$firstname', '$lastname' ,'$str1' ,'$browser' ,'$personal','$date','$username','$sex','$userpass')";
 
 										$to = "$str1";
-										$subject = "Registration for Gitmasters.com PRIVATE INFORMATION INSIDE!";
-										$message = "Thank you for registering for gitmasters.
+										$subject = "Registration - Gitmasters.com";
+										$message = "Thank you for registering at gitmasters.
 										Your username is $username.
 										Your password is $random.
 
