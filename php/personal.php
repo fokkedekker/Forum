@@ -35,7 +35,7 @@
 				?>
 			
 			<div class="picture">
-				<img src="plus.jpg" alt="emperor" width="200" height="200"/>
+				<img src="emperor.png" alt="emperor" width="200" height="200"/>
 				</div>
 				
 				<div class="overmij">
