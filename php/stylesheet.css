@@ -436,8 +436,7 @@ div.catPostTitle
 	float: left;
 	padding:3px;
 	border-right-width:0px;
-	border-left-width:3px;
-	box-shadow:3px 5px 10px #a7a7a7;
+	border-left-width:1px;
 	height:35px
 }
 
@@ -452,9 +451,8 @@ div.catPostUser
 	float: left;
 	border-left-width:0px;
 	padding:3px;
-	border-right-width:0px;
+	border-right-width:1px;
 	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
 	height:35px
 }
 
@@ -468,9 +466,8 @@ div.catPostTime
 	border-top-width:1px;
 	float: left;
 	padding:3px;
-	border-right-width:3px;
-	border-left-width:0px;
+	border-right-width:1px;
+	border-left-width:1px;
 	text-align: center;
-	box-shadow:3px 5px 10px #a7a7a7;
 	height:35px
 }
