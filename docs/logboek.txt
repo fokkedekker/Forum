@@ -33,13 +33,14 @@ Register
 
 maketopic
 - geen lege berichten posten < Fokke
+GEDAAN- Kan niet in niet bestaande catagorien posten < Kees
 
 changepw
 - niet zomaar aanroepen, posts afvangen < Fokke
 
 personal
--change pw link weghalen als je niet bij jezelf kijkt < Kees
-- string afvangen in get < Kees
+GEDAAN- change pw link weghalen als je niet bij jezelf kijkt < Kees
+GEDAAN- string afvangen in get < Kees
 
 Like < Fokke
 - Niet zelfde dingen liken
@@ -49,5 +50,5 @@ posttopic.php
 -Gets checken of bestaande id < Michiel
 
 Overal
--Auto redirect naar https ipv http < Kees
+-NIET KUNNEN DOEN; KAN NIET LOKAAL TESTENAuto redirect naar https ipv http < Kees
 -lege velden chekcen < Fokke
