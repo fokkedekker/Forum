@@ -7,7 +7,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>
-			Gitmasters
+			<?php include 'forumname.php'; ?>
 		</title>
 	</head>
 
@@ -50,7 +50,7 @@
 			</div>
 			
 			<div class="footer">
-				&#169; 2012 Patriciaat 
+				&#169; 2012 <?php include 'forumname.php'; ?>
 			</div>
 		</div>
 	</body>
