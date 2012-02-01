@@ -33,6 +33,9 @@ Login.php
 Admin
 -User admin check.
 
+Catagorie add
+-Geen leeg veld
+
 Overal
 -Comments
 -Code conventies
