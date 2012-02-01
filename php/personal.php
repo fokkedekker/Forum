@@ -25,14 +25,26 @@
 					include 'dblogin.php';
 					
 					//TODO check uitvoeren dat de user wel bestaat.
-					if (!empty($_GET['id']))
+					if (array_key_exists('id',$_GET) && ($_GET['id']) != "" && ($_GET['id']) > 0)
 					{
-					$id = $_GET['id'];
-					$idSelf = $_SESSION['userID'];
-					
-					$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
-					
-					$row = mysql_fetch_array($result1);
+						$id = $_GET['id'];
+						$idSelf = $_SESSION['userID'];
+						
+						// Exists variabele.
+						$exists = 0;
+						
+						// Gegevens uit tabel ophalen.
+						$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
+						$row = mysql_fetch_array($result1);
+						
+						// Als $id bestaat in rij, dan is $exists 1.
+						if ($row['id'] == $id)
+							$exists = 1;
+							
+						// Als de id bestaat, de gegevens tonen.
+						if ($exists == 1)
+						{
+							//$row = mysql_fetch_array($result1);
 				?>
 				<div class="picture">
 					<img src="emperor.png" alt="emperor" width="200" height="200"/>
@@ -137,6 +149,11 @@
 						?>
 					</div>
 				<?php 
+					}
+					else
+					{
+						echo "User does not exist.";
+					}
 					}
 					else
 					{
