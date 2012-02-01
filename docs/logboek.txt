@@ -17,28 +17,28 @@ Database ingevoerd door Michiel met behulp van myPHPAdmin.
 Week 3:
 
 /------------------
-Maketopic.php
--Ingelogd check fixen.
+Email
+/Link naar login pagine
+-\r gebruikt voor linebreaks
 
-Slidemenu.php
--.php weg uit woorden.
+posttopic.php
+- chekcen voor posts
 
-Index.php
--Slidemenu.php includen.
+Regiser
+- Checken of niet leeg vakjes
 
-Login.php
--Array echo weg.
--Invul vakjes in midden zetten.
+maketopic
+- geen lege berichten posten
 
-Admin
--User admin check.
+changepw
+-random.
 
-Catagorie add
--Geen leeg veld
+personal
+-change pw link weghalen als je niet bij jezelf kijkt
+- string afvangen in get
 
-Personal
-- Hoogtes vakjes gelijk zetten aan inhoud.
-
+Like
+- Niet zelfde dingen liken
+- niet liken als niet ingelogd
 Overal
--Comments
--Code conventies
+-Auto redirect naar https ipv http
