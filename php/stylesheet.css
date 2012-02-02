@@ -5,15 +5,30 @@ html, body
 }
 a:link
 {
-	color: #454545;
+	color: #FF0066;
 	text-decoration: none;
 }
 a:visited
 {
-	color: #454545;
+	color: #FF0066;
 	text-decoration: none;
 }
 a:hover
+{
+	color: #D3D3D3;
+	text-decoration: none;
+}
+h1 a:link
+{
+	color: #CC0000;
+	text-decoration: none;
+}
+h1 a:visited
+{
+	color: #CC0000;
+	text-decoration: none;
+}
+h1 a:hover
 {
 	color: #D3D3D3;
 	text-decoration: none;
@@ -43,13 +58,13 @@ div.header
 
 div.header a:link 
 {
-	color: #D3D3D3;
+	color: #CC0000;
 	text-decoration: none;
 }
 
 div.header a:visited
 {
-	color: #D3D3D3;
+	color: #CC0000;
 	text-decoration: none;
 }
 
