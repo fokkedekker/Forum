@@ -47,13 +47,7 @@
 
 										$to = "$str1";
 										$subject = "Registration - Gitmasters.com";
-										$message = "Thank you for registering at gitmasters.
-										Your username is $username.
-										Your password is $random.
-
-										best regards,
-
-										The Gitmasters team.";
+										$message = "Thank you for registering at gitmasters. /rYour username is $username. /rYour password is $random./rbest regards,/r/rThe Gitmasters team.";
 										$from = "noreply@gitmasters.com";
 										$headers = "From:" . $from;
 										mail($to,$subject,$message,$headers);
