@@ -52,13 +52,13 @@ GEDAAN -lege velden chekcen < Fokke
 -Comments @ php
 
 admin cat add
--button ipv enter
+GEDAAN-button ipv enter
 
 admin cat
 -verwijderen
 
 personal page
--links in topics zetten
+GEDAAN-links in topics zetten
 
 Verslagen
 -Systeembeheerders verslag < Michiel
