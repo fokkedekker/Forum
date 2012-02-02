@@ -35,7 +35,11 @@
 					if (array_key_exists('id',$_GET) && ($_GET['id']) != "" && ($_GET['id']) > 0)
 					{
 						$id = $_GET['id'];
-						$idSelf = $_SESSION['userID'];
+						
+						if (array_key_exists('userID', $_SESSION))
+							$idSelf = $_SESSION['userID'];
+						else 
+							$idSelf = -1;
 						
 						// Exists variabele.
 						$exists = 0;
