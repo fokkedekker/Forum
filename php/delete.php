@@ -25,7 +25,7 @@
 					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
 					{
 						$delete_topic = strip_tags($_GET['id']);
-						mysql_query("DELETE FROM topics WHERE id ='$delete_topic'") or die (mysql_error());
+						mysql_query("DELETE FROM topics WHERE id ='$delete_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
 
 						echo "Topic deleted";
 					}

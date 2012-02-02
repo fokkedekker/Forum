@@ -51,12 +51,12 @@
 					
 					$getPostID = $_GET['topicid'];
 					$getCat = $_GET['cat'];
-					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
+					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die("Oops something went wrong you can try again in a few minutes.");  
 					
 					while($row = mysql_fetch_array($result))
 					{
 						$postUser = $row['user_id'];
-						$name = mysql_query("SELECT username FROM users WHERE id = '$postUser'") or die(mysql_error());
+						$name = mysql_query("SELECT username FROM users WHERE id = '$postUser'") or die("Oops something went wrong you can try again in a few minutes.");
 						$name = mysql_fetch_array($name);
 						echo "<div class='post'>";
 						echo "Title: ".$row['posttitle'];

@@ -34,7 +34,7 @@
 						$exists = 0;
 						
 						// Gegevens uit tabel ophalen.
-						$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
+						$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die("Oops something went wrong you can try again in a few minutes.");  
 						$row = mysql_fetch_array($result1);
 						
 						// Als $id bestaat in rij, dan is $exists 1.
@@ -138,7 +138,7 @@
 							// een while met counters om het script 10 keer te laten uitvoeren waardoor de laatste 10 gestarte topics te zien zijn.
 							while($counter3 != 10)
 							{					
-								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
+								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die("Oops something went wrong you can try again in a few minutes.");  
 								
 								$row3 = mysql_fetch_array($result3);
 								echo $row3['posttitle'];

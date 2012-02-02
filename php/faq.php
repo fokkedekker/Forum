@@ -26,7 +26,7 @@
 					include 'dblogin.php';
 					
 					// Alle FAQ dingen uit de faq tabel halen.
-					$result = mysql_query("SELECT * FROM faq") or die(mysql_error());  
+					$result = mysql_query("SELECT * FROM faq") or die("Oops something went wrong you can try again in a few minutes.");  
 					
 					// Resultaat weergeven.
 					while($row = mysql_fetch_array($result))

@@ -41,7 +41,7 @@
 					$catagory = mysql_real_escape_string($_GET['cat']);
 					
 					// Laadt catagorie approval.
-					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die (mysql_error());
+					$approval = mysql_query("SELECT approval FROM catagories where id = '$catagory'") or die ("Oops something went wrong you can try again in a few minutes.");
 					$approval = mysql_fetch_array($approval);
 					
 					// Prompt gebruiker.
@@ -53,7 +53,7 @@
 					if ($checkThread === "y")
 					{
 						// Berekent nieuwe post id op basis van max in tabel.
-						$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die (mysql_error());
+						$getPost_id = mysql_query("SELECT MAX(post_id) as post_id FROM topics") or die ("Oops something went wrong you can try again in a few minutes.");
 						$row = mysql_fetch_array($getPost_id);
 						$newPost_id = $row['post_id'] + 1;
 						$start = 1;
@@ -81,7 +81,7 @@
 					echo "<br />Title: ".$postTitle."<br />";
 					
 					//Prompt catagorie naam.
-					$catagoryName = mysql_query("SELECT name FROM catagories WHERE id = '$catagory'") or die (mysql_error());
+					$catagoryName = mysql_query("SELECT name FROM catagories WHERE id = '$catagory'") or die ("Oops something went wrong you can try again in a few minutes.");
 					$catagoryName = mysql_fetch_array($catagoryName);
 					$catagoryName = $catagoryName['name'];
 					echo "Catagory: ".$catagoryName."<br />";
@@ -115,7 +115,7 @@
 					'$catagory', 
 					'$userID', 
 					CURRENT_TIMESTAMP,
-					'$start')") or die (mysql_error());
+					'$start')") or die ("Oops something went wrong you can try again in a few minutes.");
 					
 					}
 					

@@ -34,7 +34,7 @@
 						
 					if($catagorie_name != "")
 					{
-						$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die (mysql_error());
+						$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die ("Oops something went wrong you can try again in a few minutes.");
 
 						echo "Catagory added: ".$catagorie_name."<br />";
 						echo "Approved: ".$catagorie_approval; 

@@ -29,7 +29,7 @@
 						include 'dblogin.php';
 						
 						$delete_topic = strip_tags($_GET['id']);
-						mysql_query("DELETE FROM faq WHERE id ='$delete_topic'") or die (mysql_error());
+						mysql_query("DELETE FROM faq WHERE id ='$delete_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
 
 						echo "FAQ succesfully deleted, press <a href='adminfaq.php'>here</a> to return.";
 					}

@@ -28,7 +28,7 @@
 						$question = mysql_real_escape_string(strip_tags($_POST['question']));
 						$anwser = mysql_real_escape_string(strip_tags($_POST['anwser']));
 							
-						$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die (mysql_error());
+						$result = mysql_query("INSERT INTO faq(question, awnser) VALUES ('$question', '$anwser')") or die ("Oops something went wrong you can try again in a few minutes.");
 						
 						echo "<h1>New FAQ succesfully added.</h1><br />";
 						echo "Click <a href='adminfaq.php'>here</a> to return.";

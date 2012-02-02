@@ -55,7 +55,7 @@
 
 										if (!mysql_query($sql,$dbhandle))
 										{
-										  die('Error: ' . mysql_error());
+										   die("Oops something went wrong you can try again in a few minutes.");
 										}
 										echo "Thank you for registering for gitmasters.com. <br/>
 										A message containing your login credentials have been send to ".$to." <br/>";

@@ -30,7 +30,7 @@
 					$GETpassword = md5(mysql_real_escape_string(strip_tags($_POST["pass"])));
 					
 					// Kijken of de combinatie van username en password in de database te vinden is
-					$login = mysql_query("SELECT username, id, admin FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die (mysql_error());
+					$login = mysql_query("SELECT username, id, admin FROM users WHERE username = '$GETusername' and password = '$GETpassword'") or die ("Oops something went wrong you can try again in a few minutes.");
 					
 					// Als login geluk is, variabelen in sessie opslaan.
 					if(	$login = mysql_fetch_array($login))

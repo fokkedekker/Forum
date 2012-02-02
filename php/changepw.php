@@ -35,7 +35,7 @@
 
 					$id = $_SESSION['userID'];
 
-					$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die(mysql_error());
+					$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die("Oops something went wrong you can try again in a few minutes.");
 					$row = mysql_fetch_array($result);
 
 					$password = $row['password'];
