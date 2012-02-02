@@ -64,17 +64,18 @@
 						//echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						$q = $row['id'];
-						echo "<div class=button>
-							  <form action='maketopic.php?id=".$getPostID."&topic=f&cat=".$getCat."' method='POST'>
-							  <input type='submit' value='reply'/>
-							  </form>
-							  </div>";
-						echo "<form>
-							<input type ='button' value='like' onclick ='likef($q)'/>
-							
-							</form>
-							<div id='likeshizle'> Liked post will be displayed here</div>";
-							echo $q;
+						if (array_key_exists('admin',$_SESSION))
+						{
+							echo "<div class=button>
+								  <form action='maketopic.php?id=".$getPostID."&topic=f&cat=".$getCat."' method='POST'>
+								  <input type='submit' value='reply'/>
+								  </form>
+								  </div>";
+							echo "<form>
+								<input type ='button' value='like' onclick ='likef($q)'/>
+								</form>
+								<div id='likeshizle'> Liked post will be displayed here</div>";
+						}
 						echo "<br /><hr />".$row['postcontent'];
 						echo "</div>";
 					}
