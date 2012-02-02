@@ -13,9 +13,15 @@
 		
 		echo $row['id'];
 		echo "</div>";
-
+		
+		// Initialiseer variabele dots.
+		$dots = "";
+		
+		if (strlen($row['posttitle']) > 25)
+			$dots = "...";
+			
 		echo "<div class='topic_title'>";
-		echo "<a href='draadje.php?topicid=".$row['post_id']."&cat=".$row['catagorie_id']."'>".$row['posttitle']."</a>";
+		echo "<a href='draadje.php?topicid=".$row['post_id']."&cat=".$row['catagorie_id']."'>".substr($row['posttitle'], 0, 24).$dots."</a>";
 		echo "</div>";
 
 		echo "<div class='topic_starttime'>";
