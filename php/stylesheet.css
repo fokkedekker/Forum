@@ -155,7 +155,7 @@ div.currentpage
 	float:left;
 	height:29px;
 	width:96px;
-	border-width:2px;
+	border-left:2px;
 	border-color: #003366;
 	background:#003366;
 	text-align:center;
@@ -358,7 +358,10 @@ div.slidemenu
 	padding:2px;
 	padding-top: 5%;
 	padding-bottom: 5%;
-	box-shadow:3px 5px 10px #333; 
+	border-style: solid;
+	border-right: 2px;
+	border-color: #D3D3D3;
+	/*box-shadow:3px 5px 10px #333; */
 }
 
 div.forum
