@@ -40,7 +40,7 @@ GEDAAN- change pw link weghalen als je niet bij jezelf kijkt < Kees
 GEDAAN- string afvangen in get < Kees
 
 Like < Fokke
-- Niet zelfde dingen liken
+GEDAAN- Niet zelfde dingen liken
 GEDAAN- niet liken als niet ingelogd
 
 posttopic.php
