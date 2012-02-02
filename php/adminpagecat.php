@@ -22,6 +22,7 @@
 			<div class="center">
 				<?php
 					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
+					{
 						echo "
 						<div class='catagorie_maker'>
 						<form action='addcat.php' method='POST'>
@@ -34,7 +35,23 @@
 						</select>
 						<input type = 'submit' value='submit'/>
 						</form>
-						</div>";
+						</div><br />";
+						// Database login.
+						include 'dblogin.php';
+						
+						$result = mysql_query("SELECT * FROM catagories") or die("Oops something went wrong you can try again in a few minutes.");  
+						
+						// Resultaat weergeven.
+						while($row = mysql_fetch_array($result))
+						{
+							echo "<hr /><center>";
+							echo "<form action='delcat.php?id=".$row['id']."' method='POST'>";
+							echo "<input type='image' src='delete.jpg' alt='delete' value='Delete'/>";
+							echo "</center></form>";
+							echo "<h1 align = 'center'>".$row['name']."</h1>";
+							echo "<hr />";
+						}
+					}
 					else
 						echo "You are not an admin.";
 				?>

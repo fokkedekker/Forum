@@ -28,10 +28,10 @@
 						// Database login.
 						include 'dblogin.php';
 						
-						$delete_topic = mysql_real_escape_string(strip_tags($_GET['id']));
-						mysql_query("DELETE FROM faq WHERE id ='$delete_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
+						$delete_cat = mysql_real_escape_string(strip_tags($_GET['id']));
+						mysql_query("DELETE FROM catagories WHERE id ='$delete_cat'") or die ("Oops something went wrong you can try again in a few minutes.");
 
-						echo "FAQ succesfully deleted, press <a href='adminfaq.php'>here</a> to return.";
+						echo "Category succesfully deleted, press <a href='adminpagecat.php'>here</a> to return.";
 					}
 					else
 					{
