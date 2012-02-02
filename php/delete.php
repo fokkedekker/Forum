@@ -22,12 +22,16 @@
 			<div class="center">
 				<?php
 					include 'dblogin.php';
-					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
+					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" && array_key_exists('id', $_GET))
 					{
-						$delete_topic = strip_tags($_GET['id']);
+						$delete_topic = mysql_real_escape_string(strip_tags($_GET['id']));
 						mysql_query("DELETE FROM topics WHERE id ='$delete_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
 
 						echo "Topic deleted";
+					}
+					else
+					{
+						echo "An error has occured, we have send a group of highly trained parrots to fix the situation.";
 					}
 					mysql_close($dbhandle);
 				?>

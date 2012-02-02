@@ -21,14 +21,19 @@
 			</div>
 			<div class="center">
 				<?php
-				include 'dblogin.php';
-				if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" )
-				{
-				$approve_topic = strip_tags($_GET['id']);
-				mysql_query("UPDATE topics SET approved='1' WHERE id='$approve_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
+					include 'dblogin.php';
+					if (($_SESSION['admin']) != "" && ($_SESSION['admin']) == "1" && array_key_exists('id', $_GET))
+					{
+						$approve_topic = mysql_real_escape_string(strip_tags($_GET['id']));
+						mysql_query("UPDATE topics SET approved='1' WHERE id='$approve_topic'") or die ("Oops something went wrong you can try again in a few minutes.");
 
-				echo "Topic approved";
-				}
+						echo "Topic approved";
+					}
+					else
+					{
+						echo "An error has occured, we have send a group of highly trained parrots to fix the situation.";
+					}
+					mysql_close($dbhandle);
 				?>			
 			</div>
 			<div class="footer">
