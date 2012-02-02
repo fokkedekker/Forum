@@ -51,15 +51,15 @@
 				if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
 					echo "<form>
 					<select name='users' onchange='showTopic(this.value)'>
-					<option value=''>Select Topic Type:</option>
-					<option value='0'>Pending Topics</option>
-					<option value='1'>Approved Topics</option>
+					<option value=''>Select Posts Type:</option>
+					<option value='0'>Pending Posts</option>
+					<option value='1'>Approved Posts</option>
 					</select>
 					</form>
 					<br />
-					<div id='topicTabel'> Select topics will be displayed here</div>";
+					<div id='topicTabel'> Selected Posts will be displayed here.</div>";
 				else
-					echo "You are not an admin, please login.";
+					echo "You are not an admin.";
 				?>
 			</div>
 			<div class="footer">

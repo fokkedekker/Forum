@@ -36,7 +36,7 @@
 						</form>
 						</div>";
 					else
-						echo "You are not an admin, please login.";
+						echo "You are not an admin.";
 				?>
 			</div>
 			<div class="footer">

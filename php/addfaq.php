@@ -39,6 +39,10 @@
 
 						mysql_close($dbhandle);
 					}
+					else
+					{
+						echo "You are not an admin.";
+					}
 				?>
 			</div>
 			<div class="footer">

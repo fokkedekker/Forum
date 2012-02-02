@@ -21,30 +21,38 @@
 			</div>
 			<div class="center">
 				<?php
-					// Database connectie.
-					include 'dblogin.php';
-						
-					$catagorie_name = mysql_real_escape_string(strip_tags($_POST['name']));
-					$catagorie_approval = mysql_real_escape_string(strip_tags($_POST['approval']));
-
-					if($catagorie_approval == "approved")
-						$catagorie_approval = 1;
-					else
-						$catagorie_approval = 0;
-						
-					if($catagorie_name != "")
+					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
 					{
-						$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die ("Oops something went wrong you can try again in a few minutes.");
+						// Database connectie.
+						include 'dblogin.php';
+							
+						$catagorie_name = mysql_real_escape_string(strip_tags($_POST['name']));
+						$catagorie_approval = mysql_real_escape_string(strip_tags($_POST['approval']));
 
-						echo "Catagory added: ".$catagorie_name."<br />";
-						echo "Approved: ".$catagorie_approval; 
+						if($catagorie_approval == "approved")
+							$catagorie_approval = 1;
+						else
+							$catagorie_approval = 0;
+							
+						if($catagorie_name != "")
+						{
+							$result = mysql_query("INSERT INTO catagories(name, approval) VALUES ('$catagorie_name', '$catagorie_approval')") or die ("Oops something went wrong you can try again in a few minutes.");
+
+							echo "Catagory added: ".$catagorie_name."<br />";
+							echo "Approved: ".$catagorie_approval; 
+						}
+						else
+						{
+							echo "Please set a correct title for the category.";
+						}
+						
+						// Sluit database connectie.
+						mysql_close($dbhandle);
 					}
 					else
 					{
-						echo "Please set a title for the category.";
+						echo "You are not an admin.";
 					}
-					// Sluit database connectie.
-					mysql_close($dbhandle);
 				?>
 			</div>
 			<div class="footer">
