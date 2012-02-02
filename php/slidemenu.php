@@ -22,9 +22,9 @@
 		// Database connectie.
 		include 'dblogin.php';
 		
-		if (!empty($_GET["cat"]))
+		if (array_key_exists('cat',$_GET))
 		{
-			$cat = strip_tags($_GET["cat"]);
+			$cat = mysql_escape_string(strip_tags($_GET["cat"]));
 			$cats = mysql_query("SELECT name FROM catagories WHERE id='$cat'");
 			$cats = mysql_fetch_array($cats);
 			echo "&#8627; <a href='category.php?cat=".$cat."'>".$cats['name']."</a>";
