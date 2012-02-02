@@ -39,9 +39,13 @@
 				
 				// Print de tabel met gegevens.
 				echo "<div class='catPostOver'>";
-				echo "<form action='maketopic.php?cat=".$categorie."&topic=y' method='POST'>";
-				echo "<input type='submit' value='Make topic'/>";
-				echo "</form>";
+				// Als user is ingelogd, dan maketopic knop laten zien.
+				if (array_key_exists('admin',$_SESSION))
+				{
+					echo "<form action='maketopic.php?cat=".$categorie."&topic=y' method='POST'>";
+					echo "<input type='submit' value='Make topic'/>";
+					echo "</form>";
+				}
 				echo "<hr />";
 				echo "<h1 align = 'center'>".$row['name']."</h1>";
 				echo "<hr />";
