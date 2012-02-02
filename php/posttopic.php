@@ -96,6 +96,9 @@
 					echo "<br />Content: ".$postContent."<br />";
 					
 					// Mysql query.
+					if($postTitle != "" && $postContent !="")
+					{
+					
 					mysql_query("INSERT INTO `webdb1236`.`topics`
 					(approved, 
 					posttitle, 
@@ -113,6 +116,13 @@
 					'$userID', 
 					CURRENT_TIMESTAMP,
 					'$start')") or die (mysql_error());
+					
+					}
+					
+					else if($postTitle == "" || $postContent == "")
+					{
+						echo "not al fields ar filled in correct";
+					}
 					
 					// Connectie met database afsluiten.
 					mysql_close($dbhandle);

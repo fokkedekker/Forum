@@ -25,27 +25,27 @@
 				<table border="0px">
 					
 					<tr>
-					<td> Username</td>
+					<td> Username *</td>
 					<td> <input type="text" name="username" /> </td>
 					</tr>
 					
 					<tr>
-					<td> First name</td>
+					<td> First name *</td>
 					<td> <input type="text" name="firstname" /> </td>
 					</tr>
 					
 					<tr>
-					<td> Last name</td>
+					<td> Last name *</td>
 					<td> <input type="text" name="lastname" /> </td>
 					</tr>
 					
 					<tr>
-					<td> Email </td>
+					<td> Email *</td>
 					<td> <input type="text" name="email" /> </td>
 					</tr>
 					
 					<tr>
-					<td> Repeat Email </td>
+					<td> Repeat Email *</td>
 					<td> <input type="text" name="repeatemail" /> </td>
 					</tr>
 					
@@ -221,7 +221,7 @@
 					</tr>
 					
 					<tr>
-					<td> Sex</td>
+					<td> Sex </td>
 					<td> <select name="sex" method="post">
 							<option>Male</option>
 							<option>Female</option>
@@ -231,18 +231,23 @@
 					
 					
 					<tr>
-					<td> About me</td>
+					<td> About me *</td>
 					<td> <input type="text" size="30" maxlength="3000" name="overjouw" style="height:100px;"/> </td>
 					</tr>
 					
 					<tr>
-					<td> Favo Browser </td>
+					<td> Favo Browser *</td>
 					<td> <input type="text" name="browser"/> </td>
 					</tr>
 				
 					</table>
 					
 						<input type="submit" name="submit" />
+						
+						<br />
+						<br />
+						<br />
+						* Required to register.
 		
 					</form>
 				</div>
