@@ -21,7 +21,7 @@ Header
 logo.png checks
 
 Email
-/Link naar login pagine < Fokke
+GEDAAN /Link naar login pagine < Fokke
 GEDAAN-\r gebruikt voor linebreaks < Fokke
 
 posttopic.php
@@ -36,7 +36,7 @@ GEDAAN- geen lege berichten posten < Fokke
 GEDAAN- Kan niet in niet bestaande catagorien posten < Kees
 
 changepw
-- niet zomaar aanroepen, posts afvangen < Fokke
+GEDAAN - niet zomaar aanroepen, posts afvangen < Fokke
 
 personal
 GEDAAN- change pw link weghalen als je niet bij jezelf kijkt < Kees
@@ -44,12 +44,12 @@ GEDAAN- string afvangen in get < Kees
 
 Like < Fokke
 - Niet zelfde dingen liken
-- niet liken als niet ingelogd
+GEDAAN- niet liken als niet ingelogd
 
 posttopic.php
 -Gets checken of bestaande id < Michiel
 
 Overal
 GEDAAN-Auto redirect naar https ipv http < Kees
--lege velden chekcen < Fokke
+GEDAAN -lege velden chekcen < Fokke
 -Comments @ php
