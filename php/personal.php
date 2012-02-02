@@ -157,7 +157,7 @@
 						
 								$counter3 = $counter3 + 1;
 								$counter4 = $counter4 + 1;
-								echo "<br />";
+								
 							}
 						?>
 					</div>
