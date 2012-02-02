@@ -8,7 +8,8 @@
 		<script type="text/javascript">
 				function likef(int)
 				{
-				alert("Like all the posts");
+				alert("You like this post!");
+				document.getElementById("like"+int).innerHTML="You like this post.";
 				if (window.XMLHttpRequest)
 				  {// code for IE7+, Firefox, Chrome, Opera, Safari
 				  xmlhttp=new XMLHttpRequest();
@@ -25,7 +26,7 @@
 					}
 				  }
 				xmlhttp.open("GET","like.php?q="+int,true);
-				alert("test");
+				
 				xmlhttp.send(null);
 				}
 			</script>
@@ -51,12 +52,12 @@
 					
 					$getPostID = $_GET['topicid'];
 					$getCat = $_GET['cat'];
-					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die("Oops something went wrong you can try again in a few minutes.");  
+					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
 					
 					while($row = mysql_fetch_array($result))
 					{
 						$postUser = $row['user_id'];
-						$name = mysql_query("SELECT username FROM users WHERE id = '$postUser'") or die("Oops something went wrong you can try again in a few minutes.");
+						$name = mysql_query("SELECT username FROM users WHERE id = '$postUser'") or die(mysql_error());
 						$name = mysql_fetch_array($name);
 						echo "<div class='post'>";
 						echo "Title: ".$row['posttitle'];
@@ -64,6 +65,9 @@
 						//echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
 						$q = $row['id'];
+						$likes = mysql_query("SELECT user_id FROM `like` WHERE id = '$q'") or die(mysql_error());
+						$likes = mysql_num_rows($likes);
+						//$likes = COUNT($likes);
 						if (array_key_exists('admin',$_SESSION))
 						{
 							echo "<div class=button>
@@ -74,7 +78,7 @@
 							echo "<form>
 								<input type ='button' value='like' onclick ='likef($q)'/>
 								</form>
-								<div id='likeshizle'> Liked post will be displayed here</div>";
+								<div id='like".$q."'> This post has been liked ".$likes." times.</div>";
 						}
 						echo "<br /><hr />".$row['postcontent'];
 						echo "</div>";
