@@ -1,7 +1,7 @@
 <?php
 	$q=$_GET["q"];
-	mysql_query(mysql_real_escape_string($q));
 	include "dblogin.php";
+	$q = mysql_real_escape_string($q);
 
 	$sql="SELECT * FROM topics where approved = '".$q."'";
 
