@@ -50,5 +50,5 @@ posttopic.php
 -Gets checken of bestaande id < Michiel
 
 Overal
--NIET KUNNEN DOEN; KAN NIET LOKAAL TESTENAuto redirect naar https ipv http < Kees
+GEDAAN-Auto redirect naar https ipv http < Kees
 -lege velden chekcen < Fokke
