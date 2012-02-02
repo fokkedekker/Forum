@@ -24,39 +24,52 @@
 					// Database connectie.
 					include 'dblogin.php';
 					
-					// Variabelen verkrijgen.
-					$oldpw = $_POST['oldpassword'];
-					$newpw = $_POST['newpassword'];
-					$repeatnewpw = $_POST['repeatnewpw'];
+					// Variabelen instantieren.
+					$oldpw = "";
+					$newpw = "";
+					$repeatnewpw = "";
 					
-					// Md5 encriptie.
-					$md5pwnew = md5(mysql_real_escape_string($newpw));
-					$md5oldpw = md5(mysql_real_escape_string($oldpw));
-
-					$id = $_SESSION['userID'];
-
-					$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die("Oops something went wrong you can try again in a few minutes.");
-					$row = mysql_fetch_array($result);
-
-					$password = $row['password'];
-
-
-					if($md5oldpw == $password && $newpw == $repeatnewpw)
+					// Variabelen verkrijgen.
+					if (array_key_exists('oldpassword',$_POST))
+						$oldpw = mysql_real_escape_string($_POST['oldpassword']);
+					if (array_key_exists('newpassword',$_POST))	
+						$newpw = mysql_real_escape_string($_POST['newpassword']);
+					if (array_key_exists('repeatnewpw',$_POST))
+						$repeatnewpw = mysql_real_escape_string($_POST['repeatnewpw']);
+					
+					if ($oldpw != "" && newp != "" && $repeatnewpw != "")
 					{
-						mysql_query("UPDATE users SET password = '$md5pwnew' WHERE id ='$id'");
-						echo "password is changed";
-					}
+						// Md5 encriptie.
+						$md5pwnew = md5(mysql_real_escape_string($newpw));
+						$md5oldpw = md5(mysql_real_escape_string($oldpw));
 
-					else if('$newpw' != '$repeatnewpw')
+						$id = $_SESSION['userID'];
+
+						$result = mysql_query("SELECT * FROM users WHERE id = '$id'") or die("Oops something went wrong you can try again in a few minutes.");
+						$row = mysql_fetch_array($result);
+
+						$password = $row['password'];
+
+						if($md5oldpw == $password && $newpw == $repeatnewpw)
+						{
+							mysql_query("UPDATE users SET password = '$md5pwnew' WHERE id ='$id'");
+							echo "password is changed";
+						}
+
+						else if('$newpw' != '$repeatnewpw')
+						{
+							echo " Password are not the same";
+						}
+
+						else if('$oldpw' != '$password')
+						{
+							echo "Old password is not correct";
+						}
+					}
+					else
 					{
-						echo " Password are not the same";
+						echo "An error has occured, we are sending our highly trained monkeys to fix it.";
 					}
-
-					else if('$oldpw' != '$password')
-					{
-						echo "Old password is not correct";
-					}
-
 					// Database connectie afsluiten.
 					mysql_close($dbhandle);
 				?>
