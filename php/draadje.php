@@ -78,7 +78,8 @@
 						$likes = mysql_query("SELECT user_id FROM `like` WHERE id = '$q'") or die(mysql_error());
 						$likes = mysql_num_rows($likes);
 						
-						$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$postUser' AND id = '$q'") or die(mysql_error());
+						$use = $_SESSION['userID'];
+						$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$use' AND id = '$q'") or die(mysql_error());
 						$ale = mysql_num_rows($ale);
 						if (array_key_exists('admin',$_SESSION))
 						{
@@ -88,7 +89,7 @@
 								  </form>
 								  </div>";
 							echo "<form>
-								<input type ='button' id='ale".$q."' name=".$ale." value='Like' onclick='likef($q, this.name )' />
+								<input type ='button' id='ale".$q."' name='".$ale."' value='Like' onclick='likef($q, this.name )' />
 								</form>
 								<div id='like".$q."'> This post has been liked ".$likes." times.</div>";
 						}
