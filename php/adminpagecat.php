@@ -25,7 +25,7 @@
 						echo "
 						<div class='catagorie_maker'>
 						<form action='addcat.php' method='POST'>
-						Catagorie: <input type='text' name='name'/>
+						Category: <input type='text' name='name'/>
 						<br />
 						Approval:
 						<select name='approval' method='POST'>
