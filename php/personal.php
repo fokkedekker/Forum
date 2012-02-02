@@ -81,7 +81,7 @@
 							
 							$lastpostcut = str_split($lastpost, 37);
 							
-							echo "<div class = 'lastpost'> <a href=draadje.php?topicid=".$topicid. "&cat=".$catid.">".$lastpostcut[0]."</a> </div>";
+							echo "<a href=draadje.php?topicid=".$topicid. "&cat=".$catid.">".$lastpostcut[0]."</a>";
 							// Als de string langer is dan 37 dan past hij niet in het hokje dus ... 
 							// om aan te geven dat het niet de volledige titel is.
 							if (strlen($lastpostcut[0]) == 37)
@@ -153,11 +153,11 @@
 								$row3 = mysql_fetch_array($result3);
 								$topicid = $row3['post_id'];
 								$catid = $row3['catagorie_id'];
-								echo "<div class = 'lastpost'> <a href=draadje.php?topicid=".$topicid. "&cat=".$catid.">".$row3['posttitle']."</a> </div>";
+								echo "<a href=draadje.php?topicid=".$topicid."&cat=".$catid.">".$row3['posttitle']."</a> <br />";
 						
 								$counter3 = $counter3 + 1;
 								$counter4 = $counter4 + 1;
-								echo "<br />";
+								
 							}
 						?>
 					</div>
