@@ -75,7 +75,7 @@
 						$counter = 1;
 						$counter2 = 0;
 						
-						$result2 = mysql_query("SELECT * FROM topics WHERE user_id = '$id' LIMIT 10");
+						$result2 = mysql_query("SELECT * FROM topics WHERE user_id = '$id' AND approved = '1' LIMIT 10");
 						
 						while($row2 = mysql_fetch_array($result2))
 						{
@@ -152,7 +152,7 @@
 							// een while met counters om het script 10 keer te laten uitvoeren waardoor de laatste 10 gestarte topics te zien zijn.
 							while($counter3 != 10)
 							{					
-								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
+								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' AND approved = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
 								
 								$row3 = mysql_fetch_array($result3);
 								$topicid = $row3['post_id'];
