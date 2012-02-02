@@ -37,7 +37,7 @@
 					if (array_key_exists('repeatnewpw',$_POST))
 						$repeatnewpw = mysql_real_escape_string($_POST['repeatnewpw']);
 					
-					if ($oldpw != "" && newp != "" && $repeatnewpw != "")
+					if ($oldpw != "" && newpw != "" && $repeatnewpw != "")
 					{
 						// Md5 encriptie.
 						$md5pwnew = md5(mysql_real_escape_string($newpw));
