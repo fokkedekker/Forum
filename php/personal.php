@@ -34,10 +34,10 @@
 					//TODO check uitvoeren dat de user wel bestaat.
 					if (array_key_exists('id',$_GET) && ($_GET['id']) != "" && ($_GET['id']) > 0)
 					{
-						$id = $_GET['id'];
+						$id = mysql_real_escape_string($_GET['id']);
 						
 						if (array_key_exists('userID', $_SESSION))
-							$idSelf = $_SESSION['userID'];
+							$idSelf = mysql_real_escape_string($_SESSION['userID']);
 						else 
 							$idSelf = -1;
 						

@@ -64,12 +64,12 @@
 					$getCat = -1;
 					
 					if (array_key_exists('topicid',$_GET))
-						$getPostID = mysql_escape_string($_GET['topicid']);
+						$getPostID = mysql_real_escape_string($_GET['topicid']);
 					else
 						echo "Incorrect post id specified.<br />";
 						
 					if (array_key_exists('cat',$_GET))
-						$getCat = mysql_escape_string($_GET['cat']);
+						$getCat = mysql_real_escape_string($_GET['cat']);
 					else
 						echo "Incorrect category specified.<br />";
 					
@@ -93,7 +93,7 @@
 							
 							if (array_key_exists('userID',$_SESSION))
 							{
-								$use = $_SESSION['userID'];
+								$use = mysql_real_escape_string($_SESSION['userID']);
 								$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$use' AND id = '$q'") or die(mysql_error());
 								$ale = mysql_num_rows($ale);
 							}

@@ -28,8 +28,10 @@
 					
 					// Variabelen uit maketopic.php form.
 					// Stript van tags met behulp van strip_tags() en mysql_real_escape_string().
-					$postTitle = mysql_real_escape_string(strip_tags($_POST["topicname"]));
-					$postContent = mysql_real_escape_string(strip_tags($_POST["content"]));
+					if (array_key_exists('topicname',$_POST))
+						$postTitle = mysql_real_escape_string(strip_tags($_POST["topicname"]));
+					if (array_key_exists('content',$_POST))
+						$postContent = mysql_real_escape_string(strip_tags($_POST["content"]));
 					
 					if($postTitle != "" && $postContent !="" && array_key_exists('admin',$_SESSION))
 					{
