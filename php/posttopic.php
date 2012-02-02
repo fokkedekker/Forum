@@ -26,6 +26,8 @@
 					// TODO iets doen zodat als pagina geladen zonder de maketopic.php
 					// en dan hij dan niets in de db zet.
 					
+					$postTitle = "";
+					$postContent = "";
 					// Variabelen uit maketopic.php form.
 					// Stript van tags met behulp van strip_tags() en mysql_real_escape_string().
 					if (array_key_exists('topicname',$_POST))
