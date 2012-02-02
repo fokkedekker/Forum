@@ -17,9 +17,6 @@ Database ingevoerd door Michiel met behulp van myPHPAdmin.
 Week 3:
 
 /------------------
-Header
-logo.png checks
-
 Email
 GEDAAN /Link naar login pagine < Fokke
 GEDAAN-\r gebruikt voor linebreaks < Fokke
@@ -53,3 +50,13 @@ Overal
 GEDAAN-Auto redirect naar https ipv http < Kees
 GEDAAN -lege velden chekcen < Fokke
 -Comments @ php
+
+Verslagen
+-Systeembeheerders verslag < Michiel
+-Klantenverslag
+-Presentatie
+
+Algemeen
+-Git webdb user toevoegen
+-Bestanden inleveren
+-Aan de opdrachtseisen.
