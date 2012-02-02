@@ -208,7 +208,7 @@ div.info
 	border-color: #003366;
 	padding:5px;
 	width:34.5%;	
-	height: 140px;
+	height: 180px;
 	border-radius: 6px;
 	margin-right:10px;
 	margin-bottom:10px;
@@ -233,7 +233,7 @@ div.forumstatus
 	border-radius:6px;
 	border-width:2px;
 	width: 34.5%;
-	height:190px;
+	height:150px;
 }
 
 div.over
@@ -484,4 +484,10 @@ div.catPostTime
 	border-left-width:1px;
 	text-align: center;
 	height:35px
+}
+
+div.personaltitle
+{
+	color: #FF0066;
+	text-decoration:underline;
 }

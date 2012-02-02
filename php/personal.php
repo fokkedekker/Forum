@@ -1,4 +1,11 @@
-<?php session_start('test'); ?>
+<?php 
+	session_start('test'); 
+	/*if($_SERVER['HTTPS']!=”on”)
+	{
+		$redirect= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+		header("Location:$redirect");
+	}*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>
@@ -34,7 +41,7 @@
 						$exists = 0;
 						
 						// Gegevens uit tabel ophalen.
-						$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die("Oops something went wrong you can try again in a few minutes.");  
+						$result1 = mysql_query("SELECT * FROM users where id = '$id' ") or die(mysql_error());  
 						$row = mysql_fetch_array($result1);
 						
 						// Als $id bestaat in rij, dan is $exists 1.
@@ -47,7 +54,7 @@
 							//$row = mysql_fetch_array($result1);
 				?>
 				<div class="picture">
-					<img src="emperor.png" alt="emperor" width="200" height="200"/>
+					<img src="emperor.png" alt="emperor" width="190" height="200"/>
 				</div>
 				<div class="overmij">
 					<div class="personaltitle">
@@ -138,7 +145,7 @@
 							// een while met counters om het script 10 keer te laten uitvoeren waardoor de laatste 10 gestarte topics te zien zijn.
 							while($counter3 != 10)
 							{					
-								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die("Oops something went wrong you can try again in a few minutes.");  
+								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
 								
 								$row3 = mysql_fetch_array($result3);
 								echo $row3['posttitle'];
