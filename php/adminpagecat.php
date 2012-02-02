@@ -32,7 +32,7 @@
 							<option value='1'>approve</option>
 							<option value='0'>control</option>
 						</select>
-						<input type = 'button' value='submit' onclick = 'addcat.php' />
+						<input type = 'submit' value='submit'/>
 						</form>
 						</div>";
 					else
