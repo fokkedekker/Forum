@@ -76,9 +76,12 @@
 						while($row2 = mysql_fetch_array($result2))
 						{
 							$lastpost =  $row2['posttitle'];
+							$topicid = $row2['post_id'];
+							$catid = $row2['catagorie_id'];
 							
 							$lastpostcut = str_split($lastpost, 37);
-							echo $lastpostcut[0];
+							
+							echo "<div class = 'lastpost'> <a href=draadje.php?topicid=".$topicid. "&cat=".$catid.">".$lastpostcut[0]."</a> </div>";
 							// Als de string langer is dan 37 dan past hij niet in het hokje dus ... 
 							// om aan te geven dat het niet de volledige titel is.
 							if (strlen($lastpostcut[0]) == 37)
@@ -148,7 +151,10 @@
 								$result3 = mysql_query("SELECT * FROM topics WHERE user_id = $id AND start = '1' ORDER BY starttime LIMIT $counter3 OFFSET $counter4") or die(mysql_error());  
 								
 								$row3 = mysql_fetch_array($result3);
-								echo $row3['posttitle'];
+								$topicid = $row3['post_id'];
+								$catid = $row3['catagorie_id'];
+								echo "<div class = 'lastpost'> <a href=draadje.php?topicid=".$topicid. "&cat=".$catid.">".$row3['posttitle']."</a> </div>";
+						
 								$counter3 = $counter3 + 1;
 								$counter4 = $counter4 + 1;
 								echo "<br />";
