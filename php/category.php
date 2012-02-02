@@ -25,8 +25,10 @@
 				include 'dblogin.php';
 				
 				// Categorie ophalen.
-				$categorie = strip_tags($_GET["cat"]);
-				
+				if (array_key_exists('cat',$_GET))
+					$categorie = mysql_escape_string(strip_tags($_GET["cat"]));
+				else
+					$categorie = 1;
 				//TODO dit fixen vvvvvvv
 				// Als categorie niet goed gespecificeert is (e.g. moet een getal zijn unsigned), dan 1 laten zien.
 				

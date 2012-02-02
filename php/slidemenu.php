@@ -35,9 +35,9 @@
 </div>
 <div class="thread">
 	<?php 
-	if (!empty($_GET["topicid"]))
+	if (array_key_exists('topicid',$_GET))
 	{ 
-		$topic = strip_tags($_GET["topicid"]);
+		$topic = mysql_escape_string(strip_tags($_GET["topicid"]));
 		
 		//if (!empty($_GET["id"])
 		//	$topic = strip_tags($_GET["id"]);
