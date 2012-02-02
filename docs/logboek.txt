@@ -22,17 +22,17 @@ logo.png checks
 
 Email
 /Link naar login pagine < Fokke
--\r gebruikt voor linebreaks < Fokke
+GEDAAN-\r gebruikt voor linebreaks < Fokke
 
 posttopic.php
 - chekcen voor posts id bestaat < Kees
--checken lege velden < Fokke
+GEDAAN-checken lege velden < Fokke
 
 Register
-- Checken of niet leeg vakjes < Fokke
+GEDAAN- Checken of niet leeg vakjes < Fokke
 
 maketopic
-- geen lege berichten posten < Fokke
+GEDAAN- geen lege berichten posten < Fokke
 GEDAAN- Kan niet in niet bestaande catagorien posten < Kees
 
 changepw
