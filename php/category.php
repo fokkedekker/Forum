@@ -26,7 +26,7 @@
 				
 				// Categorie ophalen.
 				if (array_key_exists('cat',$_GET))
-					$categorie = mysql_escape_string(strip_tags($_GET["cat"]));
+					$categorie = mysql_real_escape_string(strip_tags($_GET["cat"]));
 				else
 					$categorie = 1;
 				//TODO dit fixen vvvvvvv

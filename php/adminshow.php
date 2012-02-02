@@ -50,7 +50,7 @@
 	include"dblogin.php";
 	
 	// Verkrijg variabele.
-	$q = $_GET['q'];
+	$q = mysql_real_escape_string($_GET['q']);
 
 	$sql="SELECT * FROM topics WHERE approved = '$q'";
 
