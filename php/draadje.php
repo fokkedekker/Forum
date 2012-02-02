@@ -4,6 +4,32 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		
+		<script type="text/javascript">
+				function likef(int)
+				{
+				alert("Like all the posts");
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+					document.getElementById("likeshizle").innerHTML=xmlhttp.responseText;
+					}
+				  }
+				xmlhttp.open("GET","like.php?q="+int,true);
+				alert("test");
+				xmlhttp.send(null);
+				}
+			</script>
+		
 		<title>
 			<?php include 'forumname.php'; ?>
 		</title>
@@ -37,11 +63,18 @@
 						echo "<br />Username: <a href='personal.php?id=".$row['user_id']."'>".$name['username']."</a>";
 						//echo "<br />PostID: ".$row['post_id'];
 						echo "<br />Time: ".$row['starttime'];
+						$q = $row['id'];
 						echo "<div class=button>
 							  <form action='maketopic.php?id=".$getPostID."&topic=f&cat=".$getCat."' method='POST'>
 							  <input type='submit' value='reply'/>
 							  </form>
 							  </div>";
+						echo "<form>
+							<input type ='button' value='like' onclick ='likef($q)'/>
+							
+							</form>
+							<div id='likeshizle'> Liked post will be displayed here</div>";
+							echo $q;
 						echo "<br /><hr />".$row['postcontent'];
 						echo "</div>";
 					}
