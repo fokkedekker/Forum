@@ -35,10 +35,10 @@
 </div>
 <div class="thread">
 	<?php 
-	if (array_key_exists('topicid',$_GET))
+	if (array_key_exists('topicid',$_GET) && array_key_exists('cat',$_GET))
 	{ 
 		$topic = mysql_real_escape_string(strip_tags($_GET["topicid"]));
-		
+		$cat = mysql_real_escape_string(strip_tags($_GET["cat"]));
 		//if (!empty($_GET["id"])
 		//	$topic = strip_tags($_GET["id"]);
 		
