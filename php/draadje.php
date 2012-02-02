@@ -60,8 +60,8 @@
 				<?php 
 					include 'dblogin.php';
 					
-					$getPostID = $_GET['topicid'];
-					$getCat = $_GET['cat'];
+					$getPostID = mysql_escape_string($_GET['topicid']);
+					$getCat = mysql_escape_string($_GET['cat']);
 					$result = mysql_query("SELECT * FROM topics WHERE approved = '1' and post_id = '$getPostID' ORDER BY starttime ASC") or die(mysql_error());  
 					
 					while($row = mysql_fetch_array($result))
@@ -78,9 +78,12 @@
 						$likes = mysql_query("SELECT user_id FROM `like` WHERE id = '$q'") or die(mysql_error());
 						$likes = mysql_num_rows($likes);
 						
-						$use = $_SESSION['userID'];
-						$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$use' AND id = '$q'") or die(mysql_error());
-						$ale = mysql_num_rows($ale);
+						if (array_key_exists('userID',$_SESSION))
+						{
+							$use = $_SESSION['userID'];
+							$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$use' AND id = '$q'") or die(mysql_error());
+							$ale = mysql_num_rows($ale);
+						}
 						if (array_key_exists('admin',$_SESSION))
 						{
 							echo "<div class=button>
