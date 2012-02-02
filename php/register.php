@@ -232,7 +232,7 @@
 					
 					<tr>
 					<td> About me *</td>
-					<td> <input type="text" size="30" maxlength="3000" name="overjouw" style="height:100px;"/> </td>
+					<td> <input type="text" size="30" maxlength="320" name="overjouw" style="height:100px;"/> </td>
 					</tr>
 					
 					<tr>
