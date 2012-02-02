@@ -6,10 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		
 		<script type="text/javascript">
-				function likef(int)
+				function likef(int, ale)
 				{
-				alert("You like this post!");
-				document.getElementById("like"+int).innerHTML="You like this post.";
+					if (ale < 1)
+					{
+						alert("You like this post!");
+					}
+					else
+					{
+						alert("You have already liked this!");
+						return;
+					}
+				
 				if (window.XMLHttpRequest)
 				  {// code for IE7+, Firefox, Chrome, Opera, Safari
 				  xmlhttp=new XMLHttpRequest();
@@ -22,7 +30,9 @@
 				  {
 				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
-					document.getElementById("likeshizle").innerHTML=xmlhttp.responseText;
+						document.getElementById("like"+int).innerHTML="You like this post.";
+						document.getElementById("ale"+int).name="9001";
+					//document.getElementById("likeshizle").innerHTML=xmlhttp.responseText;
 					}
 				  }
 				xmlhttp.open("GET","like.php?q="+int,true);
@@ -67,7 +77,9 @@
 						$q = $row['id'];
 						$likes = mysql_query("SELECT user_id FROM `like` WHERE id = '$q'") or die(mysql_error());
 						$likes = mysql_num_rows($likes);
-						//$likes = COUNT($likes);
+						
+						$ale = mysql_query("SELECT * FROM `like` WHERE user_id = '$postUser' AND id = '$q'") or die(mysql_error());
+						$ale = mysql_num_rows($ale);
 						if (array_key_exists('admin',$_SESSION))
 						{
 							echo "<div class=button>
@@ -76,7 +88,7 @@
 								  </form>
 								  </div>";
 							echo "<form>
-								<input type ='button' value='like' onclick ='likef($q)'/>
+								<input type ='button' id='ale".$q."' name=".$ale." value='Like' onclick='likef($q, this.name )' />
 								</form>
 								<div id='like".$q."'> This post has been liked ".$likes." times.</div>";
 						}
