@@ -23,7 +23,7 @@
 			</div>
 			<div class="center">
 				<?php
-					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1)
+					if (array_key_exists('admin',$_SESSION) && ($_SESSION['admin']) != "" && $_SESSION['admin'] == 1 && array_key_exists('id',$_GET))
 					{
 						// Database login.
 						include 'dblogin.php';
