@@ -23,29 +23,39 @@
 				<?php 
 					if (array_key_exists('admin',$_SESSION))
 					{
-						echo "<div class='newtopic'>
-							Title:<br \>
-							Message:<br \>";
+						$cat = mysql_real_escape_string(strip_tags($_GET["cat"]));
+						$exists = 0;
 						
-						$topic = strip_tags($_GET["topic"]);
-						
-						if ($topic === 'f')
-							$id = strip_tags($_GET["id"]);
-						else
-							$id = 0;
+						$result = mysql_query("SELECT id FROM catagories");
+						while($row = mysql_fetch_array($result))
+						{
+							if ($row['id'] == $cat)
+								$exists = 1;
+						}
+						if ($exists == 1)
+						{
+							echo "<div class='newtopic'>
+								Title:<br \>
+								Message:<br \>";
 							
-						$cat = strip_tags($_GET["cat"]);
+							$topic = strip_tags($_GET["topic"]);
+							
+							if ($topic === 'f')
+								$id = strip_tags($_GET["id"]);
+							else
+								$id = 0;
+							
+							$url = "posttopic.php?id=".$id."&topic=".$topic."&cat=".$cat;
 						
-						$url = "posttopic.php?id=".$id."&topic=".$topic."&cat=".$cat;
-					
-						echo "<form action= ".$url." method='POST'>
-							<input type='submit' value='Submit'/>
-							</div>
-							<div>
-									<input type='text' size='40' maxlength='64' name='topicname' /><br />
-									<input type='text' size='40' maxlength='4096' style='height:200px;' name='content' />
-								</form>
-							</div>";
+							echo "<form action= ".$url." method='POST'>
+								<input type='submit' value='Submit'/>
+								</div>
+								<div>
+										<input type='text' size='40' maxlength='64' name='topicname' /><br />
+										<input type='text' size='40' maxlength='4096' style='height:200px;' name='content' />
+									</form>
+								</div>";
+						}
 					}
 					else
 					{
