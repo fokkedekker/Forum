@@ -1,4 +1,9 @@
-<?php session_start('test'); ?>
+<?php session_start('test'); 
+/*Deze file verandert de waarde van het password in de database
+hier wordt eerste het oude password gevraagd. er wordt gekeken door middel van de session
+of dit het goede password is. Daarna wordt er het nieuwe password gevraagd als het nieuwe password en repeat 
+new password gelijk zijn dan mag er upgedate worden in de databse*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

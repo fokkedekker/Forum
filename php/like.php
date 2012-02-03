@@ -1,4 +1,8 @@
 <?php
+/*Deze file wordt geactiveerd als er in het forum op like gedrukt wordt. Hier wordt de post id gekoppeld 
+aan de user id. 
+Samen worden ze in de database gezet. Voordat dat gebeurt wordt er eerst gekeken of de combinatie van de post_id en 
+de user_id niet al voor komen in de database. Op die manier kan 1 user nooit twee keer de zelfde post liken.e*/
 	session_start('test');
 
 	include "dblogin.php";

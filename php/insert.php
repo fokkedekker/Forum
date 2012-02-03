@@ -1,4 +1,8 @@
-<?php session_start('test'); ?>
+<?php session_start('test');
+/*Deze file zet alle waardes van het register form in de database. De register.php linkt naar deze file
+overal worden de tags verwijdert en te mysql real escape toegepast. Daarnaast wordt er overal gekeken of de form
+wel volledig is ingevuld. */
+?>
 <?php include "dblogin.php"; ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
         "http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">

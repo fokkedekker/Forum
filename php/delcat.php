@@ -1,4 +1,9 @@
-<?php session_start('test'); ?>
+<?php session_start('test'); 
+/*deze file maakt het mogelijk om een categorie te verwijderen. Dit mag natuurlijk aleen door admins gedaan worden
+Daarom wordt er eerst gekeken of de admin in de session niet leeg is en daarnaast gelijk is aan 1. Alleen dan mag je een categorie 
+verwijderen. */
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

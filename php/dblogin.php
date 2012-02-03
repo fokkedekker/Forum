@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+/*De dblogin file wordt in alle files gebruikt om een connectie met de databse te verkrijgen*/
 	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpass = '';

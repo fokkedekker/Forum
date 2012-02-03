@@ -1,4 +1,6 @@
-<?php session_start('test'); ?>
+<?php session_start('test');
+/*Deze file geeft de html weer om het password te veranderen zodra alles velden ingevuld zijn en er op submit wordt gedruk of op enter
+wordt er door gelinkt naar changepw.php die de waardes daadwerkelijk in de database zet*/?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

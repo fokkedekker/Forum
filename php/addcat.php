@@ -1,4 +1,8 @@
-<?php session_start('test'); ?>
+<?php session_start('test');
+/*addcat.php voegt een categorie toe aan de categorie database.
+Dit doet hij alleen als alle vakjes correct zijn ingevoeld. Daarnaast wordt de approval ook in 
+de database gezet. overal wordt mysql real escape gebruikt om te zorgen dat er geen mysql inject toegpast kan worden*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

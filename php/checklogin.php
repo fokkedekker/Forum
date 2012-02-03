@@ -1,4 +1,9 @@
-<?php session_start('test'); ?>
+<?php session_start('test');
+/*Dit is de file die de login checked hij kijkt of de combinatie van de username en het password in de databse voor komt.
+Het password staat md5 encrypted in de database opgelsagen. Het wachtwoord dat de user opslaat wordt ook door md5 gecodeerd. 
+Vervolgens wordt er gecontroleerd of de twee passwords over een komen. 
+*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

@@ -1,4 +1,11 @@
-<?php session_start('test'); ?>
+<?php session_start('test');
+/*
+Deze file genereert het draadje. Dit wordt gedaan door een while statment die net zo lang uitgevoerd wordt 
+totdat alle posts in een draadje ge-genereerd zijn. 
+Tevens zit hier de javascipt in voor de like button. Op het moment dat er op de like button wordt gedrukt wordt 
+de file like.php geactiveerd. Hierin wordt de like daadwerkelijk in de database gezet. 
+*/
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>
