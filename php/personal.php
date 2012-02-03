@@ -5,6 +5,8 @@
 		$redirect= "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 		header("Location:$redirect");
 	}*/
+	
+	/* persoonlijke pagina met informatie van de gebruiker */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">

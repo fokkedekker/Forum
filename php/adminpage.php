@@ -1,4 +1,8 @@
-<?php session_start('test'); ?>
+<?php session_start('test'); 
+/* form voor de admin om het type post dat hij wil zien weer te geven,
+de geselecteerde waarde wordt doorgegeven aan het script en werkt samen met adminphp.php */
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>

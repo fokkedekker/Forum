@@ -1,4 +1,5 @@
 <?php
+	/* Maakt het approven en verwijderen van topics door de admin mogelijk met twee functies*/
 	echo "<script type='text/javascript'>
 		function approve(str)
 		{

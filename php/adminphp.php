@@ -1,4 +1,5 @@
 <?php
+	/* selecteert alle topics uit de database die nog approved moeten worden, of alle posts die al geapproved zijn*/
 	$q=$_GET["q"];
 	include "dblogin.php";
 	$q = mysql_real_escape_string($q);

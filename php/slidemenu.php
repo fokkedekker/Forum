@@ -4,6 +4,7 @@
 <div class="categorie">
 	<br />
 	<?php 
+	/* menu met boom structuur, voorgaande pagina's kunnen worden ingeklikt */
 		// Functie neemt naam van het bestand minus extensie.
 		function curPageName() 
 		{

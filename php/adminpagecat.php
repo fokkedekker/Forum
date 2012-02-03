@@ -1,4 +1,7 @@
-<?php session_start('test'); ?>
+<?php session_start('test'); 
+/* adminpagina waar een nieuwe categorie kan worden aangemaakt en categorien verwijdert kunnen worden,
+ook kan hier de restrictie van een categorie worden bepaald */
+?>
 <!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.1//EN"
 	"http://www.w3.org/ter/xhtml11/DTD/xhtml11.dtd">
 <html>
